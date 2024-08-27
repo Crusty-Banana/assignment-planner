@@ -420,7 +420,7 @@
                 <b-row>\
                     <b-col>\
                         <b-button block v-b-toggle="'collapse-' + stepobject.step" size="lg" class="m-1"><b>Bước {{ stepobject.step }}: {{ stepobject.heading }}.</b> <span class="float-right">Hoàn thành vào {{ calcDueDate }}</span></b-button>\
-                        <b-collapse visible :id="'collapse-' + stepobject.step">\
+                        <b-collapse invisible :id="'collapse-' + stepobject.step">\
                             <b-card>\
                                 <b-card-text>\
                                     <p><b> (Phần trăm thời gian cho bước này: {{ stepobject.truePercent}}%) </b></p>\

@@ -149,7 +149,7 @@
 
 <body>
     <div id="app">
-        <a href="businessCaseStudyVi.html">
+        <a href="policyBrief.html">
             <img src="https://i.pinimg.com/736x/98/9b/9c/989b9c38c26172c25bd2dca461340deb.jpg" alt="Icon Description" alt="Top Right Icon" style="float: right; width: 40px; height: 40px;">
         </a>
         <b-jumbotron>
@@ -162,31 +162,34 @@
                 <div style="margin-left: 10rem;">
                     <!-- Text in the center -->
                     <div class="col text-center ml-auto" style="padding-left: 0;">
-                        <h2>Stay <span class="highlight1">Ahead</span>, Stay <span class="highlight1">Organized</span> with our</h2>
+                        <h2><span class="highlight1">Làm chủ</span> mọi bài tập của bạn với</h2>
                         <h1>Assignment Calculator</h1>
-                        <h2>Your Roadmap to <span class="highlight1">A+</span> grades!</h2>
+                        <h2>Từng bước chinh phục <span class="highlight1">điểm số</span> <span class="highlight1">A+</span></h2>
                     </div>
-                </div>
+                </div>  
                 <!-- <div class="col-auto" style="width: 20rem"></div> -->
             </div>
         </b-jumbotron>
               
 
         <div class="section">
-            <a href="Assignment-planner.html" style="color: white">
-                ⬅ Return to assignment planner
+            <a href="Assignment-planner-vi.html" style="color: white">
+                ⬅ Quay lại trang trước
             </a>
         </div>
         <article class="mw7 center ph3 ph5-ns tc br2 pv5 bg-washed-green dark-green mb5">
-           <h2 class="fw2 f4 f3-ns lh-title mt0 mb3">
-               POSTER PRESENTATION
-           </h2>
- 
-           <p class="fw1 f5 mt0 mb3">
-             A poster presentation is a brief visual summary of research findings or a subject that is generally presented at conferences, seminars, or academic events on a sizable poster board. A strong visual presentation and high-quality studies are both components of an effective poster presentation. 
-             A STEM presentation uses text, graphs, charts, and graphics to explain difficult scientific concepts, experimental findings, or ground-breaking technology innovations. STEM poster presentations give researchers, engineers, and scientists opportunities to display their work, discuss ideas, and get peer comments. This promotes collaboration and the sharing of knowledge throughout the STEM community.
-           </p>
-         </article> 
+            <h2 class="fw2 f4 f3-ns lh-title mt0 mb3">
+             POLICY BRIEF
+            </h2>
+  
+            <p class="fw1 f5 mt0 mb3">
+             A policy brief is a concise document addressing a specific issue, offering a synthesis of research on the context, causes, stakeholders, and consequences of a situation or problem. Its primary purpose is to aid decision-makers and policymakers by presenting policy alternatives and suggestions. Policy briefs can have varied objectives; some advocate for a single policy option, while others propose multiple alternatives for consideration. It's important to ensure your approach aligns with the requirements of your assignment.
+             Regarding length and style:
+             A typical policy brief spans 4-6 pages and adopts a professional tone rather than an academic one, focusing on clear, jargon-free explanations.
+             As for the target audience:
+             Policy briefs are typically intended for readers in fields such as education, environment, politics, public health, or social work who are policymakers with a vested interest in the issue but may not possess an in-depth understanding of the subject matter. They seek the writer's insights and evidence-based recommendations.
+            </p>
+          </article> 
         <b-container class="bv-example-row">
             <b-row>
                 <b-col>
@@ -196,10 +199,11 @@
                                 :state="beginDateValid"
                                 invalid-feedback="Please enter a begin date."
                             >
-                                <label for="example-datepicker">Begin date:</label>
+                                <label for="example-datepicker">Ngày bắt đầu:</label>
                                 <b-form-datepicker 
                                     id="begin-datepicker" 
                                     v-model="tempFromDate"
+                                    locale="vi-VN"
                                     class="mb-2"></b-form-datepicker>
                             </b-form-group>
                         </div>
@@ -211,10 +215,11 @@
                                 :state="dueDateValid"
                                 :invalid-feedback="dueDateFeedback"
                             >
-                                <label for="example-datepicker">Due date:</label>
+                                <label for="example-datepicker">Hạn nộp bài:</label>
                                 <b-form-datepicker 
                                     id="due-datepicker" 
                                     v-model="tempToDate"
+                                    locale="vi-VN"
                                     class="mb-2"></b-form-datepicker>
                             </b-form-group>
                         </div>
@@ -227,7 +232,7 @@
                             block variant="primary" 
                             class="btn-primary"
                         >
-                            Generate Schedule 
+                            Lên kế hoạch
                             <b-icon icon="arrow-down-circle-fill" aria-hidden="true"></b-icon>
                         </b-button>
                     </div>
@@ -236,98 +241,151 @@
         </b-container>
         <div class="alert-container">
             <b-alert show dismissible fade>
-                Success! You have <span class="highlight1">{{ calcTotalDays() }} days</span> to finish your assignment.
+                Thành công! Bạn còn <span class="highlight1">{{ calcTotalDays() }} ngày</span> để hoàn thành bài tập.
             </b-alert>
         </div>
         <template v-if="isDatescategory()">
-             <steps v-bind:stepobject='stemPosterPresentation1'></steps>
-             <steps v-bind:stepobject='stemPosterPresentation2'></steps>
-             <steps v-bind:stepobject='stemPosterPresentation3'></steps>
-             <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib light-purple" href="#top">Back to top ^</a>
-       </template>
+            <steps v-bind:stepobject='policyBrief1'></steps>
+            <steps v-bind:stepobject='policyBrief2'></steps>
+            <steps v-bind:stepobject='policyBrief3'></steps>
+            <steps v-bind:stepobject='policyBrief4'></steps>
+            <steps v-bind:stepobject='policyBrief5'></steps>
+            <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib light-purple" href="#top">Quay lên đầu ^</a>
+        </template> 
 
         <script src="//unpkg.com/vue@2.6.12/dist/vue.min.js"></script>
         <script src="//unpkg.com/bootstrap-vue@2.23.0/dist/bootstrap-vue.js"></script>
         <script src="//unpkg.com/bootstrap-vue@2.23.0/dist/bootstrap-vue-icons.js"></script>
         <script>
             // STEPS CONTENT IN JSON OBJECT FORMAT
-            var stemPosterPresentation1 = {
+            var policyBrief1 = {
                 step: '1',
-                heading: 'Content',
+                heading: 'Get started',
                 todos: '<div class="content"> \
-                <p><strong>A. Understand the assignment</strong></p> \
-                <p>Take your time reading the instructions carefully and make sure you understand all the requirements, including the topic, design, length, and deadline, etc. Never hesitate to ask your instructor for clarification if something is unclear. To efficiently organize your time, break the assignment down into smaller activities and make a detailed timeline. \
-                For more information, please visit <a href="https://uwaterloo.ca/writing-and-communication-centre/resources-understand-your-assignment" target="_blank" rel="noopener noreferrer">Understand Your Assignment.</a></p> \
-                \
-                <p><strong>B. Consider your audience</strong></p> \
-                <p>Be succinct if your audience comprises industry professionals. You are able to immediately get into the in-depth details of your research when presenting in your field because you will not have to define all technical terms or go over the basics. If your target audience is non-specialists, more background information is needed. Describe any technical terminology then Emphasize the significance of your research.</p> \
-                <p><strong>C. Create content</strong></p> \
-                <p>- Conduct research: </p> \
-                <p>Choose a research subject or topic that interests you and meets the requirements of the assignment. Do preliminary research to compile background data and evaluate whether reliable sources are accessible. Narrow down your topics (here are some <a href="https://libguides.usc.edu/writingguide/narrowtopic" target="_blank" rel="noopener noreferrer">Strategies for Narrowing the Research Topic</a>) and then start gathering data by using reliable search tools, academic databases, and <a href="https://vinuni.libguides.com/c.php?g=934922&p=6759514" target="_blank" rel="noopener noreferrer">libraries</a> to find sources that are applicable to your subject of study. </p>\
-                <p>Consider the author\'s credentials, the source\'s reputation, and the source\'s publication date when evaluating sources. Books from credible publishers, government publications, and peer-reviewed journals are frequently reliable resources. Assess the source\'s approach and supporting data carefully as well to judge its quality and applicability to your research. You can create a well-supported and well-rounded research essay by cross-referencing data with several sources and being critical of biases or conflicts of interest. </p> \
-                <p><a href="https://www.youtube.com/watch?v=CLSLFssRQ_E" target="_blank" rel="noopener noreferrer">RADAR test</a> can be used to evaluate the sources.</p> \
-                <p>- Organize information: </p> \
-                <p>Usually, poster presentations should have about 750 words, including sections below:</p> \
-                <ul>\
-                    <li> Abstract (optional): How would you summarize the research </li> \
-                    <li> Introduction: Why are you studying this? What is your research question?</li> \
-                    <li> Methods: When, where and how did you do it? What did you use?</li> \
-                    <li> Research: What did you find? Were you right?</li> \
-                    <li> Discussion: Why is your study important? What is the next step?</li> \
-                    <li> Reference Lits</li> \
-                </ul>\
-                <p>Remember to be concise since the poster has limited space </p> \
+                <p><strong>A. Understand Your Assignment</strong></p> \
+                <p>Ensure a comprehensive understanding of your assignment by discerning its specific requirements. Meticulously read the assignment instructions to discern the intended purpose, target audience, scope, format, and length.</p> \
+                <p>It\'s important to note that policy briefs can manifest in diverse forms. To gather ideas and inspiration, consider exploring sample policy briefs from various organizations.</p> \
+                <p><strong>B. Familiarize Yourself with the Subject Matter</strong></p> \
+                <p>In some instances, you may receive a designated topic and problem, while in others, you might have the freedom to select your own. Irrespective of the scenario, it\'s imperative to engage in preliminary reading about the subject and issue at hand.</p> \
+                <p>Employing the classic journalistic interrogatives (who, what, where, when, why) can serve as a guide to pinpointing the focal points of your policy brief, facilitating your research and analysis.</p> \
                 </div>',
-                percentage: '50',
-                truePercent: '50'
-            };
-
-            var stemPosterPresentation2 = {
-                step: '2',
-                heading: 'Design',
-                todos: '<div class="content"> \
-                <p><strong>A. Make a layout</strong></p> \
-                <p>Consider factors that can affect your choice of size and design, such as the timing, target audience, and venue of the presentation. Pick a design platform that works for you and the other team members(<a href="https://www.youtube.com/watch?v=YiO4QPCk7SE" target="_blank" rel="noopener noreferrer">Canva</a>, <a href="https://www.youtube.com/watch?v=797-M5De_lA" target="_blank" rel="noopener noreferrer">Adobe Illustrators</a>, <a href="https://www.youtube.com/watch?v=_WnhoIbfcoM" target="_blank" rel="noopener noreferrer">Power point</a>, etc). </p? \
-                <p>Make a layout plan for your poster. Remember that the mix of text and graphics is visually appealing. Organize the material in a logical flow, usually from left to right and top to bottom. For simple reading, use headings and bullet points. Include illustrations to support your main ideas, such as charts, diagrams, and pictures. Use a consistent font style and size and leave some white space for a tidy, uncomplicated appearance. Last but not least, don\'t forget to give your contact details for future discussion and referrals.</p> \
-                <p><a href="https://undergradresearch.wustl.edu/making-poster#gallery" target="_blank" rel="noopener noreferrer">Here are some good example of posters.</a></p>\
-                <p><strong>B. Create the poster</strong></p> \
-                <ul> \
-                <li>Tips on visual design: Use a clear, dark, legible font on a light background to make text easier to read. Use two to three complementing colors to increase visual impact. Keep the space on your poster clear. Consider eliminating a component if it does not enhance the clarity of your research. Data visualizations such as tables, charts, and other images are a common way to turn complex data sets into clear and accessible information. Copyright restrictions may apply if you use any text, image, or table that you did not make yourself.</li> \
-                <li>Tips for text: Aim for short and to-the-point sentences. Bolding can be used to emphasize a few key details but be careful not to overuse it.</li> \
-                </ul> \
-                \
-                <p><strong>C. Revising and proofreading</strong></p> \
-                <p>Review your presentation design, seek feedback from your peers or instructors and consider appropriate recommendations to improve your work.</p> \
-                <p>Read attentively to catch all of those little mistakes. There are some <a href="https://libguides.usc.edu/writingguide/proofreading" target="_blank" rel="noopener noreferrer">strategies for proofreading</a> you should check.</p> \
-                <p>For additional help, check out the VinUniversity library website for <a href="https://vinuni.libguides.com/citation" target="_blank" rel="noopener noreferrer">LibGuides about citation resources</a>.</p> \
-                </div>',
-                percentage: '90',
-                truePercent: '40'
-            };
-
-            var stemPosterPresentation3 = {
-                step: '3',
-                heading: 'Presentation',
-                todos: '<div class="content"> \
-                <p><strong>Prepare a speech for your poster. Consider the following points:</strong></p> \
-                <ul> \
-                <li>Speak clearly and project your voice.</li> \
-                <li>Make eye contact and interact with your audience.</li> \
-                <li>Gesture to appropriate visuals to emphasize points.</li> \
-                <li>Eliminate filler words such as "um", "like" and "you know."</li> \
-                </ul> \
-                <p>Interacting with people during your presentation is important for engagement and making an impact.</p> \
-                <p>For more practical presentation skill, check out <a href="https://youtube.com/playlist?list=PL-iPJqUs0UouaCEXjLvZi8TKe_y6Y42eR&si=euOWhhWRRQWTTkwx" target="_blank" rel="noopener noreferrer">these presentation techniques</a>.</p> \
-                </div>',
-                percentage: '100',
+                percentage: '10',
                 truePercent: '10'
             };
 
+            var policyBrief2 = {
+                step: '2',
+                heading: 'Research your policy issue',
+                todos: '<div class="content"> \
+                <p><strong>A. Develop Your Research Strategy</strong></p> \
+                <ol> \
+                <li>List the terms and concepts linked to your policy issue.</li> \
+                <li>Identify the core concepts among them, which will be the keywords you use when searching library catalogs and databases to uncover pertinent books, journal articles, and various reports.</li> \
+                </ol> \
+                <p><strong>B. Locate and Assess Your Sources</strong></p> \
+                <p>Ensure the sources you select are both pertinent and current. It\'s crucial to incorporate academically reputable sources, such as peer-reviewed books and journal articles, along with materials like government publications, documents from policy institutes (think tanks), and content that conveys the perspectives of individuals or groups affected by the issue, particularly those marginalized or mistreated in some manner.</p> \
+                <p>Remember that not all sources possess equal relevance or accurately represent the subject matter.</p> \
+                <p><strong>C. Choose and Systematize Your Discoveries</strong></p> \
+                <p>Accumulate your research findings and maintain a meticulous record of your sources throughout the process.</p> \
+                </div>',
+                percentage: '45',
+                truePercent: '35'
+            };
+
+            var policyBrief3 = {
+                step: '3',
+                heading: 'Begin to organize your brief',
+                todos: '<div class="content"> \
+                <p>Utilize your policy brief outline (from Step 1B) to populate the sections of your policy brief with preliminary ideas, which can be in point form. It\'s worth noting that, although the executive summary traditionally comes at the beginning, it may be more practical to tackle it towards the end of the process.</p> \
+                <p><strong>A. Identifying Your Audience</strong></p> \
+                <ul> \
+                <li>Who is your target audience and who do you need to persuade? (This will impact your tone and evidence presentation.)</li> \
+                <li>Define the informed but non-specialist readers of your brief.</li> \
+                <li>Predict how these readers perceive the issue and discuss it.</li> \
+                <li>What key message do you aim to convey that will resonate with them? Summarize this in two sentences to maintain focus.</li> \
+                </ul> \
+                <p><strong>B. Problem Statement</strong></p> \
+                <ul> \
+                <li>Define the problem\'s scope and magnitude.</li> \
+                <li>What evidence can you provide to illustrate its significance, urgency, or scale?</li> \
+                <li>Identify the facts, graphs, images, quotes, statistics, or maps that can support your arguments.</li> \
+                </ul> \
+                <p><strong>C. Stakeholders</strong></p> \
+                <ul> \
+                <li>Enumerate all stakeholders and describe how the issue affects them.</li> \
+                <li>Consider the varied perspectives, especially those of marginalized or smaller communities and underrepresented voices, which may differ from government officials or corporate leaders. Include these perspectives if pertinent to the issue and your recommendations.</li> \
+                </ul> \
+                <p><strong>D. Policy Options</strong></p> \
+                <ul> \
+                <li>Determine if you will present multiple options with a recommendation or just a single option.</li> \
+                <li>Prepare arguments and evidence to substantiate your case.</li> \
+                <li>Clarify how the option(s) will impact various stakeholders.</li> \
+                </ul> \
+                <p><strong>E. Recommendations</strong></p> \
+                <ul> \
+                <li>Specify the necessary actions or measures and the responsible parties for instigating change.</li> \
+                <li>Decide if you will conclude with a call to action, which might be placed in the conclusion section if applicable.</li> \
+                </ul> \
+                <p><strong>F. Sources Consulted</strong></p> \
+                <ul> \
+                <li>Confirm the inclusion of a list of credible references supporting your points.</li> \
+                <li>Ensure that these references encompass a range of perspectives.</li> \
+                </ul> \
+                <p><strong>G. Executive Summary</strong></p> \
+                <ul> \
+                <li>Review if the executive summary captures key aspects of the rationale and problem.</li> \
+                <li>Evaluate whether the summary effectively entices readers to delve deeper into the brief.</li> \
+                </ul> \
+                </div>',
+                percentage: '65',
+                truePercent: '20'
+            };
+
+            var policyBrief4 = {
+                step: '4',
+                heading: 'Write the first draft',
+                todos: '<div class="content"> \
+                <p>It\'s time to start writing! When you\'re working on your first draft, your primary aim is to get your ideas onto paper. Don\'t worry if your thoughts aren\'t fully developed at this stage. Release the desire for perfection and write swiftly. You can refine and revise your work later on.</p> \
+                </div>',
+                percentage: '85',
+                truePercent: '20'
+            };
+
+            var policyBrief5 = {
+                step: '5',
+                heading: 'Revise and proofread',
+                todos: '<div class="content"> \
+                <p><strong>A. Assess Your First Draft and Perform Additional Research as Necessary</strong></p> \
+                <ul> \
+                <li>Examine your initial draft to identify any gaps or areas where your arguments lack sufficient evidence.</li> \
+                <li>If you identify deficiencies, conduct further research to bolster your arguments.</li> \
+                </ul> \
+                <p><strong>B. Revise Your Draft</strong></p> \
+                <ul> \
+                <li>Print out a hard copy of your brief and work from it.</li> \
+                <li>Thoroughly read through your document, initially focusing on higher-order issues like organization, structure, evidence, and analysis.</li> \
+                </ul> \
+                <p><strong>C. Evaluate Your Second Draft and Make Revisions</strong></p> \
+                <ul> \
+                <li>Refine your revision process by concentrating on paragraph-level matters, such as sentence flow and transitions.</li> \
+                </ul> \
+                <p><strong>D. Proofread the Final Version of Your Brief</strong></p> \
+                <ul> \
+                <li>In this final step, carefully review your work to catch minor errors. Utilize effective proofreading techniques.</li> \
+                <li>Ensure your brief adheres to the style guide recommended in your assignment or by your instructor. Pay attention to details like titles, margins, and page numbers. Confirm whether a cover sheet is necessary.</li> \
+                <li>Your list of sources should encompass key references used in crafting your brief. Adhere to the citation style guide specified in your assignment or by your instructor.</li> \
+                <li>Consider using reference management software such as RefWorks and Write-N-Cite to help manage your citations as you write. These tools are valuable for building your bibliography.</li> \
+                </ul> \
+                </div>',
+                percentage: '100',
+                truePercent: '15'
+            };
             // TEMPLATE for <steps>
             var Step = {
                 props: ['stepobject'],
 
                 computed: {
+
                     calcDueDate: function () {
                         // initialize dates.  must use suffix to include my timezone GMT-5
                         var ISOsuffix = 'T00:00:00.000-05:00';
@@ -335,8 +393,13 @@
                         var toDateObject = new Date(vm.toDate + ISOsuffix);
                         var daysBetween = this.diffDays(fromDateObject, toDateObject);
                         var numDays = this.calcNumDays(daysBetween, this.stepobject.percentage);
-                        var dueDate_String = this.nextDueDate(fromDateObject, numDays);
-                        console.log(dueDate_String)
+                        var dueDate = this.nextDueDate(fromDateObject, numDays);
+
+                        // Format date to Vietnamese locale
+                        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                        var formatter = new Intl.DateTimeFormat('vi-VN', options);
+                        return formatter.format(new Date(dueDate));
+
                         return dueDate_String;
                     },
                     collapseId: function() {
@@ -368,11 +431,11 @@
                 template: `<b-container class="steps">\
                 <b-row>\
                     <b-col>\
-                        <b-button block v-b-toggle="'collapse-' + stepobject.step" size="lg" class="m-1"><b>Step {{ stepobject.step }}: {{ stepobject.heading }}.</b> <span class="float-right">Finish by {{ calcDueDate }}</span></b-button>\
+                        <b-button block v-b-toggle="'collapse-' + stepobject.step" size="lg" class="m-1"><b>Bước {{ stepobject.step }}: {{ stepobject.heading }}.</b> <span class="float-right">Hoàn thành vào {{ calcDueDate }}</span></b-button>\
                         <b-collapse invisible :id="'collapse-' + stepobject.step">\
                             <b-card>\
                                 <b-card-text>\
-                                    <p><b> (Percent time spent on this step: {{ stepobject.truePercent}}%) </b></p>\
+                                    <p><b> (Phần trăm thời gian cho bước này: {{ stepobject.truePercent}}%) </b></p>\
                                     <p v-html="stepobject.todos"> </p>\
                                 </b-card-text>\
                                 <!-- <b-button variant="outline-info">\
@@ -421,10 +484,10 @@
                 computed: {
                     dueDateFeedback() {
                         if (this.toDate == '') {
-                            return "Please enter a due date.";
+                            return "Làm ơn chọn hạn nộp bài.";
                         }
-                        if (this.toDate < this.fromDate) {
-                            return "Due date must be later than the begin date.";
+                        if (this.toDate <= this.fromDate) {
+                            return "Hạn nộp bài phải trễ hơn ngày bắt đầu.";
                         }
                         return null;
                     },

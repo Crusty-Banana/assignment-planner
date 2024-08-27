@@ -149,7 +149,7 @@
 
 <body>
     <div id="app">
-        <a href="businessCaseStudyVi.html">
+        <a href="infographic.html">
             <img src="https://i.pinimg.com/736x/98/9b/9c/989b9c38c26172c25bd2dca461340deb.jpg" alt="Icon Description" alt="Top Right Icon" style="float: right; width: 40px; height: 40px;">
         </a>
         <b-jumbotron>
@@ -162,31 +162,30 @@
                 <div style="margin-left: 10rem;">
                     <!-- Text in the center -->
                     <div class="col text-center ml-auto" style="padding-left: 0;">
-                        <h2>Stay <span class="highlight1">Ahead</span>, Stay <span class="highlight1">Organized</span> with our</h2>
+                        <h2><span class="highlight1">Làm chủ</span> mọi bài tập của bạn với</h2>
                         <h1>Assignment Calculator</h1>
-                        <h2>Your Roadmap to <span class="highlight1">A+</span> grades!</h2>
+                        <h2>Từng bước chinh phục <span class="highlight1">điểm số</span> <span class="highlight1">A+</span></h2>
                     </div>
-                </div>
+                </div>  
                 <!-- <div class="col-auto" style="width: 20rem"></div> -->
             </div>
         </b-jumbotron>
               
 
         <div class="section">
-            <a href="Assignment-planner.html" style="color: white">
-                ⬅ Return to assignment planner
+            <a href="Assignment-planner-vi.html" style="color: white">
+                ⬅ Quay lại trang trước
             </a>
         </div>
         <article class="mw7 center ph3 ph5-ns tc br2 pv5 bg-washed-green dark-green mb5">
-           <h2 class="fw2 f4 f3-ns lh-title mt0 mb3">
-               POSTER PRESENTATION
-           </h2>
- 
-           <p class="fw1 f5 mt0 mb3">
-             A poster presentation is a brief visual summary of research findings or a subject that is generally presented at conferences, seminars, or academic events on a sizable poster board. A strong visual presentation and high-quality studies are both components of an effective poster presentation. 
-             A STEM presentation uses text, graphs, charts, and graphics to explain difficult scientific concepts, experimental findings, or ground-breaking technology innovations. STEM poster presentations give researchers, engineers, and scientists opportunities to display their work, discuss ideas, and get peer comments. This promotes collaboration and the sharing of knowledge throughout the STEM community.
-           </p>
-         </article> 
+            <h2 class="fw2 f4 f3-ns lh-title mt0 mb3">
+             INFOGRAPHIC
+            </h2>
+  
+            <p class="fw1 f5 mt0 mb3">
+             Infographics are visual representations of data that condense complex information into visually appealing and readily understood pictures. Learning about infographic design as a university project provides students with a variety of learning opportunities. Through the collection and synthesis of data, it not only develops research and analytical abilities but also expertise in visual communication. The significance of infographic designing is in the capacity to clearly communicate complex ideas to a variety of audiences.
+            </p>
+          </article> 
         <b-container class="bv-example-row">
             <b-row>
                 <b-col>
@@ -196,10 +195,11 @@
                                 :state="beginDateValid"
                                 invalid-feedback="Please enter a begin date."
                             >
-                                <label for="example-datepicker">Begin date:</label>
+                                <label for="example-datepicker">Ngày bắt đầu:</label>
                                 <b-form-datepicker 
                                     id="begin-datepicker" 
                                     v-model="tempFromDate"
+                                    locale="vi-VN"
                                     class="mb-2"></b-form-datepicker>
                             </b-form-group>
                         </div>
@@ -211,10 +211,11 @@
                                 :state="dueDateValid"
                                 :invalid-feedback="dueDateFeedback"
                             >
-                                <label for="example-datepicker">Due date:</label>
+                                <label for="example-datepicker">Hạn nộp bài:</label>
                                 <b-form-datepicker 
                                     id="due-datepicker" 
                                     v-model="tempToDate"
+                                    locale="vi-VN"
                                     class="mb-2"></b-form-datepicker>
                             </b-form-group>
                         </div>
@@ -227,7 +228,7 @@
                             block variant="primary" 
                             class="btn-primary"
                         >
-                            Generate Schedule 
+                            Lên kế hoạch
                             <b-icon icon="arrow-down-circle-fill" aria-hidden="true"></b-icon>
                         </b-button>
                     </div>
@@ -236,98 +237,127 @@
         </b-container>
         <div class="alert-container">
             <b-alert show dismissible fade>
-                Success! You have <span class="highlight1">{{ calcTotalDays() }} days</span> to finish your assignment.
+                Thành công! Bạn còn <span class="highlight1">{{ calcTotalDays() }} ngày</span> để hoàn thành bài tập.
             </b-alert>
         </div>
         <template v-if="isDatescategory()">
-             <steps v-bind:stepobject='stemPosterPresentation1'></steps>
-             <steps v-bind:stepobject='stemPosterPresentation2'></steps>
-             <steps v-bind:stepobject='stemPosterPresentation3'></steps>
-             <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib light-purple" href="#top">Back to top ^</a>
-       </template>
+            <steps v-bind:stepobject='infographic1'></steps>
+            <steps v-bind:stepobject='infographic2'></steps>
+            <steps v-bind:stepobject='infographic3'></steps>
+            <steps v-bind:stepobject='infographic4'></steps>
+            <steps v-bind:stepobject='infographic5'></steps>
+            <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib light-purple" href="#top">Quay lên đầu ^</a>
+        </template> 
 
         <script src="//unpkg.com/vue@2.6.12/dist/vue.min.js"></script>
         <script src="//unpkg.com/bootstrap-vue@2.23.0/dist/bootstrap-vue.js"></script>
         <script src="//unpkg.com/bootstrap-vue@2.23.0/dist/bootstrap-vue-icons.js"></script>
         <script>
             // STEPS CONTENT IN JSON OBJECT FORMAT
-            var stemPosterPresentation1 = {
+            var infographic1 = {
                 step: '1',
-                heading: 'Content',
+                heading: 'Getting Started',
                 todos: '<div class="content"> \
-                <p><strong>A. Understand the assignment</strong></p> \
-                <p>Take your time reading the instructions carefully and make sure you understand all the requirements, including the topic, design, length, and deadline, etc. Never hesitate to ask your instructor for clarification if something is unclear. To efficiently organize your time, break the assignment down into smaller activities and make a detailed timeline. \
-                For more information, please visit <a href="https://uwaterloo.ca/writing-and-communication-centre/resources-understand-your-assignment" target="_blank" rel="noopener noreferrer">Understand Your Assignment.</a></p> \
-                \
-                <p><strong>B. Consider your audience</strong></p> \
-                <p>Be succinct if your audience comprises industry professionals. You are able to immediately get into the in-depth details of your research when presenting in your field because you will not have to define all technical terms or go over the basics. If your target audience is non-specialists, more background information is needed. Describe any technical terminology then Emphasize the significance of your research.</p> \
-                <p><strong>C. Create content</strong></p> \
-                <p>- Conduct research: </p> \
-                <p>Choose a research subject or topic that interests you and meets the requirements of the assignment. Do preliminary research to compile background data and evaluate whether reliable sources are accessible. Narrow down your topics (here are some <a href="https://libguides.usc.edu/writingguide/narrowtopic" target="_blank" rel="noopener noreferrer">Strategies for Narrowing the Research Topic</a>) and then start gathering data by using reliable search tools, academic databases, and <a href="https://vinuni.libguides.com/c.php?g=934922&p=6759514" target="_blank" rel="noopener noreferrer">libraries</a> to find sources that are applicable to your subject of study. </p>\
-                <p>Consider the author\'s credentials, the source\'s reputation, and the source\'s publication date when evaluating sources. Books from credible publishers, government publications, and peer-reviewed journals are frequently reliable resources. Assess the source\'s approach and supporting data carefully as well to judge its quality and applicability to your research. You can create a well-supported and well-rounded research essay by cross-referencing data with several sources and being critical of biases or conflicts of interest. </p> \
-                <p><a href="https://www.youtube.com/watch?v=CLSLFssRQ_E" target="_blank" rel="noopener noreferrer">RADAR test</a> can be used to evaluate the sources.</p> \
-                <p>- Organize information: </p> \
-                <p>Usually, poster presentations should have about 750 words, including sections below:</p> \
-                <ul>\
-                    <li> Abstract (optional): How would you summarize the research </li> \
-                    <li> Introduction: Why are you studying this? What is your research question?</li> \
-                    <li> Methods: When, where and how did you do it? What did you use?</li> \
-                    <li> Research: What did you find? Were you right?</li> \
-                    <li> Discussion: Why is your study important? What is the next step?</li> \
-                    <li> Reference Lits</li> \
-                </ul>\
+                <p><strong>A. Understand the assignment</strong></p>\
+                <p>Take your time reading the instruction carefully and make sure you understand all the requirements, including the topic, design, length, and deadline, etc. Never hesitate to ask your instructor for clarification if something is unclear.\
+                To efficiently organize your time, break the assignment down into smaller activities and make a detailed timeline. For more information, please visit Understand Your Assignment.</p>\
+                <p><strong>B. Consider your audience</strong></p>\
+                <p>Be succinct if your audience comprises industry professionals. You are able to immediately get into the in-depth details of your research when presenting in your field because you will not have to define all technical terms or go over the basics. </p>\
+                <p>If your target audience is non-specialists, more background information is needed. Describe any technical terminology then emphasize the significance of your research.</p>\
+                </div>',
+                percentage: '10',
+                truePercent: '10'
+            };
+
+            var infographic2 = {
+                step: '2',
+                heading: 'Gathering Data',
+                todos: '<div class="content"> \
+                <p><strong>A. Conduct research:</strong></p>\
+                <p>Choose a research subject or topic that interests you and meets the requirement of the assignment. Do preliminary research to compile background data and evaluate whether reliable sources are accessible. Narrow down your topics (here are some Strategies for Narrowing the Research Topic) and start gathering data by using reliable search tools, academic databases, and libraries to find sources that are applicable to your subject of study.</p>\
+                <p>Consider the author\'s credentials, the source\'s reputation, and the source\'s publication date when evaluating sources. Books from credible publishers, government publications, and peer-reviewed journals are frequently reliable sources.\
+                Assess the source\'s approach and supporting data carefully as well to judge its quality and applicability to your research. You can create a well-supported and well-rounded research essay by cross-referencing data with several sources and being critical of biases or conflicts of interest.</p>\
+                <p>RADAR test can be used to evaluate sources.</p>\
+                <p><strong>B. Organize information:</strong></p>\
+                <p>Information graphics can be demonstrated and presented in a variety of different formats, including websites, videos, PowerPoint presentations, posters, ... However, an infographic usually include of the following parts:</p>\
+                <ul> \
+                <li> Title: Conveys the main message or topic of the infographic.</li>\
+                <li> Introduction: Provides context and sets the tone for the infographic. </li>\
+                <li> Main Ideas </li>\
+                <li> Key Takeaways/Conclusion: Summarize main points by recaping the most important information. </li>\
+                <li> References </li>\
+                </ul> \
                 <p>Remember to be concise since the poster has limited space </p> \
                 </div>',
-                percentage: '50',
-                truePercent: '50'
+                percentage: '45',
+                truePercent: '35'
             };
 
-            var stemPosterPresentation2 = {
-                step: '2',
+            var infographic3 = {
+                step: '3',
                 heading: 'Design',
                 todos: '<div class="content"> \
-                <p><strong>A. Make a layout</strong></p> \
-                <p>Consider factors that can affect your choice of size and design, such as the timing, target audience, and venue of the presentation. Pick a design platform that works for you and the other team members(<a href="https://www.youtube.com/watch?v=YiO4QPCk7SE" target="_blank" rel="noopener noreferrer">Canva</a>, <a href="https://www.youtube.com/watch?v=797-M5De_lA" target="_blank" rel="noopener noreferrer">Adobe Illustrators</a>, <a href="https://www.youtube.com/watch?v=_WnhoIbfcoM" target="_blank" rel="noopener noreferrer">Power point</a>, etc). </p? \
-                <p>Make a layout plan for your poster. Remember that the mix of text and graphics is visually appealing. Organize the material in a logical flow, usually from left to right and top to bottom. For simple reading, use headings and bullet points. Include illustrations to support your main ideas, such as charts, diagrams, and pictures. Use a consistent font style and size and leave some white space for a tidy, uncomplicated appearance. Last but not least, don\'t forget to give your contact details for future discussion and referrals.</p> \
-                <p><a href="https://undergradresearch.wustl.edu/making-poster#gallery" target="_blank" rel="noopener noreferrer">Here are some good example of posters.</a></p>\
-                <p><strong>B. Create the poster</strong></p> \
+                <p><strong>A. Make a layout</strong></p>\
+                <p>Consider factors that can affect your choice of size and design, such as the timing, target audience, and venue of the presentation. \
+                Pick a design platform that works for you and the other team members (Canva, Adobe Illustrators, Power point, etc)</p>\
+                <p>Make a layout plan for your poster. Remember that the mix of text and graphics is visually appealing. Organize the material in a logical flow. \
+                Include illustrations to support your main ideas, such as charts, diagrams, and pictures. Use a consistent font style and size and leave some white space for a tidy, uncomplicated appearance.</p> \
+                <p><strong>B. Create the poster</strong></p>\
+                <p>Tips on visual design</p>\
                 <ul> \
-                <li>Tips on visual design: Use a clear, dark, legible font on a light background to make text easier to read. Use two to three complementing colors to increase visual impact. Keep the space on your poster clear. Consider eliminating a component if it does not enhance the clarity of your research. Data visualizations such as tables, charts, and other images are a common way to turn complex data sets into clear and accessible information. Copyright restrictions may apply if you use any text, image, or table that you did not make yourself.</li> \
-                <li>Tips for text: Aim for short and to-the-point sentences. Bolding can be used to emphasize a few key details but be careful not to overuse it.</li> \
+                <li> Use a clear, dark, legible font on a light background to make text easier to read. </li>\
+                <li> Use two to three complementing colors to increase visual impact.</li>\
+                <li> Keep the space on your infographic clear.</li>\
+                <li> Consider eliminating a component if it does not enhance the clarity of your research.</li>\
+                <li> Data visualizations such as tables, charts and other images are a common way to turn complex data sets into clear and accessible information.</li>\
+                <li> Copyright restrictions may apply if you use any text, image, or table that you did not make yourself. </li>\
                 </ul> \
-                \
-                <p><strong>C. Revising and proofreading</strong></p> \
-                <p>Review your presentation design, seek feedback from your peers or instructors and consider appropriate recommendations to improve your work.</p> \
-                <p>Read attentively to catch all of those little mistakes. There are some <a href="https://libguides.usc.edu/writingguide/proofreading" target="_blank" rel="noopener noreferrer">strategies for proofreading</a> you should check.</p> \
-                <p>For additional help, check out the VinUniversity library website for <a href="https://vinuni.libguides.com/citation" target="_blank" rel="noopener noreferrer">LibGuides about citation resources</a>.</p> \
+                <p> Tips for text </p> \
+                <ul> \
+                <li> Aim for short and to-the-point sentences </li>\
+                <li> Bolding can be used to emphasize a few key details but be careful not to overuse it. </li>\
+                </ul> \
                 </div>',
-                percentage: '90',
-                truePercent: '40'
+                percentage: '80',
+                truePercent: '35'
             };
 
-            var stemPosterPresentation3 = {
-                step: '3',
+            var infographic4 = {
+                step: '4',
+                heading: 'Revising and proofreading',
+                todos: '<div class="content"> \
+                <p>Review your presentation design, seek feedback from your peers or instructors and consider appropriate recommendations to improve your work.</p> \
+                <p>Read attentively to catch all of those little mistakes. There are some strategies for proofreading you should check </p> \
+                <p>For additional help, check out the VinUniversity library website for LibGuides about citation resources. </p> \
+                </div>',
+                percentage: '90',
+                truePercent: '10'
+            };
+
+            var infographic5 = {
+                step: '5',
                 heading: 'Presentation',
                 todos: '<div class="content"> \
-                <p><strong>Prepare a speech for your poster. Consider the following points:</strong></p> \
+                <p>Prepare a speech for your poster.</p>\
                 <ul> \
-                <li>Speak clearly and project your voice.</li> \
-                <li>Make eye contact and interact with your audience.</li> \
-                <li>Gesture to appropriate visuals to emphasize points.</li> \
-                <li>Eliminate filler words such as "um", "like" and "you know."</li> \
+                <li> Speak clearly. </li>\
+                <li> Project your voice. </li>\
+                <li> Make eye contact and interact with your audience. </li>\
+                <li> Gesture to appropriate visuals. </li>\
+                <li> Eliminate filler words such as "um", "like" and "you know".</li>\
                 </ul> \
-                <p>Interacting with people during your presentation is important for engagement and making an impact.</p> \
-                <p>For more practical presentation skill, check out <a href="https://youtube.com/playlist?list=PL-iPJqUs0UouaCEXjLvZi8TKe_y6Y42eR&si=euOWhhWRRQWTTkwx" target="_blank" rel="noopener noreferrer">these presentation techniques</a>.</p> \
+                <p>During your presentation, interacting with people is important</p> \
+                <p>For more practical presentation skills, checkout These presentation techniques. \
                 </div>',
                 percentage: '100',
                 truePercent: '10'
             };
-
             // TEMPLATE for <steps>
             var Step = {
                 props: ['stepobject'],
 
                 computed: {
+
                     calcDueDate: function () {
                         // initialize dates.  must use suffix to include my timezone GMT-5
                         var ISOsuffix = 'T00:00:00.000-05:00';
@@ -335,8 +365,13 @@
                         var toDateObject = new Date(vm.toDate + ISOsuffix);
                         var daysBetween = this.diffDays(fromDateObject, toDateObject);
                         var numDays = this.calcNumDays(daysBetween, this.stepobject.percentage);
-                        var dueDate_String = this.nextDueDate(fromDateObject, numDays);
-                        console.log(dueDate_String)
+                        var dueDate = this.nextDueDate(fromDateObject, numDays);
+
+                        // Format date to Vietnamese locale
+                        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                        var formatter = new Intl.DateTimeFormat('vi-VN', options);
+                        return formatter.format(new Date(dueDate));
+
                         return dueDate_String;
                     },
                     collapseId: function() {
@@ -368,11 +403,11 @@
                 template: `<b-container class="steps">\
                 <b-row>\
                     <b-col>\
-                        <b-button block v-b-toggle="'collapse-' + stepobject.step" size="lg" class="m-1"><b>Step {{ stepobject.step }}: {{ stepobject.heading }}.</b> <span class="float-right">Finish by {{ calcDueDate }}</span></b-button>\
+                        <b-button block v-b-toggle="'collapse-' + stepobject.step" size="lg" class="m-1"><b>Bước {{ stepobject.step }}: {{ stepobject.heading }}.</b> <span class="float-right">Hoàn thành vào {{ calcDueDate }}</span></b-button>\
                         <b-collapse invisible :id="'collapse-' + stepobject.step">\
                             <b-card>\
                                 <b-card-text>\
-                                    <p><b> (Percent time spent on this step: {{ stepobject.truePercent}}%) </b></p>\
+                                    <p><b> (Phần trăm thời gian cho bước này: {{ stepobject.truePercent}}%) </b></p>\
                                     <p v-html="stepobject.todos"> </p>\
                                 </b-card-text>\
                                 <!-- <b-button variant="outline-info">\
@@ -421,10 +456,10 @@
                 computed: {
                     dueDateFeedback() {
                         if (this.toDate == '') {
-                            return "Please enter a due date.";
+                            return "Làm ơn chọn hạn nộp bài.";
                         }
-                        if (this.toDate < this.fromDate) {
-                            return "Due date must be later than the begin date.";
+                        if (this.toDate <= this.fromDate) {
+                            return "Hạn nộp bài phải trễ hơn ngày bắt đầu.";
                         }
                         return null;
                     },

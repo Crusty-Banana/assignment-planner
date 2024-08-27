@@ -298,7 +298,7 @@
                 <b-row>\
                     <b-col>\
                         <b-button block v-b-toggle="'collapse-' + stepobject.step" size="lg" class="m-1"><b>Step {{ stepobject.step }}: {{ stepobject.heading }}.</b> <span class="float-right">Finish by {{ calcDueDate }}</span></b-button>\
-                        <b-collapse visible :id="'collapse-' + stepobject.step">\
+                        <b-collapse invisible :id="'collapse-' + stepobject.step">\
                             <b-card>\
                                 <b-card-text>\
                                     <p><b> (Percent time spent on this step: {{ stepobject.truePercent}}%) </b></p>\
