@@ -149,7 +149,7 @@
 
 <body>
     <div id="app">
-        <a href="Vi-Assignment-Calculator.html">
+        <a href="businessCaseStudy.html">
             <img src="https://i.pinimg.com/736x/98/9b/9c/989b9c38c26172c25bd2dca461340deb.jpg" alt="Icon Description" alt="Top Right Icon" style="float: right; width: 40px; height: 40px;">
         </a>
         <b-jumbotron>
@@ -162,31 +162,30 @@
                 <div style="margin-left: 10rem;">
                     <!-- Text in the center -->
                     <div class="col text-center ml-auto" style="padding-left: 0;">
-                        <h2>Stay <span class="highlight1">Ahead</span>, Stay <span class="highlight1">Organized</span> with our</h2>
+                        <h2><span class="highlight1">Làm chủ</span> mọi bài tập của bạn với</h2>
                         <h1>Assignment Calculator</h1>
-                        <h2>Your Roadmap to <span class="highlight1">A+</span> grades!</h2>
+                        <h2>Từng bước chinh phục <span class="highlight1">điểm số</span> <span class="highlight1">A+</span></h2>
                     </div>
-                </div>
+                </div>  
                 <!-- <div class="col-auto" style="width: 20rem"></div> -->
             </div>
         </b-jumbotron>
               
 
         <div class="section">
-            <a href="Assignment-planner.html" style="color: white">
-                ⬅ Return to assignment planner
+            <a href="Assignment-planner-vi.html" style="color: white">
+                ⬅ Quay lại trang trước
             </a>
         </div>
         <article class="mw7 center ph3 ph5-ns tc br2 pv5 bg-washed-green dark-green mb5">
-           <h2 class="fw2 f4 f3-ns lh-title mt0 mb3">
-               POSTER PRESENTATION
-           </h2>
- 
-           <p class="fw1 f5 mt0 mb3">
-             A poster presentation is a brief visual summary of research findings or a subject that is generally presented at conferences, seminars, or academic events on a sizable poster board. A strong visual presentation and high-quality studies are both components of an effective poster presentation. 
-             A STEM presentation uses text, graphs, charts, and graphics to explain difficult scientific concepts, experimental findings, or ground-breaking technology innovations. STEM poster presentations give researchers, engineers, and scientists opportunities to display their work, discuss ideas, and get peer comments. This promotes collaboration and the sharing of knowledge throughout the STEM community.
-           </p>
-         </article> 
+            <h2 class="fw2 f4 f3-ns lh-title mt0 mb3">
+             BUSINESS CASE STUDY
+            </h2>
+  
+            <p class="fw1 f5 mt0 mb3">
+             A business case study involves actual business scenarios or fictional representations of business situations or challenges. These studies empower students to thoroughly examine diverse business issues from different viewpoints, applying the critical thinking and problem-solving skills cultivated in the classroom. Through business case studies, complex business theories and frameworks can be simplified, illustrating their practical applications. 
+            </p>
+        </article> 
         <b-container class="bv-example-row">
             <b-row>
                 <b-col>
@@ -196,10 +195,11 @@
                                 :state="beginDateValid"
                                 invalid-feedback="Please enter a begin date."
                             >
-                                <label for="example-datepicker">Begin date:</label>
+                                <label for="example-datepicker">Ngày bắt đầu:</label>
                                 <b-form-datepicker 
                                     id="begin-datepicker" 
                                     v-model="tempFromDate"
+                                    locale="vi-VN"
                                     class="mb-2"></b-form-datepicker>
                             </b-form-group>
                         </div>
@@ -211,10 +211,11 @@
                                 :state="dueDateValid"
                                 :invalid-feedback="dueDateFeedback"
                             >
-                                <label for="example-datepicker">Due date:</label>
+                                <label for="example-datepicker">Hạn nộp bài:</label>
                                 <b-form-datepicker 
                                     id="due-datepicker" 
                                     v-model="tempToDate"
+                                    locale="vi-VN"
                                     class="mb-2"></b-form-datepicker>
                             </b-form-group>
                         </div>
@@ -227,7 +228,7 @@
                             block variant="primary" 
                             class="btn-primary"
                         >
-                            Generate Schedule 
+                            Lên kế hoạch
                             <b-icon icon="arrow-down-circle-fill" aria-hidden="true"></b-icon>
                         </b-button>
                     </div>
@@ -236,98 +237,143 @@
         </b-container>
         <div class="alert-container">
             <b-alert show dismissible fade>
-                Success! You have <span class="highlight1">{{ calcTotalDays() }} days</span> to finish your assignment.
+                Thành công! Bạn còn <span class="highlight1">{{ calcTotalDays() }} ngày</span> để hoàn thành bài tập.
             </b-alert>
         </div>
         <template v-if="isDatescategory()">
-             <steps v-bind:stepobject='stemPosterPresentation1'></steps>
-             <steps v-bind:stepobject='stemPosterPresentation2'></steps>
-             <steps v-bind:stepobject='stemPosterPresentation3'></steps>
-             <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib light-purple" href="#top">Back to top ^</a>
-       </template>
+            <steps v-bind:stepobject='businessCaseStudy1'></steps>
+            <steps v-bind:stepobject='businessCaseStudy2'></steps>
+            <steps v-bind:stepobject='businessCaseStudy3'></steps>
+            <steps v-bind:stepobject='businessCaseStudy4'></steps>
+            <steps v-bind:stepobject='businessCaseStudy5'></steps>
+            <steps v-bind:stepobject='businessCaseStudy6'></steps>
+            <steps v-bind:stepobject='businessCaseStudy7'></steps>
+            <steps v-bind:stepobject='businessCaseStudy8'></steps>
+            <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib light-purple" href="#top">Quay lên đầu ^</a>
+        </template> 
 
         <script src="//unpkg.com/vue@2.6.12/dist/vue.min.js"></script>
         <script src="//unpkg.com/bootstrap-vue@2.23.0/dist/bootstrap-vue.js"></script>
         <script src="//unpkg.com/bootstrap-vue@2.23.0/dist/bootstrap-vue-icons.js"></script>
         <script>
             // STEPS CONTENT IN JSON OBJECT FORMAT
-            var stemPosterPresentation1 = {
+            var businessCaseStudy1 = {
                 step: '1',
-                heading: 'Content',
+                heading: 'Get started',
                 todos: '<div class="content"> \
-                <p><strong>A. Understand the assignment</strong></p> \
-                <p>Take your time reading the instructions carefully and make sure you understand all the requirements, including the topic, design, length, and deadline, etc. Never hesitate to ask your instructor for clarification if something is unclear. To efficiently organize your time, break the assignment down into smaller activities and make a detailed timeline. \
-                For more information, please visit <a href="https://uwaterloo.ca/writing-and-communication-centre/resources-understand-your-assignment" target="_blank" rel="noopener noreferrer">Understand Your Assignment.</a></p> \
-                \
-                <p><strong>B. Consider your audience</strong></p> \
-                <p>Be succinct if your audience comprises industry professionals. You are able to immediately get into the in-depth details of your research when presenting in your field because you will not have to define all technical terms or go over the basics. If your target audience is non-specialists, more background information is needed. Describe any technical terminology then Emphasize the significance of your research.</p> \
-                <p><strong>C. Create content</strong></p> \
-                <p>- Conduct research: </p> \
-                <p>Choose a research subject or topic that interests you and meets the requirements of the assignment. Do preliminary research to compile background data and evaluate whether reliable sources are accessible. Narrow down your topics (here are some <a href="https://libguides.usc.edu/writingguide/narrowtopic" target="_blank" rel="noopener noreferrer">Strategies for Narrowing the Research Topic</a>) and then start gathering data by using reliable search tools, academic databases, and <a href="https://vinuni.libguides.com/c.php?g=934922&p=6759514" target="_blank" rel="noopener noreferrer">libraries</a> to find sources that are applicable to your subject of study. </p>\
-                <p>Consider the author\'s credentials, the source\'s reputation, and the source\'s publication date when evaluating sources. Books from credible publishers, government publications, and peer-reviewed journals are frequently reliable resources. Assess the source\'s approach and supporting data carefully as well to judge its quality and applicability to your research. You can create a well-supported and well-rounded research essay by cross-referencing data with several sources and being critical of biases or conflicts of interest. </p> \
-                <p><a href="https://www.youtube.com/watch?v=CLSLFssRQ_E" target="_blank" rel="noopener noreferrer">RADAR test</a> can be used to evaluate the sources.</p> \
-                <p>- Organize information: </p> \
-                <p>Usually, poster presentations should have about 750 words, including sections below:</p> \
-                <ul>\
-                    <li> Abstract (optional): How would you summarize the research </li> \
-                    <li> Introduction: Why are you studying this? What is your research question?</li> \
-                    <li> Methods: When, where and how did you do it? What did you use?</li> \
-                    <li> Research: What did you find? Were you right?</li> \
-                    <li> Discussion: Why is your study important? What is the next step?</li> \
-                    <li> Reference Lits</li> \
-                </ul>\
-                <p>Remember to be concise since the poster has limited space </p> \
+                <p><strong>A. Understanding your assignment</strong></p>\
+                <p>Typically, university assignments require you to showcase your grasp of specific topics within the scope of your course. Case study assignments tend to be complicated, requiring careful attention to the given instructions. Failure to adhere to the task requirements may result in a lower grade, irrespective of the quality of your writing. \
+                If you must select from various questions, topics, or cases, conducting preliminary reading (e.g., from your textbook) can assist you in making informed decisions at this stage. Access the “Understanding the Assignment” for further clarification. </p> \
+                <p><strong>B. Get to know components of a business case study report</strong></p>\
+                <p>Understanding which parts are included in a business case study report would help you to have a great big picture of what exactly you need to work on. Have a look at this Case Study Structure Sample and Case Study Report Sample.</p> \
+                <p><strong>C. Group Work (if this is a group assignment)</strong></p>\
+                <p>For group work, you should also arrange tasks and plan the timeline for the whole project at this time. </p>\
                 </div>',
-                percentage: '50',
-                truePercent: '50'
-            };
+                percentage: '5',
+                truePercent: '5'
+            }
 
-            var stemPosterPresentation2 = {
+            var businessCaseStudy2 = {
                 step: '2',
-                heading: 'Design',
+                heading: 'Brainstorming ideas and starting to examine the case',
                 todos: '<div class="content"> \
-                <p><strong>A. Make a layout</strong></p> \
-                <p>Consider factors that can affect your choice of size and design, such as the timing, target audience, and venue of the presentation. Pick a design platform that works for you and the other team members(<a href="https://www.youtube.com/watch?v=YiO4QPCk7SE" target="_blank" rel="noopener noreferrer">Canva</a>, <a href="https://www.youtube.com/watch?v=797-M5De_lA" target="_blank" rel="noopener noreferrer">Adobe Illustrators</a>, <a href="https://www.youtube.com/watch?v=_WnhoIbfcoM" target="_blank" rel="noopener noreferrer">Power point</a>, etc). </p? \
-                <p>Make a layout plan for your poster. Remember that the mix of text and graphics is visually appealing. Organize the material in a logical flow, usually from left to right and top to bottom. For simple reading, use headings and bullet points. Include illustrations to support your main ideas, such as charts, diagrams, and pictures. Use a consistent font style and size and leave some white space for a tidy, uncomplicated appearance. Last but not least, don\'t forget to give your contact details for future discussion and referrals.</p> \
-                <p><a href="https://undergradresearch.wustl.edu/making-poster#gallery" target="_blank" rel="noopener noreferrer">Here are some good example of posters.</a></p>\
-                <p><strong>B. Create the poster</strong></p> \
-                <ul> \
-                <li>Tips on visual design: Use a clear, dark, legible font on a light background to make text easier to read. Use two to three complementing colors to increase visual impact. Keep the space on your poster clear. Consider eliminating a component if it does not enhance the clarity of your research. Data visualizations such as tables, charts, and other images are a common way to turn complex data sets into clear and accessible information. Copyright restrictions may apply if you use any text, image, or table that you did not make yourself.</li> \
-                <li>Tips for text: Aim for short and to-the-point sentences. Bolding can be used to emphasize a few key details but be careful not to overuse it.</li> \
-                </ul> \
-                \
-                <p><strong>C. Revising and proofreading</strong></p> \
-                <p>Review your presentation design, seek feedback from your peers or instructors and consider appropriate recommendations to improve your work.</p> \
-                <p>Read attentively to catch all of those little mistakes. There are some <a href="https://libguides.usc.edu/writingguide/proofreading" target="_blank" rel="noopener noreferrer">strategies for proofreading</a> you should check.</p> \
-                <p>For additional help, check out the VinUniversity library website for <a href="https://vinuni.libguides.com/citation" target="_blank" rel="noopener noreferrer">LibGuides about citation resources</a>.</p> \
+                <p>Thoroughly review the case, preferably more than once, and take note of any queries or information gaps. If specific questions are provided for your response, create initial notes for each question based on the case details.</p>\
+                <p>Construct a visual representation, such as a mind map, encompassing your knowledge about the subject and the focal points relevant to your case. Online tools like MindMup or Bubbl.us (compatible with Chrome, Firefox, or Safari) can assist in this process.\
+                Explore connections between the case and pertinent concepts or theories covered in your coursework. Give special consideration to any concepts or theories highlighted in your assignment instructions. Additionally, consider the alignment between the case and readings from your course materials. </p>\
+                <p>Review your mind map to identify any notable gaps in key areas. This strategic approach will guide your subsequent research phase, ensuring that you direct your efforts toward relevant information and avoid wasting time on irrelevant aspects.</p>\
+                </div>',
+                percentage: '15',
+                truePercent: '10'
+            }
+
+            var businessCaseStudy3 = {
+                step: '3',
+                heading: 'Researching on the subject/topic of the case study',
+                todos: '<div class="content"> \
+                <p>Should the case study pertain to an actual company, collecting data from the company\'s websites, financial records, and an extensive online search can offer deeper insights into the company\'s historical and current status, the industry it operates in, its primary competitors, and other pertinent details.</p>\
+                <p>Utilizing information from course textbooks, academic journals, and books aids in gaining a more profound understanding of the issue at hand, facilitating a thorough analysis and the formulation of well-founded recommendations.\
+                While research may be time-consuming, incorporating reliable references enhances the report\'s credibility, underscoring the diligence and thoroughness of your investigation. </p>\
+                <p>The followings are types of sources that you can concentrate on: </p>\
+                <ul>\
+                <li>Company website</li>\
+                <li>Company financial documents</li>\
+                <li>Broader web search (e.g., industry, competitors)</li>\
+                <li>Course textbooks</li>\
+                <li>Academic journals and books</li>\
+                </ul>\
+                </div>',
+                percentage: '25',
+                truePercent: '10'
+            }
+
+            var businessCaseStudy4 = {
+                step: '4',
+                heading: 'Develop your case study structure - Organize your sources',
+                todos: '<div class="content"> \
+                <p>Refer to your assignment requirements to determine whether a specific format is mandated for your assignment. For instance, you may have been instructed to employ specific headings for organizing your response. \
+                Strategize the content for each section by outlining your main points, considering supporting evidence, deciding on the order of presentation, and formulating topic sentences to begin the drafting of your paragraphs.</p>\
+                <p>Organize all the sources you have researched so far and decide which sources will be cited in which parts of your case study report. </p>\
+                </div>',
+                percentage: '35',
+                truePercent: '10'
+            }
+
+            var businessCaseStudy5 = {
+                step: '5',
+                heading: 'Writing your first draft',
+                todos: '<div class="content"> \
+                <p>Draft a paragraph for each main idea, providing an explanation and supporting evidence for each point. It may be necessary to extend beyond a single paragraph for each section of the case study but remember to maintain a singular main idea in each paragraph. Subsequently, craft an introduction and a concluding section, potentially including recommendations based on the guidelines in your assignment instructions. \
+                Make sure that ideas drawn from your sources are all cited, and their citations are included in your reference list (if a specific referencing style is required in your assignment, make sure you apply it to all the sources). Further guidance for citations is available on VinUni Library\'s LibGuides.</p>\
+                <p>In the context of group work, when collaboratively producing content, you should offer constructive feedback to one another. Strive to provide encouragement while also suggesting areas for improvement. \
+                Foster a collaborative and supportive environment within the group to enhance the overall quality of the work.</p>\
+                <p>Here is a detail instruction on how to write each section of a business case study report.</p>\
+                </div>',
+                percentage: '70',
+                truePercent: '35'
+            }
+            
+            var businessCaseStudy6 = {
+                step: '6',
+                heading: 'Reviewing and revising',
+                todos: '<div class="content"> \
+                <p><strong>A. Self-evaluating and proofreading</strong></p>\
+                <p>Review your case study report and revise the content as needed. Assess the coherence of your argument—ensure clarity and logical flow in your explanations. Self-evaluate your work and reflect your work with the rubrics/marking criteria (if available) to see whether it fulfill all the requirements and expectations.\
+                You might want to refer to a checklist for your content and a checklist for overall formatting of your case study report. Once prepared, submit your draft to Turnitin, if permitted by your institution (refer to your instructors for confirmation). </p> \
+                <p><strong>B. Peer review & Advisor feedback</strong></p>\
+                <p>Seeking feedback and suggestions from your advisors, instructors, and colleagues can be highly beneficial. Engaging with diverse perspectives not only enriches your understanding but also enhances the objectivity of your report. Their insights can offer valuable perspectives that might have been overlooked, contributing to a more comprehensive and well-rounded analysis. </p> \
                 </div>',
                 percentage: '90',
-                truePercent: '40'
-            };
+                truePercent: '20'
+            }
 
-            var stemPosterPresentation3 = {
-                step: '3',
-                heading: 'Presentation',
+            var businessCaseStudy7 = {
+                step: '7',
+                heading: 'Finalizing your business case study',
                 todos: '<div class="content"> \
-                <p><strong>Prepare a speech for your poster. Consider the following points:</strong></p> \
-                <ul> \
-                <li>Speak clearly and project your voice.</li> \
-                <li>Make eye contact and interact with your audience.</li> \
-                <li>Gesture to appropriate visuals to emphasize points.</li> \
-                <li>Eliminate filler words such as "um", "like" and "you know."</li> \
-                </ul> \
-                <p>Interacting with people during your presentation is important for engagement and making an impact.</p> \
-                <p>For more practical presentation skill, check out <a href="https://youtube.com/playlist?list=PL-iPJqUs0UouaCEXjLvZi8TKe_y6Y42eR&si=euOWhhWRRQWTTkwx" target="_blank" rel="noopener noreferrer">these presentation techniques</a>.</p> \
+                <p>Upon receiving feedback, be selective in choosing recommendations that align with the goals of your report. Focus on rewriting specific sections that require adjustments, ensuring clarity and coherence. Additionally, address any identified grammatical, spelling, or punctuation errors to enhance the overall quality of your report. The aim is to refine and improve the content based on constructive feedback, prioritizing changes that contribute to the report\'s effectiveness. </p>\
                 </div>',
-                percentage: '100',
-                truePercent: '10'
-            };
+                percentage: '95',
+                truePercent: '5'
+            }
+
+            var businessCaseStudy8 = {
+                step: '8',
+                heading: 'Submitting your work',
+                todos: '<div class="content"> \
+                <p>Ensure that your final version is saved properly and ready to submit. Submitting your work a few hours before the deadline is advisable, as you will have additional time to address any potential technical issues that may suddenly arise. </p>\
+                <p>For group submissions, make sure you understand the submission process for your group assignment. Determine whether the entire group submits it collectively or if only one person is designated to submit. Clearly establish and communicate the responsibility for submission within your group.</p>\
+                <p>After submitting your business case study, take a moment to celebrate and reward yourself (or with your group) for completing the task! </p>\
+                </div>',
+                percentage: '95',
+                truePercent: '5'
+            }
 
             // TEMPLATE for <steps>
             var Step = {
                 props: ['stepobject'],
 
                 computed: {
+
                     calcDueDate: function () {
                         // initialize dates.  must use suffix to include my timezone GMT-5
                         var ISOsuffix = 'T00:00:00.000-05:00';
@@ -335,8 +381,13 @@
                         var toDateObject = new Date(vm.toDate + ISOsuffix);
                         var daysBetween = this.diffDays(fromDateObject, toDateObject);
                         var numDays = this.calcNumDays(daysBetween, this.stepobject.percentage);
-                        var dueDate_String = this.nextDueDate(fromDateObject, numDays);
-                        console.log(dueDate_String)
+                        var dueDate = this.nextDueDate(fromDateObject, numDays);
+
+                        // Format date to Vietnamese locale
+                        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                        var formatter = new Intl.DateTimeFormat('vi-VN', options);
+                        return formatter.format(new Date(dueDate));
+
                         return dueDate_String;
                     },
                     collapseId: function() {
@@ -368,11 +419,11 @@
                 template: `<b-container class="steps">\
                 <b-row>\
                     <b-col>\
-                        <b-button block v-b-toggle="'collapse-' + stepobject.step" size="lg" class="m-1"><b>Step {{ stepobject.step }}: {{ stepobject.heading }}.</b> <span class="float-right">Finish by {{ calcDueDate }}</span></b-button>\
-                        <b-collapse invisible :id="'collapse-' + stepobject.step">\
+                        <b-button block v-b-toggle="'collapse-' + stepobject.step" size="lg" class="m-1"><b>Bước {{ stepobject.step }}: {{ stepobject.heading }}.</b> <span class="float-right">Hoàn thành vào {{ calcDueDate }}</span></b-button>\
+                        <b-collapse visible :id="'collapse-' + stepobject.step">\
                             <b-card>\
                                 <b-card-text>\
-                                    <p><b> (Percent time spent on this step: {{ stepobject.truePercent}}%) </b></p>\
+                                    <p><b> (Phần trăm thời gian cho bước này: {{ stepobject.truePercent}}%) </b></p>\
                                     <p v-html="stepobject.todos"> </p>\
                                 </b-card-text>\
                                 <!-- <b-button variant="outline-info">\
@@ -421,10 +472,10 @@
                 computed: {
                     dueDateFeedback() {
                         if (this.toDate == '') {
-                            return "Please enter a due date.";
+                            return "Làm ơn chọn hạn nộp bài.";
                         }
-                        if (this.toDate < this.fromDate) {
-                            return "Due date must be later than the begin date.";
+                        if (this.toDate <= this.fromDate) {
+                            return "Hạn nộp bài phải trễ hơn ngày bắt đầu.";
                         }
                         return null;
                     },
