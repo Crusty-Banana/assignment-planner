@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Assignment Calculator</title>
+    <meta name="description" content="Assignment Calculator">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.5.5/css/tachyons.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//unpkg.com/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//unpkg.com/bootstrap-vue@2.23.0/dist/bootstrap-vue.css">
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Montserrat';
+        }
+
+        .highlight1 {
+            color: red;
+            white-space: nowrap;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-family: 'Titan One';
+            margin-bottom: 2rem;
+            color: rgb(61, 81, 131);
+        }
+
+        .section {
+            background: rgb(61, 81, 131);
+            font-size: 2rem;
+            color: white;
+            padding: 20px;
+            margin: 0 0 3rem;
+        }
+
+        .form {
+            text-align: left;
+
+            >.form-group label {
+                font-size: 1.1rem;
+            }
+        }
+
+        .content {
+            text-align: left;
+        }
+
+        div.card {
+            .card-body {
+                text-align: center;
+                padding: 1.25rem;
+            }
+
+            >img {
+                width: 80%;
+                margin: 20px auto 0;
+            }
+        }
+
+        .btn-primary {
+            font-size: 1.5rem;
+            font-weight: 600;
+            width: 400px;
+            margin: 20px 20px;
+            padding: 15px;
+        }
+
+        .jumbotron {
+            margin-bottom: 0;
+        }
+
+        .card-deck {
+            >button {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+                padding: 1rem 2rem;
+                border-radius: 1rem;
+                margin: 0.5rem;
+                width: 11%;
+                min-width: 100px;
+
+                >img {
+                    width: 100px;
+                }
+
+                >h5 {
+                    margin: 0.5rem 0 0;
+                    font-weight: bold;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+
+        .alert-info {
+            background-color: rgb(218, 236, 220);
+            font-size: 1.2rem;
+        }
+
+        .alert-container {
+            display: flex;
+            justify-content: center; /* Centers the alert horizontally */
+            align-items: center; /* Centers the alert vertically, if needed */
+            text-align: center; /* Centers the text within the alert */
+        }
+
+        .steps {
+            >.row .col>button {
+                background-color: rgb(61, 81, 131);
+                text-align: left;
+            }
+        }
+
+        .container {
+            margin-bottom: 40px;
+        }
+        .bv-example-row {
+            max-width: 1440px;
+            .input-button-group {
+                display: flex; /* This will enable flexbox */
+                align-items: center; /* This will vertically center align the items */
+                gap: 10px; /* This adds space between the input and the buttons */
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("z_LAKkqo4xiHbzP2_");
+        })();
+    </script>
+</head>
+
+<body>
+    <div id="app">
+        <a href="Vi-Assignment-Calculator.html">
+            <img src="https://i.pinimg.com/736x/98/9b/9c/989b9c38c26172c25bd2dca461340deb.jpg" alt="Icon Description" alt="Top Right Icon" style="float: right; width: 40px; height: 40px;">
+        </a>
+        <b-jumbotron>
+            <div class="row align-items-center">
+                <!-- Logo on the left -->
+                <div class="col-auto" style="width: 20rem">
+                    <img src="resource/vinuni_logo.webp" alt="VinUni Logo" style="height: 100px;">
+                </div>
+        
+                <!-- Text in the center -->
+                <div class="col text-center ml-auto" style="padding-left: 0;">
+                    <h2>Stay <span class="highlight1">Ahead</span>, Stay <span class="highlight1">Organized</span> with our</h2>
+                    <h1>Assignment Calculator</h1>
+                    <h2>Your Roadmap to <span class="highlight1">A+</span> grades!</h2>
+                </div>
+
+                <!-- <div class="col-auto" style="width: 20rem"></div> -->
+            </div>
+        </b-jumbotron>
+              
+
+        <div class="section">Choose your type of assignment</div>
+        <b-container class="bv-example-row">
+            <b-row>
+                <b-col>
+                    <div class="form">
+                        <b-form-group>
+                            <!-- First Row of Icons -->
+                            <b-card-group deck class = "justify-content-center">
+                                <b-button @click="pickAssignment('researchEssay')" variant="outline-info">
+                                    <img src="https://media-public.canva.com/9bqGM/MAFazw9bqGM/1/t.png" />
+                                    <h5>RESEARCH ESSAYS</h5>
+                                </b-button>
+                                <b-button @click="pickAssignment('stemPosterPresentation')" variant="outline-info">
+                                    <img src="https://media-public.canva.com/CFjdg/MAFpI2CFjdg/1/t.png" />
+                                    <h5>POSTER PRESENTATION</h5>
+                                </b-button>
+                                <b-button @click="pickAssignment('criticalReflection')" variant="outline-info">
+                                    <img src="https://media-public.canva.com/1iDCg/MAEoTO1iDCg/1/t.png" />
+                                    <h5>CRITICAL REFLECTION</h5>
+                                </b-button>
+                                <b-button @click="pickAssignment('literatureReview')" variant="outline-info">
+                                    <img src="https://media-public.canva.com/NKiIY/MAFbFRNKiIY/1/t.png" />
+                                    <h5>LITERATURE REVIEW</h5>
+                                </b-button>
+                            </b-card-group>
+                        </b-form-group>
+                    </div>
+                </b-col>
+            </b-row>
+            <b-row>
+                <b-col>
+                    <div class="form" ref="assignmentTypeForm">
+                        <!-- Second Row of Icons -->
+                        <b-card-group deck class = "justify-content-center">
+                            <b-button @click="pickAssignment('articleReview')" variant="outline-info">
+                                <img src="https://media-public.canva.com/Vk0os/MAFfQZVk0os/1/t.png" />
+                                <h5>ARTICLE REVIEW</h5>
+                            </b-button>
+                            <b-button @click="pickAssignment('annotatedBibliography')" variant="outline-info">
+                                <img src="https://media-public.canva.com/bwLcc/MAE_-GbwLcc/1/t.png" />
+                                <h5>ANNOTATED BIBLIOGRAPHY</h5>
+                            </b-button>
+                            <b-button @click="pickAssignment('labReport')" variant="outline-info">
+                                <img src="https://media-public.canva.com/5fE14/MAFmn45fE14/1/t.png" />
+                                <h5>LAB REPORT</h5>
+                            </b-button>
+                            <b-button @click="pickAssignment('policyBrief')" variant="outline-info">
+                                <img src="https://media-public.canva.com/EmkSM/MAFn1kEmkSM/1/t.png" />
+                                <h5>POLICY BRIEF</h5>
+                            </b-button>
+                        </b-card-group>
+                    </div>
+                </b-col>
+            </b-row>
+            <b-row>
+                <b-col>
+                    <div class="form">
+                        <b-form-group
+                            :state="assignmentTypeValid"
+                            invalid-feedback="Please select an assignment type."
+                        >
+                            <!-- Third Row of Icons -->
+                            <b-card-group deck class = "justify-content-center">
+                                <b-button @click="pickAssignment('infographic')" variant="outline-info">
+                                    <img src="https://media-public.canva.com/Im1A4/MAFlltIm1A4/1/t.png" />
+                                    <h5>INFOGRAPHIC</h5>
+                                </b-button>
+                                <b-button @click="pickAssignment('podcast')" variant="outline-info">
+                                    <img src="https://media-public.canva.com/utyWw/MAFdEPutyWw/1/t.png" />
+                                    <h5>PODCAST</h5>
+                                </b-button>
+                                <b-button @click="pickAssignment('businessCaseStudy')" variant="outline-info">
+                                    <img src="https://media-public.canva.com/nHOjo/MAFMTNnHOjo/1/t.png" />
+                                    <h5>BUSINESS CASE STUDY</h5>
+                                </b-button>
+                            </b-card-group>
+                        </b-form-group>
+                    </div>
+                </b-col>
+            </b-row>
+        </b-container>
+
+        <script src="//unpkg.com/vue@2.6.12/dist/vue.min.js"></script>
+        <script src="//unpkg.com/bootstrap-vue@2.23.0/dist/bootstrap-vue.js"></script>
+        <script src="//unpkg.com/bootstrap-vue@2.23.0/dist/bootstrap-vue-icons.js"></script>
+        <script>
+
+            // TEMPLATE for <steps>
+            var Step = {
+                props: ['stepobject'],
+
+                computed: {
+                    calcDueDate: function () {
+                        // initialize dates.  must use suffix to include my timezone GMT-5
+                        var ISOsuffix = 'T00:00:00.000-05:00';
+                        var fromDateObject = new Date(vm.fromDate + ISOsuffix);
+                        var toDateObject = new Date(vm.toDate + ISOsuffix);
+                        var daysBetween = this.diffDays(fromDateObject, toDateObject);
+                        var numDays = this.calcNumDays(daysBetween, this.stepobject.percentage);
+                        var dueDate_String = this.nextDueDate(fromDateObject, numDays);
+
+                        return dueDate_String;
+                    },
+                    collapseId: function() {
+                        return 'collapse-' + this.stepobject.step; // Generates a unique ID using the step number
+                    }
+                },
+
+                methods: {
+                    // calculate number of days between both dates
+                    diffDays: function (fromDate, toDate) {
+                        var oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+                        return Math.round(Math.abs((fromDate.getTime() - toDate.getTime()) / (oneDay)));
+                    },
+
+                    // will calculate number of days based off percentage.  This number will be used to add to fromDate to make dueDate
+                    calcNumDays: function (diffDays, percentage) {
+                        return (Math.floor(diffDays * percentage * 0.01)); // using floor to round down since it's an off by 1 (Nov 1 + 3 days = Nov 3?)
+                    },
+
+                    // input fromDate, and numberofDaysToAdd, will output duedate in string format.  This will be used to show when each step is due.
+                    nextDueDate: function (fromDate, numDays) {
+                        var ISOsuffix = 'T00:00:00.000-05:00';
+                        var dueDate = new Date(vm.fromDate + ISOsuffix); // this will be a varying calculated value for each step
+                        dueDate.setDate(fromDate.getDate() + numDays);
+                        return dueDate.toDateString();
+                    },
+                },
+                
+                template: `<b-container class="steps">\
+                <b-row>\
+                    <b-col>\
+                        <b-button block v-b-toggle="'collapse-' + stepobject.step" size="lg" class="m-1"><b>Step {{ stepobject.step }}: {{ stepobject.heading }}.</b> <span class="float-right">Finish by {{ calcDueDate }}</span></b-button>\
+                        <b-collapse visible :id="'collapse-' + stepobject.step">\
+                            <b-card>\
+                                <b-card-text>\
+                                    <p><b> (Percent time spent on this step: {{ stepobject.truePercent}}%) </b></p>\
+                                    <p v-html="stepobject.todos"> </p>\
+                                </b-card-text>\
+                                <!-- <b-button variant="outline-info">\
+                                    <h5>Video: Taming your research topic <b-icon icon="hand-index"\
+                                            aria-hidden="true"></b-icon>\
+                                    </h5>\
+                                </b-button>\ -->\
+                            </b-card>\
+                        </b-collapse>\
+                    </b-col>\
+                </b-row>\
+            </b-container>`
+
+            
+            };
+
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    fromDate: '',
+                    toDate: '',
+                    picked: '',
+                    stepobject: '',  // will be determined in the HTML <steps v-bind...>
+                    name: '',
+                    show: false,
+                    blank: '',
+                    value: '',
+                    context: null,
+                    suffix : 'T00:00:00.000-05:00',
+                    totalDays: 0,
+                    assignmentName: '',
+                    assignmentNameValid: null,
+                    beginDateValid: null,
+                    dueDateValid: null,
+                    assignmentTypeValid : null,
+                },
+                mounted() {
+                    this.fromDate = this.getToday();
+                },
+                
+                computed: {
+                    dueDateFeedback() {
+                        if (this.toDate == '') {
+                            return "Please enter a due date.";
+                        }
+                        if (this.toDate <= this.fromDate) {
+                            return "Due date must be later than to the begin date.";
+                        }
+                        return null;
+                    },
+                },
+                methods: {
+                    getToday() {
+                        const date = new Date();
+                        const year = date.getFullYear();
+                        const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
+                        const day = String(date.getDate()).padStart(2, '0');
+                        return `${year}-${month}-${day}`;
+                    },
+                    isDatescategory: function () {
+                        // check to make sure both date fields are filled and in chronological order
+                        if (this.fromDate !== '' && this.toDate !== '' && vm.toDate > vm.fromDate) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    },
+                    isAssignment: function(assignmentType) {
+                        if (this.picked==assignmentType) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    },
+                    calcTotalDays: function(){
+                        if (this.fromDate !== '' && this.toDate !== '' && vm.toDate > vm.fromDate){
+                            var fromDateObject = new Date(vm.fromDate + this.suffix);
+                            var toDateObject = new Date(vm.toDate + this.suffix);
+                            var oneDay = 24 * 60 * 60 * 1000;
+                            return Math.round(Math.abs((fromDateObject.getTime() - toDateObject.getTime()) / (oneDay)));
+                        }
+                        else{
+                            return 0;
+                        }
+                    },
+                    sendEmail() {
+                        var params = {
+                            assignmentName: document.getElementById('assignmentName').value,
+                            emailTo: document.getElementById('emailTo').value,
+                        };
+
+                        const serviceID = "service_5r78bbg";
+                        const templateID = "template_ftc406h";
+
+                        emailjs.send(serviceID, templateID, params).then(
+                            (res) => {
+                                document.getElementById('assignmentName').value = "";
+                                document.getElementById('emailTo').value = "";
+                                console.log(res);
+                                alert("Email sent successfully");
+                            })
+                        .catch((err) => {
+                            console.log(err);
+                            alert("Error sending email");
+                        })
+                    },
+                    pickAssignment(assignmentType) {
+                        console.log('pick', assignmentType)
+                        this.picked = assignmentType
+                        window.location.href = assignmentType +".html";
+                    },
+                    validateAssignmentName() {
+                        this.assignmentNameValid = this.assignmentName !== '';
+                    },
+                    toggle() {
+                        if (this.show == false) {
+                            console.log('Toggle button clicked')
+                            this.assignmentNameValid = this.assignmentName !== '';
+                            this.beginDateValid = this.fromDate !== '';
+                            this.dueDateValid = this.toDate !== '';  
+                            this.assignmentTypeValid = this.picked !== '';
+                            if (this.assignmentNameValid == false || this.beginDateValid == false || this.dueDateValid == false) {
+                                this.$refs.nameForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            } else if (this.toDate <= this.fromDate) {
+                                this.dueDateValid = false;
+                                this.$refs.nameForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            } else if (this.assignmentTypeValid == false){
+                                this.$refs.assignmentTypeForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            } else {
+                                this.show = !this.show
+                                setTimeout(function(){
+                                    document.getElementById("emailTo").scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                }, 100);
+                            }
+                        } else {
+                            this.show = !this.show
+                        }
+                    },
+                    dismissed() {
+                        console.log('Alert dismissed')
+                    },
+                    onContext(ctx) {
+                        this.context = ctx
+                    }
+                },
+
+                components: {
+                    'steps': Step
+                }
+            });
+
+
+        </script>
+</body>
+
+</html>

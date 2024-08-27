@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Assignment Calculator</title>
+    <meta name="description" content="Assignment Calculator">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.5.5/css/tachyons.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//unpkg.com/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//unpkg.com/bootstrap-vue@2.23.0/dist/bootstrap-vue.css">
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Montserrat';
+        }
+
+        .highlight1 {
+            color: red;
+            white-space: nowrap;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-family: 'Titan One';
+            margin-bottom: 2rem;
+            color: rgb(61, 81, 131);
+        }
+
+        .section {
+            background: rgb(61, 81, 131);
+            font-size: 1rem;
+            color: white;
+            padding: 20px;
+            margin: 0 0 3rem;
+            text-align: left;
+        }
+
+        .form {
+            text-align: left;
+
+            >.form-group label {
+                font-size: 1.1rem;
+            }
+        }
+
+        .content {
+            text-align: left;
+        }
+
+        div.card {
+            .card-body {
+                text-align: center;
+                padding: 1.25rem;
+            }
+
+            >img {
+                width: 80%;
+                margin: 20px auto 0;
+            }
+        }
+
+        .btn-primary {
+            font-size: 1.5rem;
+            font-weight: 600;
+            width: 400px;
+            margin: 20px 20px;
+            padding: 15px;
+        }
+
+        .jumbotron {
+            margin-bottom: 0;
+        }
+
+        .card-deck {
+            >button {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+                padding: 1rem 2rem;
+                border-radius: 1rem;
+                margin: 0.5rem;
+                width: 11%;
+                min-width: 100px;
+
+                >img {
+                    width: 100px;
+                }
+
+                >h5 {
+                    margin: 0.5rem 0 0;
+                    font-weight: bold;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+
+        .alert-info {
+            background-color: rgb(218, 236, 220);
+            font-size: 1.2rem;
+        }
+
+        .alert-container {
+            display: flex;
+            justify-content: center; /* Centers the alert horizontally */
+            align-items: center; /* Centers the alert vertically, if needed */
+            text-align: center; /* Centers the text within the alert */
+        }
+
+        .steps {
+            margin-bottom: 10px;
+            .container {
+                margin-bottom: 10px;
+            }
+            >.row {
+                .col>button {
+                    background-color: rgb(61, 81, 131);
+                    text-align: left;
+                }
+            }
+        }
+
+        .container {
+            margin-bottom: 10px;
+        }
+        .bv-example-row {
+            max-width: 1440px;
+            .input-button-group {
+                display: flex; /* This will enable flexbox */
+                align-items: center; /* This will vertically center align the items */
+                gap: 10px; /* This adds space between the input and the buttons */
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("z_LAKkqo4xiHbzP2_");
+        })();
+    </script>
+</head>
+
+<body>
+    <div id="app">
+        <a href="Vi-Assignment-Calculator.html">
+            <img src="https://i.pinimg.com/736x/98/9b/9c/989b9c38c26172c25bd2dca461340deb.jpg" alt="Icon Description" alt="Top Right Icon" style="float: right; width: 40px; height: 40px;">
+        </a>
+        <b-jumbotron>
+            <div class="row align-items-center">
+                <!-- Logo on the left -->
+                <div class="col-auto" style="width: 20rem">
+                    <img src="resource/vinuni_logo.webp" alt="VinUni Logo" style="height: 100px;">
+                </div>
+        
+                <!-- Text in the center -->
+                <div class="col text-center ml-auto" style="padding-left: 0;">
+                    <h2>Stay <span class="highlight1">Ahead</span>, Stay <span class="highlight1">Organized</span> with our</h2>
+                    <h1>Assignment Calculator</h1>
+                    <h2>Your Roadmap to <span class="highlight1">A+</span> grades!</h2>
+                </div>
+
+                <!-- <div class="col-auto" style="width: 20rem"></div> -->
+            </div>
+        </b-jumbotron>
+              
+
+        <div class="section">
+            <a href="Assignment-planner.html" style="color: white">
+                ⬅ Return to assignment planner
+            </a>
+        </div>
+        <article class="mw7 center ph3 ph5-ns tc br2 pv5 bg-washed-green dark-green mb5">
+            <h2 class="fw2 f4 f3-ns lh-title mt0 mb3">
+             LAB REPORT
+            </h2>
+  
+            <p class="fw1 f5 mt0 mb3">
+             Laboratory experiments offer the opportunity to witness scientific principles in practical application and hone your research skills. A lab report serves as an official documentation of an experiment, with the level of detail necessary to enable replication by others. If you're studying in the field of science, you'll discover that lab reports are a widely used means to communicate and disseminate your scientific insights.
+            </p>
+          </article>
+        <b-container class="bv-example-row">
+            <b-row>
+                <b-col>
+                    <template>
+                        <div class="form">
+                            <b-form-group 
+                                :state="beginDateValid"
+                                invalid-feedback="Please enter a begin date."
+                            >
+                                <label for="example-datepicker">Begin date:</label>
+                                <b-form-datepicker 
+                                    id="begin-datepicker" 
+                                    v-model="tempFromDate"
+                                    class="mb-2"></b-form-datepicker>
+                            </b-form-group>
+                        </div>
+                    </template>
+                </b-col>
+                <b-col><template>
+                        <div class="form">
+                            <b-form-group
+                                :state="dueDateValid"
+                                :invalid-feedback="dueDateFeedback"
+                            >
+                                <label for="example-datepicker">Due date:</label>
+                                <b-form-datepicker 
+                                    id="due-datepicker" 
+                                    v-model="tempToDate"
+                                    class="mb-2"></b-form-datepicker>
+                            </b-form-group>
+                        </div>
+                    </template>
+                </b-col>
+                <b-col> 
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <b-button 
+                            @click="toggle" 
+                            block variant="primary" 
+                            class="btn-primary"
+                        >
+                            Generate Schedule 
+                            <b-icon icon="arrow-down-circle-fill" aria-hidden="true"></b-icon>
+                        </b-button>
+                    </div>
+                </b-col>
+            </b-row>
+        </b-container>
+        <div class="alert-container">
+            <b-alert show dismissible fade>
+                Success! You have <span class="highlight1">{{ calcTotalDays() }} days</span> to finish your assignment.
+            </b-alert>
+        </div>
+        <template v-if="isDatescategory()">
+            <steps v-bind:stepobject='labReport1'></steps>
+            <steps v-bind:stepobject='labReport2'></steps>
+            <steps v-bind:stepobject='labReport3'></steps>
+            <steps v-bind:stepobject='labReport4'></steps>
+            <steps v-bind:stepobject='labReport5'></steps>
+            <steps v-bind:stepobject='labReport6'></steps>
+            <steps v-bind:stepobject='labReport7'></steps>
+            <steps v-bind:stepobject='labReport8'></steps>
+            <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib light-purple" href="#top">Back to top ^</a>
+        </template> 
+
+        <script src="//unpkg.com/vue@2.6.12/dist/vue.min.js"></script>
+        <script src="//unpkg.com/bootstrap-vue@2.23.0/dist/bootstrap-vue.js"></script>
+        <script src="//unpkg.com/bootstrap-vue@2.23.0/dist/bootstrap-vue-icons.js"></script>
+        <script>
+            // STEPS CONTENT IN JSON OBJECT FORMAT
+            var labReport1 = {
+                step: '1',
+                heading: 'Write your introduction',
+                todos: '<div class="content"> \
+                <p>The introduction to a lab report usually includes the following elements:</p> \
+                <ol> \
+                <li>Background information about scientific concepts related to the lab;</li> \
+                <li>The lab\'s purpose;</li> \
+                <li>The lab\'s objective(s);</li> \
+                <li>Your hypothesis for the experiment;</li> \
+                <li>Reasons for your hypothesis.</li> \
+                </ol> \
+                <p>Refers to the introduction part of <a href="https://writeonline.ca/labreport.php?content=section4" target="_blank" rel="noopener noreferrer">WriteOnline.ca\'s Lab Report instruction</a> for further information </p> \
+                </div>',
+                percentage: '10',
+                truePercent: '10'
+            };
+
+            var labReport2 = {
+                step: '2',
+                heading: 'Write your materials and methods',
+                todos: '<div class="content"> \
+                <p>Craft a narrative outlining the methodology you employed. While depicting your procedure, make reference to the equipment and analytical tools you utilized. Your objective is to offer a concise, focused account.</p> \
+                <p>Include only the essential particulars required for replicating the experiment. Omit any discussion of procedures and tools that your peers would already be acquainted with.</p> \
+                <p>Refers to the material and methods part of <a href="https://writeonline.ca/labreport.php?content=section4" target="_blank" rel="noopener noreferrer">WriteOnline.ca\'s Lab Report instruction</a> for further information </p> \
+                </div>',
+                percentage: '15',
+                truePercent: '5'
+            };
+
+            var labReport3 = {
+                step: '3',
+                heading: 'Develop tables and graphs. Write a summary of your results',
+                todos: '<div class="content"> \
+                <p>What were your observations? Your aim is to present the trends, patterns, and connections within your data. The initial step involves creating tables and graphs to construct a narrative illustrating your observations. Subsequently, integrate these visual representations into a written account of your findings. It\'s essential to focus on what you saw, rather than delving into explanations of why it occurred. Your results section should encompass the following:</p> \
+                <ol> \
+                <li>An initial summary that outlines your noteworthy observations and the trend(s) you have identified.</li> \
+                <li>Body paragraphs where you elucidate your observations.</li> \
+                <li>Visual aids, such as graphs, tables, and figures, to substantiate your observations.</li> \
+                </ol> \
+                <p>Refers to the result part of <a href="https://writeonline.ca/labreport.php?content=section4" target="_blank" rel="noopener noreferrer">WriteOnline.ca\'s Lab Report instruction</a> for further information </p> \
+                </div>',
+                percentage: '40',
+                truePercent: '25'
+            };
+
+            var labReport4 = {
+                step: '4',
+                heading: 'Discussion section prep. Analyze your results',
+                todos: '<div class="content"> \
+                <p>Now, it\'s time to delve deeper into the meaning of your results. Why did you obtain the specific results you did? How do these results deviate from those in previous studies, other class experiments, or your classmates\' findings? What are the implications of these distinctions? Employ the following approaches to analyze the significance of your results:</p> \
+                <ol> \
+                <li>Review your lab notes to gain further insight.</li> \
+                <li>Contrast your findings with those of your peers in the class.</li> \
+                <li>Seek out and examine articles or other relevant materials linked to your laboratory experiment.</li> \
+                </ol> \
+                </div>',
+                percentage: '55',
+                truePercent: '15'
+            };
+
+            var labReport5 = {
+                step: '5',
+                heading: 'Write your discussion',
+                todos: '<div class="content"> \
+                <p>Utilize the research and analysis you conducted in Step 4 to engage in a critical reflection on your experiment and its outcomes. It\'s advisable to consult your lab manual, Teaching Assistant (TA), or instructor for specific guidelines on what to include. A discussion section can encompass the following components:</p> \
+                <ol> \
+                <li>A summary of your findings.</li> \
+                <li>An explanation of your findings (What led to the specific results you obtained?).</li> \
+                <li>A comparison between your results and prior research or alternative findings.</li> \
+                <li>A consideration of the limitations and weaknesses of your experiment.</li> \
+                <li>An evaluation of the significance of the results (What is the meaning of these outcomes? Why do they matter?).</li> \
+                <li>Suggestions or recommendations for future research endeavors.</li> \
+                </ol> \
+                <p>Refers to the discussion part of <a href="https://writeonline.ca/labreport.php?content=section4" target="_blank" rel="noopener noreferrer">WriteOnline.ca\'s Lab Report instruction</a> for further information </p> \
+                </div>',
+                percentage: '65',
+                truePercent: '10'
+            };
+
+            var labReport6 = {
+                step: '6',
+                heading: 'Write your conclusion',
+                todos: '<div class="content"> \
+                <p>Compose a concise conclusion for your lab report by:</p> \
+                <ol> \
+                <li>Summarizing the key findings.</li> \
+                <li>Relating the results to the experiment\'s objectives.</li> \
+                <li>Stating whether the data supports your hypothesis.</li> \
+                <li>Mentioning any unexpected results or limitations.</li> \
+                <li>Explaining the broader implications of the findings, if applicable.</li> \
+                <li>Ending with a brief statement that ties back to the experiment\'s purpose.</li> \
+                </ol> \
+                <p>Refers to the conclusion part of <a href="https://writeonline.ca/labreport.php?content=section4" target="_blank" rel="noopener noreferrer">WriteOnline.ca\'s Lab Report instruction</a> for further information </p> \
+                </div>',
+                percentage: '75',
+                truePercent: '10'
+            };
+
+            var labReport7 = {
+                step: '7',
+                heading: 'Write the abstract. Prepare a bibliography',
+                todos: '<div class="content"> \
+                <p>An abstract, located at the beginning of your paper, serves as a concise summary of your report, typically spanning 100-200 words. The abstract should encompass the following details:</p> \
+                <ol> \
+                <li>The lab\'s objectives and your primary hypothesis.</li> \
+                <li>A succinct outline of the procedures followed.</li> \
+                <li>A summary of the overall findings and their alignment with your initial hypothesis.</li> \
+                <li>An exposition of the conclusions drawn.</li> \
+                <li>The scientific principles you gained insights into during the lab.</li> \
+                </ol> \
+                <p>In your bibliography, make sure to include reference details for all the sources employed in crafting your report. Format it in accordance with the citation style guide recommended in your lab manual or by your instructor. Check out the VinUniversity library website for <a href="https://vinuni.libguides.com/citation" target="_blank" rel="noopener noreferrer">LibGuides about citation resources.</a>.</p> \
+                </div>',
+                percentage: '85',
+                truePercent: '10'
+            };
+
+            var labReport8 = {
+                step: '8',
+                heading: 'Put the lab report in final form. Revise and edit',
+                todos: '<div class="content"> \
+                <p>Before finalizing your document, scrutinize the formatting, images, and references. For precise formatting instructions, refer to your lab manual and consult with your Teaching Assistant (TA) for additional guidance.</p> \
+                <p>As is the case with all forms of writing, the initial draft of your lab report may contain omissions, issues with structure and lucidity, and grammatical or spelling mistakes. To produce a successful report, dedicate time to the revision and editing process.</p> \
+                </div>',
+                percentage: '100',
+                truePercent: '15'
+            };
+            // TEMPLATE for <steps>
+            var Step = {
+                props: ['stepobject'],
+
+                computed: {
+                    calcDueDate: function () {
+                        // initialize dates.  must use suffix to include my timezone GMT-5
+                        var ISOsuffix = 'T00:00:00.000-05:00';
+                        var fromDateObject = new Date(vm.fromDate + ISOsuffix);
+                        var toDateObject = new Date(vm.toDate + ISOsuffix);
+                        var daysBetween = this.diffDays(fromDateObject, toDateObject);
+                        var numDays = this.calcNumDays(daysBetween, this.stepobject.percentage);
+                        var dueDate_String = this.nextDueDate(fromDateObject, numDays);
+                        console.log(dueDate_String)
+                        return dueDate_String;
+                    },
+                    collapseId: function() {
+                        return 'collapse-' + this.stepobject.step; // Generates a unique ID using the step number
+                    }
+                },
+
+                methods: {
+                    // calculate number of days between both dates
+                    diffDays: function (fromDate, toDate) {
+                        var oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+                        return Math.round(Math.abs((fromDate.getTime() - toDate.getTime()) / (oneDay)));
+                    },
+
+                    // will calculate number of days based off percentage.  This number will be used to add to fromDate to make dueDate
+                    calcNumDays: function (diffDays, percentage) {
+                        return (Math.floor(diffDays * percentage * 0.01)); // using floor to round down since it's an off by 1 (Nov 1 + 3 days = Nov 3?)
+                    },
+
+                    // input fromDate, and numberofDaysToAdd, will output duedate in string format.  This will be used to show when each step is due.
+                    nextDueDate: function (fromDate, numDays) {
+                        var ISOsuffix = 'T00:00:00.000-05:00';
+                        var dueDate = new Date(vm.fromDate + ISOsuffix); // this will be a varying calculated value for each step
+                        dueDate.setDate(fromDate.getDate() + numDays);
+                        return dueDate.toDateString();
+                    },
+                },
+                
+                template: `<b-container class="steps">\
+                <b-row>\
+                    <b-col>\
+                        <b-button block v-b-toggle="'collapse-' + stepobject.step" size="lg" class="m-1"><b>Step {{ stepobject.step }}: {{ stepobject.heading }}.</b> <span class="float-right">Finish by {{ calcDueDate }}</span></b-button>\
+                        <b-collapse invisible :id="'collapse-' + stepobject.step">\
+                            <b-card>\
+                                <b-card-text>\
+                                    <p><b> (Percent time spent on this step: {{ stepobject.truePercent}}%) </b></p>\
+                                    <p v-html="stepobject.todos"> </p>\
+                                </b-card-text>\
+                                <!-- <b-button variant="outline-info">\
+                                    <h5>Video: Taming your research topic <b-icon icon="hand-index"\
+                                            aria-hidden="true"></b-icon>\
+                                    </h5>\
+                                </b-button>\ -->\
+                            </b-card>\
+                        </b-collapse>\
+                    </b-col>\
+                </b-row>\
+            </b-container>`
+
+            
+            };
+
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    tempFromDate: '',
+                    tempToDate: '',
+                    fromDate: '',
+                    toDate: '',
+                    picked: '',
+                    stepobject: '',  // will be determined in the HTML <steps v-bind...>
+                    name: '',
+                    show: false,
+                    blank: '',
+                    value: '',
+                    context: null,
+                    suffix : 'T00:00:00.000-05:00',
+                    totalDays: 0,
+                    assignmentName: '',
+                    assignmentNameValid: null,
+                    beginDateValid: null,
+                    dueDateValid: null,
+                    assignmentTypeValid : null,
+                },
+                mounted() {
+                    this.fromDate = this.getToday();
+                    this.toDate = this.getTodayNextMonth();
+                    this.tempFromDate = this.getToday();
+                    this.tempToDate = this.getTodayNextMonth();
+                },
+                
+                computed: {
+                    dueDateFeedback() {
+                        if (this.toDate == '') {
+                            return "Please enter a due date.";
+                        }
+                        if (this.toDate < this.fromDate) {
+                            return "Due date must be later than the begin date.";
+                        }
+                        return null;
+                    },
+                },
+                methods: {
+                    getToday() {
+                        const date = new Date();
+                        const year = date.getFullYear();
+                        const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
+                        const day = String(date.getDate()).padStart(2, '0');
+                        return `${year}-${month}-${day}`;
+                    },
+                    getTodayNextMonth() {
+                        const date = new Date();
+                        date.setDate(date.getDate() + 31);
+                        const year = date.getFullYear();
+                        const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
+                        const day = String(date.getDate()).padStart(2, '0');
+                        return `${year}-${month}-${day}`;
+                    },
+                    isDatescategory: function () {
+                        // check to make sure both date fields are filled and in chronological order
+                        if (this.fromDate !== '' && this.toDate !== '' && vm.toDate >= vm.fromDate) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    },
+                    isAssignment: function(assignmentType) {
+                        if (this.picked==assignmentType) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    },
+                    calcTotalDays: function(){
+                        if (this.fromDate !== '' && this.toDate !== '' && vm.toDate > vm.fromDate){
+                            var fromDateObject = new Date(vm.fromDate + this.suffix);
+                            var toDateObject = new Date(vm.toDate + this.suffix);
+                            var oneDay = 24 * 60 * 60 * 1000;
+                            return Math.round(Math.abs((fromDateObject.getTime() - toDateObject.getTime()) / (oneDay)));
+                        }
+                        else{
+                            return 0;
+                        }
+                    },
+                    sendEmail() {
+                        var params = {
+                            assignmentName: document.getElementById('assignmentName').value,
+                            emailTo: document.getElementById('emailTo').value,
+                        };
+
+                        const serviceID = "service_5r78bbg";
+                        const templateID = "template_ftc406h";
+
+                        emailjs.send(serviceID, templateID, params).then(
+                            (res) => {
+                                document.getElementById('assignmentName').value = "";
+                                document.getElementById('emailTo').value = "";
+                                console.log(res);
+                                alert("Email sent successfully");
+                            })
+                        .catch((err) => {
+                            console.log(err);
+                            alert("Error sending email");
+                        })
+                    },
+                    pickAssignment(assignmentType) {
+                        console.log('pick', assignmentType)
+                        this.picked = assignmentType
+                    },
+                    validateAssignmentName() {
+                        this.assignmentNameValid = this.assignmentName !== '';
+                    },
+                    toggle() {
+                        console.log('Toggle button clicked')
+                        this.fromDate = this.tempFromDate
+                        this.toDate = this.tempToDate
+                        if (this.fromDate > this.toDate) {
+                            this.dueDateValid = false;
+                        }
+                        this.show = !this.show
+                    },
+                    dismissed() {
+                        console.log('Alert dismissed')
+                    },
+                    onContext(ctx) {
+                        this.context = ctx
+                    }
+                },
+
+                components: {
+                    'steps': Step
+                }
+            });
+
+
+        </script>
+</body>
+
+</html>
