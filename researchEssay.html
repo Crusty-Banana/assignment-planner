@@ -48,7 +48,7 @@
         </b-jumbotron>
               
 
-        <div class="section">
+        <div class="return-section">
             <a href="Assignment-planner.html" style="color: white">
                 ⬅ Return to assignment planner
             </a>
@@ -109,13 +109,19 @@
                     </div>
                 </b-col>
             </b-row>
+            <b-row>
+                <div class="form">  
+                    <label>Save your assignment:</label>
+                    <button onclick="window.print()">Print now</button>
+                </div>
+            </b-row>
         </b-container>
-        <div class="alert-container">
-            <b-alert show dismissible fade>
-                Success! You have <span class="highlight1">{{ calcTotalDays() }} days</span> to finish your assignment.
-            </b-alert>
-        </div>
         <template v-if="isDatescategory()">
+            <div class="alert-container">
+                <b-alert show dismissible fade>
+                    Success! You have <span class="highlight1">{{ calcTotalDays() }} days</span> to finish your assignment.
+                </b-alert>
+            </div>
             <steps v-bind:stepobject='researchEssays1'></steps>
             <steps v-bind:stepobject='researchEssays2'></steps>
             <steps v-bind:stepobject='researchEssays3'></steps>
@@ -123,311 +129,20 @@
             <steps v-bind:stepobject='researchEssays5'></steps>
             <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib light-purple" href="#top">Back to top ^</a>
         </template> 
-
+        
+        <div id="to-print">
+            <template v-if="isDatescategory()">
+                <printing-steps v-bind:stepobject='researchEssays1'></printing-steps>
+                <printing-steps v-bind:stepobject='researchEssays2'></printing-steps>
+                <printing-steps v-bind:stepobject='researchEssays3'></printing-steps>
+                <printing-steps v-bind:stepobject='researchEssays4'></printing-steps>
+                <printing-steps v-bind:stepobject='researchEssays5'></printing-steps>
+            </template>
+        </div>
         <script src="//unpkg.com/vue@2.6.12/dist/vue.min.js"></script>
         <script src="//unpkg.com/bootstrap-vue@2.23.0/dist/bootstrap-vue.js"></script>
         <script src="//unpkg.com/bootstrap-vue@2.23.0/dist/bootstrap-vue-icons.js"></script>
-        <script>
-            // STEPS CONTENT IN JSON OBJECT FORMAT
-            var researchEssays1 = {
-                step: '1',
-                heading: 'Getting Started',
-                truePercent: '10',
-                todos: '<div class="content"> \
-                <p><strong>A. Understand your assignment.</strong></p> \
-                <p>Take your time reading the instructions carefully and make sure you understand all the requirements, including the topic, format, length, and deadline, etc. Never hesitate to ask your instructor for clarification if something is unclear. To efficiently organize your time, break the assignment down into smaller activities and make a detailed timeline.\
-                    To efficiently organize your time, break the assignment down into smaller activities and make a detailed timeline. For more information, please visit <a href="https://uwaterloo.ca/writing-and-communication-centre/resources-understand-your-assignment" target="_blank" rel="noopener noreferrer">Understand Your Assignment.</a></p> \
-                \
-                <p><strong>B.Initial investigation</strong> </p> \
-                <p>The initial investigation phase sets the foundation for your research essay and guides the direction of your study. There are a few key steps to starting an investigation for a research paper:</p> \
-                <ul> \
-                    <li>Choose a research subject or topic that interests you and meets the requirements of the assignment.</li> \
-                    <li>Do preliminary research to compile background data and evaluate whether reliable sources are accessible.</li> \
-                </ul> \
-                \
-                <p><strong>C. Narrow your topic</strong></p> \
-                <p>Evaluate each possible topic\'s importance, feasibility, and relevance. Seek advice from instructors if needed. Choose a specific research issue or subtopic that fits within the scope of your assignment, aligns with your research objectives, and has the potential for insightful analysis. Consider using traditional journalistic questions (who, what, where, when, why).\
-                    Here are some <a href="https://libguides.usc.edu/writingguide/narrowtopic" target="_blank" rel="noopener noreferrer">Strategies for Narrowing the Research Topic.</a></p> \
-                \
-                <p><strong>D. Form research question</strong></p> \
-                <p>Once a gap or problem is identified, <a href="https://libraries.indiana.edu/sites/default/files/Develop_a_Research_Question.pdf" target="_blank" rel="noopener noreferrer">develop the problem into a direct research question.</a> Make sure your research question is clear, simple, and able to be answered. Additionally, it must be relevant and capable of expanding the field.</p> \
-            </div>',
-                percentage: '10',
-                truePercent: '10'
-            };
-
-
-            var researchEssays2 = {
-                step: '2',
-                heading: 'Research',
-                todos: '<div class="content"> \
-                <p><strong>A. Create research strategy</strong></p> \
-                <p>Depending on your research objectives, select suitable research methods, whether they be qualitative, quantitative, or mixed methodologies. Create an organized plan for collecting data, laying out the sources, tools, and procedures you are going to employ.</p> \
-                \
-                <p><strong>B. Find and assess resources</strong></p> \
-                <p>Using reliable search tools, academic databases, and <a href="https://vinuni.libguides.com/c.php?g=934922&p=6759514https://vinuni.libguides.com/c.php?g=934922&p=6759514" target="_blank" rel="noopener noreferrer">libraries</a> to find sources that are applicable to your subject of study.\
-                Consider the author\'s credentials, the source\'s reputation, and the source\'s publication date when <a href="https://guides.library.pdx.edu/evaluate" target="_blank" rel="noopener noreferrer">evaluating sources.</a>\
-                Books from credible publishers, government publications, and peer-reviewed journals are frequently reliable resources. Assess the source\'s approach and supporting data carefully as well to judge its quality and applicability to your research. You can create a well-supported and well-rounded research essay by cross-referencing data with several sources and being critical of biases or conflicts of interest. <a href="https://www.youtube.com/watch?v=CLSLFssRQ_E" target="_blank" rel="noopener noreferrer">RADAR test</a> can be used to evaluate the sources.</p> \
-                \
-                <p><strong>C. Conduct research</strong></p> \
-                <p>As you begin your investigation, gather your data, make sure that you highlight important details, write down personal thoughts. Discover <a href="https://vinuni.instructure.com/courses/1630/pages/reading-and-note-taking?module_item_id=64273" target="_blank" rel="noopener noreferrer">reading and notetaking strategies.</a>\
-                Carefully organize them to keep track of your sources. There are some useful tools to organize your research data: <a href="https://youtu.be/XTfVCiksapk?si=6utERLyZtNsQiaZK" target="_blank" rel="noopener noreferrer">Mendeley</a>, <a href="https://help.evernote.com/hc/en-us/articles/218176427-Evernote-for-Research" target="_blank" rel="noopener noreferrer">Evernote</a>, <a href="https://www.youtube.com/watch?v=ui8vPKUK5sQ" rel="noopener noreferrer">Zotero</a> etc</p> \
-            </div>',
-                percentage: '45',
-                truePercent: '35'
-            };
-
-            var researchEssays3 = {
-                step: '3',
-                heading: 'Structuring your essay',
-                todos: '<div class="content">  \
-                <p><strong>A. Move from research to writing: Brainstorming</strong></p> \
-                <p>Analyze your sources attentively, considering their credibility and applicability. Then use this analysis to support your main points and arguments. As your thinking, remember to maintain a logical flow of thought, and use evidence from your study to back up your points of view.</p> \
-                \
-                <p><strong>B. Form a thesis statement</strong></p> \
-                <p>Keep in mind that a solid thesis statement forms the basis of your research essay, directing your research and providing your paper with a defined direction. Your thesis statement should be a succinct, declarative sentence that wraps up your essay\'s major idea and expresses your opinion on the topic. Make sure your thesis is both specific and debatable. It shouldn\'t just be a factual claim; rather, it should be a statement that encourages debate and analysis.\
-                Visit <a href="https://uwaterloo.ca/writing-and-communication-centre/resources-thesis-statements" target="_blank" rel="noopener noreferrer">Thesis statement</a> for detailed information.</p> \
-                \
-                <p><strong>C. Make a detailed outline</strong></p> \
-                <p>Divide your writing into paragraphs or major points that support your thesis. Each section should be further broken into more narrowly focused subjects or arguments. Put in the main points, supporting details, and illustrations for each subtopic that you intend to use in your essay. \
-                <a href="https://www.scribbr.com/research-paper/outline/" target="_blank" rel="noopener noreferrer">Making an outline</a> not only serves as a clear road map for your writing but also makes sure you cover relevant content while keeping a logical flow throughout your research essay. </p> \
-            </div>',
-                percentage: '60',
-                truePercent: '15'
-            };
-
-            var researchEssays4 = {
-                step: '4',
-                heading: 'Writing the first draft',
-                todos: '<div class="content">\
-                <p>Write your ideas down on paper without worrying too much about accuracy.\
-                The first draft is about creating content and putting your thoughts into words.\
-                Pay attention to the logical flow from the beginning to the end of your essay. <a href="https://www.concordia.ca/content/dam/concordia/offices/cdev/docs/writing/writing-essays-research-papers/creating_first_draft_research_paper.pdf" target="_blank" rel="noopener noreferrer">Here</a> are some tips to start your first draft</p> </div>',
-                percentage: '80',
-                truePercent: '20'
-            };
-
-            var researchEssays5 = {
-                step: '5',
-                heading: 'Revising and proofreading',
-                todos: '<div class="content">\
-                <p><strong>A. Evaluate your first draft and conduct additional research as needed</strong></p> \
-                <p> <a href="https://www.scribbr.com/language-rules/what-is-proofreading/" target="_blank" rel="noopener noreferrer">Review your first draft</a> and, if necessary, do further additional research.</p> \
-                \
-                <p><strong>B. Revise your draft</strong></p> \
-                <p>Review the organization of your essay to ensure that your thoughts are arranged clearly and coherently. Ensure that each paragraph supports your core argument. Pay attention to grammar, punctuation, and spelling to improve readability overall. Additionally, seek feedback from your peers or instructors and consider appropriate recommendations to improve your work.</p> \
-                \
-                <p><strong>C. Evaluate your second draft and rewrite as needed</strong></p> \
-                <p>Form a thesis statement. Focus on issues within the paragraph level, such as logic, analysis, flow, and transitions.</p> \
-                \
-                <p><strong>D. Proofread and put your paper into its final format</strong></p> \
-                <p>Read attentively to catch all of those little mistakes. Spend time making sure your paper follows the rules outlined in the suitable style guide. Remember the page numbers, titles, margins, reference lists, and citations. \
-                There are some <a href="https://libguides.usc.edu/writingguide/proofreading" target="_blank" rel="noopener noreferrer">strategies for proofreading</a> you should check. For additional help, check out the VinUniversity library website for <a href="https://vinuni.libguides.com/citation" target="_blank" rel="noopener noreferrer">LibGuides about citation resources.</a> </p> \
-            </div>',
-                percentage: '100',
-                truePercent: '20'
-            };
-
-            // TEMPLATE for <steps>
-            var Step = {
-                props: ['stepobject'],
-
-                computed: {
-                    calcDueDate: function () {
-                        // initialize dates.  must use suffix to include my timezone GMT-5
-                        var ISOsuffix = 'T00:00:00.000-05:00';
-                        var fromDateObject = new Date(vm.fromDate + ISOsuffix);
-                        var toDateObject = new Date(vm.toDate + ISOsuffix);
-                        var daysBetween = this.diffDays(fromDateObject, toDateObject);
-                        var numDays = this.calcNumDays(daysBetween, this.stepobject.percentage);
-                        var dueDate_String = this.nextDueDate(fromDateObject, numDays);
-                        console.log(dueDate_String)
-                        return dueDate_String;
-                    },
-                    collapseId: function() {
-                        return 'collapse-' + this.stepobject.step; // Generates a unique ID using the step number
-                    }
-                },
-
-                methods: {
-                    // calculate number of days between both dates
-                    diffDays: function (fromDate, toDate) {
-                        var oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-                        return Math.round(Math.abs((fromDate.getTime() - toDate.getTime()) / (oneDay)));
-                    },
-
-                    // will calculate number of days based off percentage.  This number will be used to add to fromDate to make dueDate
-                    calcNumDays: function (diffDays, percentage) {
-                        return (Math.floor(diffDays * percentage * 0.01)); // using floor to round down since it's an off by 1 (Nov 1 + 3 days = Nov 3?)
-                    },
-
-                    // input fromDate, and numberofDaysToAdd, will output duedate in string format.  This will be used to show when each step is due.
-                    nextDueDate: function (fromDate, numDays) {
-                        var ISOsuffix = 'T00:00:00.000-05:00';
-                        var dueDate = new Date(vm.fromDate + ISOsuffix); // this will be a varying calculated value for each step
-                        dueDate.setDate(fromDate.getDate() + numDays);
-                        return dueDate.toDateString();
-                    },
-                },
-                
-                template: `<b-container class="steps">\
-                <b-row>\
-                    <b-col>\
-                        <b-button block v-b-toggle="'collapse-' + stepobject.step" size="lg" class="m-1"><b>Step {{ stepobject.step }}: {{ stepobject.heading }}.</b> <span class="float-right">Finish by {{ calcDueDate }}</span></b-button>\
-                        <b-collapse invisible :id="'collapse-' + stepobject.step">\
-                            <b-card>\
-                                <b-card-text>\
-                                    <p><b> (Percent time spent on this step: {{ stepobject.truePercent}}%) </b></p>\
-                                    <p v-html="stepobject.todos"> </p>\
-                                </b-card-text>\
-                                <!-- <b-button variant="outline-info">\
-                                    <h5>Video: Taming your research topic <b-icon icon="hand-index"\
-                                            aria-hidden="true"></b-icon>\
-                                    </h5>\
-                                </b-button>\ -->\
-                            </b-card>\
-                        </b-collapse>\
-                    </b-col>\
-                </b-row>\
-            </b-container>`
-
-            
-            };
-
-            var vm = new Vue({
-                el: '#app',
-                data: {
-                    tempFromDate: '',
-                    tempToDate: '',
-                    fromDate: '',
-                    toDate: '',
-                    picked: '',
-                    stepobject: '',  // will be determined in the HTML <steps v-bind...>
-                    name: '',
-                    show: false,
-                    blank: '',
-                    value: '',
-                    context: null,
-                    suffix : 'T00:00:00.000-05:00',
-                    totalDays: 0,
-                    assignmentName: '',
-                    assignmentNameValid: null,
-                    beginDateValid: null,
-                    dueDateValid: null,
-                    assignmentTypeValid : null,
-                },
-                mounted() {
-                    this.fromDate = this.getToday();
-                    this.toDate = this.getTodayNextMonth();
-                    this.tempFromDate = this.getToday();
-                    this.tempToDate = this.getTodayNextMonth();
-                },
-                
-                computed: {
-                    dueDateFeedback() {
-                        if (this.toDate == '') {
-                            return "Please enter a due date.";
-                        }
-                        if (this.toDate < this.fromDate) {
-                            return "Due date must be later than the begin date.";
-                        }
-                        return null;
-                    },
-                },
-                methods: {
-                    getToday() {
-                        const date = new Date();
-                        const year = date.getFullYear();
-                        const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
-                        const day = String(date.getDate()).padStart(2, '0');
-                        return `${year}-${month}-${day}`;
-                    },
-                    getTodayNextMonth() {
-                        const date = new Date();
-                        date.setDate(date.getDate() + 31);
-                        const year = date.getFullYear();
-                        const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
-                        const day = String(date.getDate()).padStart(2, '0');
-                        return `${year}-${month}-${day}`;
-                    },
-                    isDatescategory: function () {
-                        // check to make sure both date fields are filled and in chronological order
-                        if (this.fromDate !== '' && this.toDate !== '' && vm.toDate >= vm.fromDate) {
-                            return true;
-                        } else {
-                            return false;
-                        }
-                    },
-                    isAssignment: function(assignmentType) {
-                        if (this.picked==assignmentType) {
-                            return true;
-                        } else {
-                            return false;
-                        }
-                    },
-                    calcTotalDays: function(){
-                        if (this.fromDate !== '' && this.toDate !== '' && vm.toDate > vm.fromDate){
-                            var fromDateObject = new Date(vm.fromDate + this.suffix);
-                            var toDateObject = new Date(vm.toDate + this.suffix);
-                            var oneDay = 24 * 60 * 60 * 1000;
-                            return Math.round(Math.abs((fromDateObject.getTime() - toDateObject.getTime()) / (oneDay)));
-                        }
-                        else{
-                            return 0;
-                        }
-                    },
-                    sendEmail() {
-                        var params = {
-                            assignmentName: document.getElementById('assignmentName').value,
-                            emailTo: document.getElementById('emailTo').value,
-                        };
-
-                        const serviceID = "service_5r78bbg";
-                        const templateID = "template_ftc406h";
-
-                        emailjs.send(serviceID, templateID, params).then(
-                            (res) => {
-                                document.getElementById('assignmentName').value = "";
-                                document.getElementById('emailTo').value = "";
-                                console.log(res);
-                                alert("Email sent successfully");
-                            })
-                        .catch((err) => {
-                            console.log(err);
-                            alert("Error sending email");
-                        })
-                    },
-                    pickAssignment(assignmentType) {
-                        console.log('pick', assignmentType)
-                        this.picked = assignmentType
-                    },
-                    validateAssignmentName() {
-                        this.assignmentNameValid = this.assignmentName !== '';
-                    },
-                    toggle() {
-                        console.log('Toggle button clicked')
-                        this.fromDate = this.tempFromDate
-                        this.toDate = this.tempToDate
-                        if (this.fromDate > this.toDate) {
-                            this.dueDateValid = false;
-                        }
-                        this.show = !this.show
-                    },
-                    dismissed() {
-                        console.log('Alert dismissed')
-                    },
-                    onContext(ctx) {
-                        this.context = ctx
-                    }
-                },
-
-                components: {
-                    'steps': Step
-                }
-            });
-
-
-        </script>
+        <script src="index.js"></script>
 </body>
 
 </html>

@@ -48,7 +48,7 @@
         </b-jumbotron>
               
 
-        <div class="section">
+        <div class="return-section">
             <a href="Assignment-planner.html" style="color: white">
                 ⬅ Return to assignment planner
             </a>
@@ -112,13 +112,19 @@
                     </div>
                 </b-col>
             </b-row>
+            <b-row>
+                <div class="form">  
+                    <label>Save your assignment:</label>
+                    <button onclick="window.print()">Print now</button>
+                </div>
+            </b-row>
         </b-container>
-        <div class="alert-container">
-            <b-alert show dismissible fade>
-                Success! You have <span class="highlight1">{{ calcTotalDays() }} days</span> to finish your assignment.
-            </b-alert>
-        </div>
         <template v-if="isDatescategory()">
+            <div class="alert-container">
+                <b-alert show dismissible fade>
+                    Success! You have <span class="highlight1">{{ calcTotalDays() }} days</span> to finish your assignment.
+                </b-alert>
+            </div>
             <steps v-bind:stepobject='policyBrief1'></steps>
             <steps v-bind:stepobject='policyBrief2'></steps>
             <steps v-bind:stepobject='policyBrief3'></steps>
@@ -126,335 +132,20 @@
             <steps v-bind:stepobject='policyBrief5'></steps>
             <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib light-purple" href="#top">Back to top ^</a>
         </template> 
-
+        
+        <div id="to-print">
+            <template v-if="isDatescategory()">
+                <printing-steps v-bind:stepobject='policyBrief1'></printing-steps>
+                <printing-steps v-bind:stepobject='policyBrief2'></printing-steps>
+                <printing-steps v-bind:stepobject='policyBrief3'></printing-steps>
+                <printing-steps v-bind:stepobject='policyBrief4'></printing-steps>
+                <printing-steps v-bind:stepobject='policyBrief5'></printing-steps>
+            </template>
+        </div>
         <script src="//unpkg.com/vue@2.6.12/dist/vue.min.js"></script>
         <script src="//unpkg.com/bootstrap-vue@2.23.0/dist/bootstrap-vue.js"></script>
         <script src="//unpkg.com/bootstrap-vue@2.23.0/dist/bootstrap-vue-icons.js"></script>
-        <script>
-            // STEPS CONTENT IN JSON OBJECT FORMAT
-            var policyBrief1 = {
-                step: '1',
-                heading: 'Get started',
-                todos: '<div class="content"> \
-                <p><strong>A. Understand Your Assignment</strong></p> \
-                <p>Ensure a comprehensive understanding of your assignment by discerning its specific requirements. Meticulously read the assignment instructions to discern the intended purpose, target audience, scope, format, and length.</p> \
-                <p>It\'s important to note that policy briefs can manifest in diverse forms. To gather ideas and inspiration, consider exploring sample policy briefs from various organizations.</p> \
-                <p><strong>B. Familiarize Yourself with the Subject Matter</strong></p> \
-                <p>In some instances, you may receive a designated topic and problem, while in others, you might have the freedom to select your own. Irrespective of the scenario, it\'s imperative to engage in preliminary reading about the subject and issue at hand.</p> \
-                <p>Employing the classic journalistic interrogatives (who, what, where, when, why) can serve as a guide to pinpointing the focal points of your policy brief, facilitating your research and analysis.</p> \
-                </div>',
-                percentage: '10',
-                truePercent: '10'
-            };
-
-            var policyBrief2 = {
-                step: '2',
-                heading: 'Research your policy issue',
-                todos: '<div class="content"> \
-                <p><strong>A. Develop Your Research Strategy</strong></p> \
-                <ol> \
-                <li>List the terms and concepts linked to your policy issue.</li> \
-                <li>Identify the core concepts among them, which will be the keywords you use when searching library catalogs and databases to uncover pertinent books, journal articles, and various reports.</li> \
-                </ol> \
-                <p><strong>B. Locate and Assess Your Sources</strong></p> \
-                <p>Ensure the sources you select are both pertinent and current. It\'s crucial to incorporate academically reputable sources, such as peer-reviewed books and journal articles, along with materials like government publications, documents from policy institutes (think tanks), and content that conveys the perspectives of individuals or groups affected by the issue, particularly those marginalized or mistreated in some manner.</p> \
-                <p>Remember that not all sources possess equal relevance or accurately represent the subject matter.</p> \
-                <p><strong>C. Choose and Systematize Your Discoveries</strong></p> \
-                <p>Accumulate your research findings and maintain a meticulous record of your sources throughout the process.</p> \
-                </div>',
-                percentage: '45',
-                truePercent: '35'
-            };
-
-            var policyBrief3 = {
-                step: '3',
-                heading: 'Begin to organize your brief',
-                todos: '<div class="content"> \
-                <p>Utilize your policy brief outline (from Step 1B) to populate the sections of your policy brief with preliminary ideas, which can be in point form. It\'s worth noting that, although the executive summary traditionally comes at the beginning, it may be more practical to tackle it towards the end of the process.</p> \
-                <p><strong>A. Identifying Your Audience</strong></p> \
-                <ul> \
-                <li>Who is your target audience and who do you need to persuade? (This will impact your tone and evidence presentation.)</li> \
-                <li>Define the informed but non-specialist readers of your brief.</li> \
-                <li>Predict how these readers perceive the issue and discuss it.</li> \
-                <li>What key message do you aim to convey that will resonate with them? Summarize this in two sentences to maintain focus.</li> \
-                </ul> \
-                <p><strong>B. Problem Statement</strong></p> \
-                <ul> \
-                <li>Define the problem\'s scope and magnitude.</li> \
-                <li>What evidence can you provide to illustrate its significance, urgency, or scale?</li> \
-                <li>Identify the facts, graphs, images, quotes, statistics, or maps that can support your arguments.</li> \
-                </ul> \
-                <p><strong>C. Stakeholders</strong></p> \
-                <ul> \
-                <li>Enumerate all stakeholders and describe how the issue affects them.</li> \
-                <li>Consider the varied perspectives, especially those of marginalized or smaller communities and underrepresented voices, which may differ from government officials or corporate leaders. Include these perspectives if pertinent to the issue and your recommendations.</li> \
-                </ul> \
-                <p><strong>D. Policy Options</strong></p> \
-                <ul> \
-                <li>Determine if you will present multiple options with a recommendation or just a single option.</li> \
-                <li>Prepare arguments and evidence to substantiate your case.</li> \
-                <li>Clarify how the option(s) will impact various stakeholders.</li> \
-                </ul> \
-                <p><strong>E. Recommendations</strong></p> \
-                <ul> \
-                <li>Specify the necessary actions or measures and the responsible parties for instigating change.</li> \
-                <li>Decide if you will conclude with a call to action, which might be placed in the conclusion section if applicable.</li> \
-                </ul> \
-                <p><strong>F. Sources Consulted</strong></p> \
-                <ul> \
-                <li>Confirm the inclusion of a list of credible references supporting your points.</li> \
-                <li>Ensure that these references encompass a range of perspectives.</li> \
-                </ul> \
-                <p><strong>G. Executive Summary</strong></p> \
-                <ul> \
-                <li>Review if the executive summary captures key aspects of the rationale and problem.</li> \
-                <li>Evaluate whether the summary effectively entices readers to delve deeper into the brief.</li> \
-                </ul> \
-                </div>',
-                percentage: '65',
-                truePercent: '20'
-            };
-
-            var policyBrief4 = {
-                step: '4',
-                heading: 'Write the first draft',
-                todos: '<div class="content"> \
-                <p>It\'s time to start writing! When you\'re working on your first draft, your primary aim is to get your ideas onto paper. Don\'t worry if your thoughts aren\'t fully developed at this stage. Release the desire for perfection and write swiftly. You can refine and revise your work later on.</p> \
-                </div>',
-                percentage: '85',
-                truePercent: '20'
-            };
-
-            var policyBrief5 = {
-                step: '5',
-                heading: 'Revise and proofread',
-                todos: '<div class="content"> \
-                <p><strong>A. Assess Your First Draft and Perform Additional Research as Necessary</strong></p> \
-                <ul> \
-                <li>Examine your initial draft to identify any gaps or areas where your arguments lack sufficient evidence.</li> \
-                <li>If you identify deficiencies, conduct further research to bolster your arguments.</li> \
-                </ul> \
-                <p><strong>B. Revise Your Draft</strong></p> \
-                <ul> \
-                <li>Print out a hard copy of your brief and work from it.</li> \
-                <li>Thoroughly read through your document, initially focusing on higher-order issues like organization, structure, evidence, and analysis.</li> \
-                </ul> \
-                <p><strong>C. Evaluate Your Second Draft and Make Revisions</strong></p> \
-                <ul> \
-                <li>Refine your revision process by concentrating on paragraph-level matters, such as sentence flow and transitions.</li> \
-                </ul> \
-                <p><strong>D. Proofread the Final Version of Your Brief</strong></p> \
-                <ul> \
-                <li>In this final step, carefully review your work to catch minor errors. Utilize effective proofreading techniques.</li> \
-                <li>Ensure your brief adheres to the style guide recommended in your assignment or by your instructor. Pay attention to details like titles, margins, and page numbers. Confirm whether a cover sheet is necessary.</li> \
-                <li>Your list of sources should encompass key references used in crafting your brief. Adhere to the citation style guide specified in your assignment or by your instructor.</li> \
-                <li>Consider using reference management software such as RefWorks and Write-N-Cite to help manage your citations as you write. These tools are valuable for building your bibliography.</li> \
-                </ul> \
-                </div>',
-                percentage: '100',
-                truePercent: '15'
-            };
-
-            // TEMPLATE for <steps>
-            var Step = {
-                props: ['stepobject'],
-
-                computed: {
-                    calcDueDate: function () {
-                        // initialize dates.  must use suffix to include my timezone GMT-5
-                        var ISOsuffix = 'T00:00:00.000-05:00';
-                        var fromDateObject = new Date(vm.fromDate + ISOsuffix);
-                        var toDateObject = new Date(vm.toDate + ISOsuffix);
-                        var daysBetween = this.diffDays(fromDateObject, toDateObject);
-                        var numDays = this.calcNumDays(daysBetween, this.stepobject.percentage);
-                        var dueDate_String = this.nextDueDate(fromDateObject, numDays);
-                        console.log(dueDate_String)
-                        return dueDate_String;
-                    },
-                    collapseId: function() {
-                        return 'collapse-' + this.stepobject.step; // Generates a unique ID using the step number
-                    }
-                },
-
-                methods: {
-                    // calculate number of days between both dates
-                    diffDays: function (fromDate, toDate) {
-                        var oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-                        return Math.round(Math.abs((fromDate.getTime() - toDate.getTime()) / (oneDay)));
-                    },
-
-                    // will calculate number of days based off percentage.  This number will be used to add to fromDate to make dueDate
-                    calcNumDays: function (diffDays, percentage) {
-                        return (Math.floor(diffDays * percentage * 0.01)); // using floor to round down since it's an off by 1 (Nov 1 + 3 days = Nov 3?)
-                    },
-
-                    // input fromDate, and numberofDaysToAdd, will output duedate in string format.  This will be used to show when each step is due.
-                    nextDueDate: function (fromDate, numDays) {
-                        var ISOsuffix = 'T00:00:00.000-05:00';
-                        var dueDate = new Date(vm.fromDate + ISOsuffix); // this will be a varying calculated value for each step
-                        dueDate.setDate(fromDate.getDate() + numDays);
-                        return dueDate.toDateString();
-                    },
-                },
-                
-                template: `<b-container class="steps">\
-                <b-row>\
-                    <b-col>\
-                        <b-button block v-b-toggle="'collapse-' + stepobject.step" size="lg" class="m-1"><b>Step {{ stepobject.step }}: {{ stepobject.heading }}.</b> <span class="float-right">Finish by {{ calcDueDate }}</span></b-button>\
-                        <b-collapse invisible :id="'collapse-' + stepobject.step">\
-                            <b-card>\
-                                <b-card-text>\
-                                    <p><b> (Percent time spent on this step: {{ stepobject.truePercent}}%) </b></p>\
-                                    <p v-html="stepobject.todos"> </p>\
-                                </b-card-text>\
-                                <!-- <b-button variant="outline-info">\
-                                    <h5>Video: Taming your research topic <b-icon icon="hand-index"\
-                                            aria-hidden="true"></b-icon>\
-                                    </h5>\
-                                </b-button>\ -->\
-                            </b-card>\
-                        </b-collapse>\
-                    </b-col>\
-                </b-row>\
-            </b-container>`
-
-            
-            };
-
-            var vm = new Vue({
-                el: '#app',
-                data: {
-                    tempFromDate: '',
-                    tempToDate: '',
-                    fromDate: '',
-                    toDate: '',
-                    picked: '',
-                    stepobject: '',  // will be determined in the HTML <steps v-bind...>
-                    name: '',
-                    show: false,
-                    blank: '',
-                    value: '',
-                    context: null,
-                    suffix : 'T00:00:00.000-05:00',
-                    totalDays: 0,
-                    assignmentName: '',
-                    assignmentNameValid: null,
-                    beginDateValid: null,
-                    dueDateValid: null,
-                    assignmentTypeValid : null,
-                },
-                mounted() {
-                    this.fromDate = this.getToday();
-                    this.toDate = this.getTodayNextMonth();
-                    this.tempFromDate = this.getToday();
-                    this.tempToDate = this.getTodayNextMonth();
-                },
-                
-                computed: {
-                    dueDateFeedback() {
-                        if (this.toDate == '') {
-                            return "Please enter a due date.";
-                        }
-                        if (this.toDate < this.fromDate) {
-                            return "Due date must be later than the begin date.";
-                        }
-                        return null;
-                    },
-                },
-                methods: {
-                    getToday() {
-                        const date = new Date();
-                        const year = date.getFullYear();
-                        const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
-                        const day = String(date.getDate()).padStart(2, '0');
-                        return `${year}-${month}-${day}`;
-                    },
-                    getTodayNextMonth() {
-                        const date = new Date();
-                        date.setDate(date.getDate() + 31);
-                        const year = date.getFullYear();
-                        const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
-                        const day = String(date.getDate()).padStart(2, '0');
-                        return `${year}-${month}-${day}`;
-                    },
-                    isDatescategory: function () {
-                        // check to make sure both date fields are filled and in chronological order
-                        if (this.fromDate !== '' && this.toDate !== '' && vm.toDate >= vm.fromDate) {
-                            return true;
-                        } else {
-                            return false;
-                        }
-                    },
-                    isAssignment: function(assignmentType) {
-                        if (this.picked==assignmentType) {
-                            return true;
-                        } else {
-                            return false;
-                        }
-                    },
-                    calcTotalDays: function(){
-                        if (this.fromDate !== '' && this.toDate !== '' && vm.toDate > vm.fromDate){
-                            var fromDateObject = new Date(vm.fromDate + this.suffix);
-                            var toDateObject = new Date(vm.toDate + this.suffix);
-                            var oneDay = 24 * 60 * 60 * 1000;
-                            return Math.round(Math.abs((fromDateObject.getTime() - toDateObject.getTime()) / (oneDay)));
-                        }
-                        else{
-                            return 0;
-                        }
-                    },
-                    sendEmail() {
-                        var params = {
-                            assignmentName: document.getElementById('assignmentName').value,
-                            emailTo: document.getElementById('emailTo').value,
-                        };
-
-                        const serviceID = "service_5r78bbg";
-                        const templateID = "template_ftc406h";
-
-                        emailjs.send(serviceID, templateID, params).then(
-                            (res) => {
-                                document.getElementById('assignmentName').value = "";
-                                document.getElementById('emailTo').value = "";
-                                console.log(res);
-                                alert("Email sent successfully");
-                            })
-                        .catch((err) => {
-                            console.log(err);
-                            alert("Error sending email");
-                        })
-                    },
-                    pickAssignment(assignmentType) {
-                        console.log('pick', assignmentType)
-                        this.picked = assignmentType
-                    },
-                    validateAssignmentName() {
-                        this.assignmentNameValid = this.assignmentName !== '';
-                    },
-                    toggle() {
-                        console.log('Toggle button clicked')
-                        this.fromDate = this.tempFromDate
-                        this.toDate = this.tempToDate
-                        if (this.fromDate > this.toDate) {
-                            this.dueDateValid = false;
-                        }
-                        this.show = !this.show
-                    },
-                    dismissed() {
-                        console.log('Alert dismissed')
-                    },
-                    onContext(ctx) {
-                        this.context = ctx
-                    }
-                },
-
-                components: {
-                    'steps': Step
-                }
-            });
-
-
-        </script>
+        <script src="index.js"></script>
 </body>
 
 </html>

@@ -48,7 +48,7 @@
         </b-jumbotron>
               
 
-        <div class="section">
+        <div class="return-section">
             <a href="Assignment-planner.html" style="color: white">
                 ⬅ Return to assignment planner
             </a>
@@ -109,315 +109,40 @@
                     </div>
                 </b-col>
             </b-row>
+            <b-row>
+                <div class="form">  
+                    <label>Save your assignment:</label>
+                    <button onclick="window.print()">Print now</button>
+                </div>
+            </b-row>
         </b-container>
-        <div class="alert-container">
-            <b-alert show dismissible fade>
-                Success! You have <span class="highlight1">{{ calcTotalDays() }} days</span> to finish your assignment.
-            </b-alert>
-        </div>
         <template v-if="isDatescategory()">
-             <steps v-bind:stepobject='literatureReview1'></steps>
-             <steps v-bind:stepobject='literatureReview2'></steps>
-             <steps v-bind:stepobject='literatureReview3'></steps>
-             <steps v-bind:stepobject='literatureReview4'></steps>
-             <steps v-bind:stepobject='literatureReview5'></steps>
+            <div class="alert-container">
+                <b-alert show dismissible fade>
+                    Success! You have <span class="highlight1">{{ calcTotalDays() }} days</span> to finish your assignment.
+                </b-alert>
+            </div>
+            <steps v-bind:stepobject='literatureReview1'></steps>
+            <steps v-bind:stepobject='literatureReview2'></steps>
+            <steps v-bind:stepobject='literatureReview3'></steps>
+            <steps v-bind:stepobject='literatureReview4'></steps>
+            <steps v-bind:stepobject='literatureReview5'></steps>
             <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib light-purple" href="#top">Back to top ^</a>
         </template> 
-
+        
+        <div id="to-print">
+            <template v-if="isDatescategory()">
+                <printing-steps v-bind:stepobject='literatureReview1'></printing-steps>
+                <printing-steps v-bind:stepobject='literatureReview2'></printing-steps>
+                <printing-steps v-bind:stepobject='literatureReview3'></printing-steps>
+                <printing-steps v-bind:stepobject='literatureReview4'></printing-steps>
+                <printing-steps v-bind:stepobject='literatureReview5'></printing-steps>
+            </template>
+        </div>
         <script src="//unpkg.com/vue@2.6.12/dist/vue.min.js"></script>
         <script src="//unpkg.com/bootstrap-vue@2.23.0/dist/bootstrap-vue.js"></script>
         <script src="//unpkg.com/bootstrap-vue@2.23.0/dist/bootstrap-vue-icons.js"></script>
-        <script>
-            // STEPS CONTENT IN JSON OBJECT FORMAT
-            var literatureReview1 = {
-                step: '1',
-                heading: 'Get started',
-                todos: '<div class="content"> \
-                <p><strong>A. Understand your assignment</strong></p> \
-                <p>Take your time reading the instructions carefully and make sure you understand all the requirements, including the topic, format, length, and deadline, etc. Never hesitate to ask your instructor for clarification if something is unclear. </p> \
-                <p>To efficiently organize your time, break the assignment down into smaller activities and make a detailed timeline. For further information, take a look at <a href="https://uwaterloo.ca/writing-and-communication-centre/resources-understand-your-assignment" target="_blank" rel="noopener noreferrer">how to understand the assignment</a>.</p> \
-                <p><strong>B. Form a research question</strong></p> \
-                <p>After doing quick initial research, narrow down your topic to identify a particular problem. Then develop it into a direct, precise question. Make sure your research question is clear, simple, and able to be answered. Additionally, it must be relevant and capable of expanding the field. Learn how to <a href="https://www.youtube.com/watch?v=HJTh2ccrex4" target="_blank" rel="noopener noreferrer">focus your research topic</a>.</p> \
-                </div>',
-                percentage: '10',
-                truePercent: '10'
-            };
-
-            var literatureReview2 = {
-                step: '2',
-                heading: 'Research',
-                todos: '<div class="content"> \
-                <p><strong>A. Create a research strategy</strong></p> \
-                <p>Depending on your research objectives, select <a href="https://guides.lib.berkeley.edu/researchmethods" target="_blank" rel="noopener noreferrer">suitable research methods</a>, whether they be qualitative, quantitative, or mixed methodologies. Create an organized plan for collecting data, laying out the sources, tools, and procedures you are going to employ.</p> \
-                \
-                <p><strong>B. Research</strong></p> \
-                <p>Using reliable search tools, academic databases, and libraries to find sources that are applicable to your subject of study.</p> \
-                \
-                <p><strong>C. Evaluate sources for alignment with your topic</strong></p> \
-                <p>After collecting resources, <a href="https://vinuni.instructure.com/courses/1630/pages/evaluating-sources-on-the-internet?module_item_id=64265" target="_blank" rel="noopener noreferrer">evaluate and appraise the content</a> to fit with your topic. Consider the author\'s credentials, the source\'s reputation, and the source\'s publication date when evaluating sources. Books from credible publishers, government publications, and peer-reviewed journals are frequently reliable resources. Assess the source\'s approach and supporting data carefully as well to judge its quality and applicability to your research.</p> \
-                <p><a href="https://www.youtube.com/watch?v=CLSLFssRQ_E" target="_blank" rel="noopener noreferrer">RADAR test</a> can be used to evaluate the sources. </p>\
-                <p><strong>D. Research critically</strong></p> \
-                <p>Pay attention to the research techniques and supporting data utilized in the papers, articles, or any material you are reading as you go along, assessing their validity and applicability to your own research. Compare and contrast various sources, looking for similarities and differences. Remember to take notes or highlight any details that emphasize important points, discoveries, and your own thoughts. Discover <a href="https://vinuni.instructure.com/courses/1630/pages/reading-and-note-taking?module_item_id=64273" target="_blank" rel="noopener noreferrer">reading and notetaking strategies</a>.</p> \
-                </div>',
-                percentage: '40',
-                truePercent: '30'
-            };
-
-            var literatureReview3 = {
-                step: '3',
-                heading: 'Organize your literature review',
-                todos: '<div class="content"> \
-                <p><strong>A. Identify themes and organize</strong></p> \
-                <p>Create a citation management system as you collect pertinent sources to keep track of your references, such as <a href="https://www.youtube.com/watch?v=ui8vPKUK5sQ" rel="noopener noreferrer">Zotero</a>, <a href="https://guides.lib.umich.edu/c.php?g=283006&p=1885648" target="_blank" rel="noopener noreferrer">Mendeley</a>, or <a href="https://vinuni.libguides.com/EndNote" target="_blank" rel="noopener noreferrer">EndNote</a>. After gathering your sources, group them into themes or subtopics to identify common patterns and gaps. Look for organizational patterns like same ideas, theories, themes, corporate structures, regional emphasis, data set, historical development, problem-solution.</p> \
-                \
-                <p><strong>B. Thesis statement</strong></p> \
-                <p>Write a <a href="https://writingcenter.fas.harvard.edu/thesis" target="_blank" rel="noopener noreferrer">thesis statement</a> that summarizes a general picture of the available research on the topic, using the themes and conclusions you established in the earlier rounds. Your thesis statement should be a succinct, declarative sentence that wraps up your essay\'s major idea and expresses your opinion on the topic.</p> \
-                </div>',
-                percentage: '60',
-                truePercent: '20'
-            };
-
-            var literatureReview4 = {
-                step: '4',
-                heading: 'First draft',
-                todos: '<div class="content"> \
-                <p><strong>A. Verify the style guide requirements</strong></p> \
-                <p>For more information on the required style guide, consult your course curriculum or your instructor. Common citation styles include the Chicago style guide, APA style guide, IEEE style guide, MLA style guide. Check out the VinUniversity library website for <a href="https://vinuni.libguides.com/citation" target="_blank" rel="noopener noreferrer">LibGuides about citation resources</a>.</p> \
-                \
-                <p><strong>B. Introduction</strong></p> \
-                <p>Introduce the broad topic and its importance to the academic field. Gradually narrow down the review\'s focus, mentioning the major issues, differences, and gaps in the literature. Indicate your review\'s aim/ thesis statement. Give readers a roadmap for what to expect in the next parts by explaining the organization of your review.</p> \
-                \
-                <p><strong>C. Body paragraphs</strong></p> \
-                <p>Each paragraph should begin with a topic sentence that clearly states the major idea or theme you\'ll be addressing. Then, give a summary or analysis of the literature on that particular subject, stressing the main conclusions, hypotheses, or arguments from the sources you have read. Link the sources together and make similarities or contrasts if needed. Maintain a coherent flow from one paragraph to the next while supporting your views with evidence and examples from the literature. Remember to give proper credit to your sources and assess the reliability and significance of each reference.</p> \
-                \
-                <p><strong>D. Conclusion</strong></p> \
-                <p>Restate the main research question or review\'s goal. Briefly summarize the major topics, recurring patterns, and significant research covered in your literature review. Emphasize the importance of the readings you\'ve done and how they\'ve shaped your understanding of the subject as a whole. Point out any shortcomings or gaps in the current body of knowledge and offer potential directions for further study if needed.</p> \
-                </div>',
-                percentage: '80',
-                truePercent: '20'
-            };
-
-            var literatureReview5 = {
-                step: '5',
-                heading: 'Revising and proofreading',
-                todos: '<div class="content"> \
-                <p><strong>A. Evaluate your first draft and conduct additional research as needed</strong></p> \
-                <p>Review your first draft and, if necessary, do further additional research.</p> \
-                \
-                <p><strong>B. Revise your draft</strong></p> \
-                <p>Review the organization of your essay to ensure that your thoughts are arranged clearly and coherently. Ensure that each paragraph supports your core argument. Pay attention to grammar, punctuation, and spelling to improve readability overall. Additionally, seek feedback from your peers or instructors and consider appropriate recommendations to improve your work.</p> \
-                \
-                <p><strong>C. Evaluate your second draft and rewrite as needed</strong></p> \
-                <p>Focus on issues within the paragraph level, such as logic, analysis, flow, and transitions.</p> \
-                \
-                <p><strong>D. Proofread and put your paper into its final format</strong></p> \
-                <p>Read attentively to catch all of those little mistakes. There are some <a href="https://libguides.usc.edu/writingguide/proofreading" target="_blank" rel="noopener noreferrer">strategies for proofreading</a> you should check.</p> \
-                <p>For additional help, check out the VinUniversity library website for <a href="https://vinuni.libguides.com/citation" target="_blank" rel="noopener noreferrer">LibGuides about citation resources</a>.</p> \
-                </div>',
-                percentage: '100',
-                truePercent: '20'
-            };
-
-            // TEMPLATE for <steps>
-            var Step = {
-                props: ['stepobject'],
-
-                computed: {
-                    calcDueDate: function () {
-                        // initialize dates.  must use suffix to include my timezone GMT-5
-                        var ISOsuffix = 'T00:00:00.000-05:00';
-                        var fromDateObject = new Date(vm.fromDate + ISOsuffix);
-                        var toDateObject = new Date(vm.toDate + ISOsuffix);
-                        var daysBetween = this.diffDays(fromDateObject, toDateObject);
-                        var numDays = this.calcNumDays(daysBetween, this.stepobject.percentage);
-                        var dueDate_String = this.nextDueDate(fromDateObject, numDays);
-                        console.log(dueDate_String)
-                        return dueDate_String;
-                    },
-                    collapseId: function() {
-                        return 'collapse-' + this.stepobject.step; // Generates a unique ID using the step number
-                    }
-                },
-
-                methods: {
-                    // calculate number of days between both dates
-                    diffDays: function (fromDate, toDate) {
-                        var oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-                        return Math.round(Math.abs((fromDate.getTime() - toDate.getTime()) / (oneDay)));
-                    },
-
-                    // will calculate number of days based off percentage.  This number will be used to add to fromDate to make dueDate
-                    calcNumDays: function (diffDays, percentage) {
-                        return (Math.floor(diffDays * percentage * 0.01)); // using floor to round down since it's an off by 1 (Nov 1 + 3 days = Nov 3?)
-                    },
-
-                    // input fromDate, and numberofDaysToAdd, will output duedate in string format.  This will be used to show when each step is due.
-                    nextDueDate: function (fromDate, numDays) {
-                        var ISOsuffix = 'T00:00:00.000-05:00';
-                        var dueDate = new Date(vm.fromDate + ISOsuffix); // this will be a varying calculated value for each step
-                        dueDate.setDate(fromDate.getDate() + numDays);
-                        return dueDate.toDateString();
-                    },
-                },
-                
-                template: `<b-container class="steps">\
-                <b-row>\
-                    <b-col>\
-                        <b-button block v-b-toggle="'collapse-' + stepobject.step" size="lg" class="m-1"><b>Step {{ stepobject.step }}: {{ stepobject.heading }}.</b> <span class="float-right">Finish by {{ calcDueDate }}</span></b-button>\
-                        <b-collapse invisible :id="'collapse-' + stepobject.step">\
-                            <b-card>\
-                                <b-card-text>\
-                                    <p><b> (Percent time spent on this step: {{ stepobject.truePercent}}%) </b></p>\
-                                    <p v-html="stepobject.todos"> </p>\
-                                </b-card-text>\
-                                <!-- <b-button variant="outline-info">\
-                                    <h5>Video: Taming your research topic <b-icon icon="hand-index"\
-                                            aria-hidden="true"></b-icon>\
-                                    </h5>\
-                                </b-button>\ -->\
-                            </b-card>\
-                        </b-collapse>\
-                    </b-col>\
-                </b-row>\
-            </b-container>`
-
-            
-            };
-
-            var vm = new Vue({
-                el: '#app',
-                data: {
-                    tempFromDate: '',
-                    tempToDate: '',
-                    fromDate: '',
-                    toDate: '',
-                    picked: '',
-                    stepobject: '',  // will be determined in the HTML <steps v-bind...>
-                    name: '',
-                    show: false,
-                    blank: '',
-                    value: '',
-                    context: null,
-                    suffix : 'T00:00:00.000-05:00',
-                    totalDays: 0,
-                    assignmentName: '',
-                    assignmentNameValid: null,
-                    beginDateValid: null,
-                    dueDateValid: null,
-                    assignmentTypeValid : null,
-                },
-                mounted() {
-                    this.fromDate = this.getToday();
-                    this.toDate = this.getTodayNextMonth();
-                    this.tempFromDate = this.getToday();
-                    this.tempToDate = this.getTodayNextMonth();
-                },
-                
-                computed: {
-                    dueDateFeedback() {
-                        if (this.toDate == '') {
-                            return "Please enter a due date.";
-                        }
-                        if (this.toDate < this.fromDate) {
-                            return "Due date must be later than the begin date.";
-                        }
-                        return null;
-                    },
-                },
-                methods: {
-                    getToday() {
-                        const date = new Date();
-                        const year = date.getFullYear();
-                        const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
-                        const day = String(date.getDate()).padStart(2, '0');
-                        return `${year}-${month}-${day}`;
-                    },
-                    getTodayNextMonth() {
-                        const date = new Date();
-                        date.setDate(date.getDate() + 31);
-                        const year = date.getFullYear();
-                        const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
-                        const day = String(date.getDate()).padStart(2, '0');
-                        return `${year}-${month}-${day}`;
-                    },
-                    isDatescategory: function () {
-                        // check to make sure both date fields are filled and in chronological order
-                        if (this.fromDate !== '' && this.toDate !== '' && vm.toDate >= vm.fromDate) {
-                            return true;
-                        } else {
-                            return false;
-                        }
-                    },
-                    isAssignment: function(assignmentType) {
-                        if (this.picked==assignmentType) {
-                            return true;
-                        } else {
-                            return false;
-                        }
-                    },
-                    calcTotalDays: function(){
-                        if (this.fromDate !== '' && this.toDate !== '' && vm.toDate > vm.fromDate){
-                            var fromDateObject = new Date(vm.fromDate + this.suffix);
-                            var toDateObject = new Date(vm.toDate + this.suffix);
-                            var oneDay = 24 * 60 * 60 * 1000;
-                            return Math.round(Math.abs((fromDateObject.getTime() - toDateObject.getTime()) / (oneDay)));
-                        }
-                        else{
-                            return 0;
-                        }
-                    },
-                    sendEmail() {
-                        var params = {
-                            assignmentName: document.getElementById('assignmentName').value,
-                            emailTo: document.getElementById('emailTo').value,
-                        };
-
-                        const serviceID = "service_5r78bbg";
-                        const templateID = "template_ftc406h";
-
-                        emailjs.send(serviceID, templateID, params).then(
-                            (res) => {
-                                document.getElementById('assignmentName').value = "";
-                                document.getElementById('emailTo').value = "";
-                                console.log(res);
-                                alert("Email sent successfully");
-                            })
-                        .catch((err) => {
-                            console.log(err);
-                            alert("Error sending email");
-                        })
-                    },
-                    pickAssignment(assignmentType) {
-                        console.log('pick', assignmentType)
-                        this.picked = assignmentType
-                    },
-                    validateAssignmentName() {
-                        this.assignmentNameValid = this.assignmentName !== '';
-                    },
-                    toggle() {
-                        console.log('Toggle button clicked')
-                        this.fromDate = this.tempFromDate
-                        this.toDate = this.tempToDate
-                        if (this.fromDate > this.toDate) {
-                            this.dueDateValid = false;
-                        }
-                        this.show = !this.show
-                    },
-                    dismissed() {
-                        console.log('Alert dismissed')
-                    },
-                    onContext(ctx) {
-                        this.context = ctx
-                    }
-                },
-
-                components: {
-                    'steps': Step
-                }
-            });
-
-
-        </script>
+        <script src="index.js"></script>
 </body>
 
 </html>
