@@ -168,3 +168,10 @@ div.card {
 label {
   font-size: 1.1rem;
 }
+
+/* remove this when Vietnamese version is ready */
+a {
+  > img {
+    display: none;
+  }
+}
