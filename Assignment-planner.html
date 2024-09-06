@@ -26,18 +26,22 @@
         }
 
         h1 {
-            font-size: 4rem;
+            font-size: max(2rem, min(4vw, 3rem));
             font-family: 'Titan One';
             margin-bottom: 2rem;
             color: rgb(61, 81, 131);
         }
 
+        h2 {
+            font-size: max(1rem, min(2vw, 1.5rem));
+        }
+
         .section {
             background: rgb(61, 81, 131);
-            font-size: 2rem;
+            font-size: max(1rem, min(2vw, 1.5rem));
             color: white;
             padding: 20px;
-            margin: 0 0 3rem;
+            margin: 0 0 1rem;
         }
 
         .form {
@@ -74,20 +78,26 @@
 
         .jumbotron {
             margin-bottom: 0;
+            padding-bottom: 0;
+            padding-top: min(5vh, 2rem);
             align-items: center;
         }
 
         .card-deck {
+            display: flex;
+            flex-flow: row wrap;
+            margin-right: -15px;
+            margin-left: -15px;
             >button {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: flex-end;
-                padding: 1rem 2rem;
+                padding: min(2vw, 1rem) min(2vw, 2rem);
                 border-radius: 1rem;
                 margin: 0.5rem;
                 width: 11%;
-                min-width: 100px;
+                min-width: 70px;
 
                 >img {
                     width: 100px;
@@ -96,7 +106,7 @@
                 >h5 {
                     margin: 0.5rem 0 0;
                     font-weight: bold;
-                    font-size: 0.8rem;
+                    font-size: max(0.5rem, min(1vw, 0.8rem));
                 }
             }
         }
@@ -121,7 +131,7 @@
         }
 
         .container {
-            margin-bottom: 40px;
+            margin-bottom: 0px;
         }
         .bv-example-row {
             max-width: 1440px;
@@ -144,17 +154,17 @@
 <body>
     <div id="app">
         <a href="Assignment-planner-vi.html">
-            <img src="https://i.pinimg.com/736x/98/9b/9c/989b9c38c26172c25bd2dca461340deb.jpg" alt="Icon Description" alt="Top Right Icon" style="float: right; width: 40px; height: 40px;">
+            <img src="https://i.pinimg.com/736x/98/9b/9c/989b9c38c26172c25bd2dca461340deb.jpg" alt="Icon Description" alt="Top Right Icon" style="float: right; width: 2rem; height: 2rem;">
         </a>
         <b-jumbotron>
-            <div class="row align-items-center justify-content-center">
+            <div class="row align-items-between justify-content-around">
                 <!-- Logo on the left -->
-                <div class="col-auto" style="width: 20rem">
-                    <img src="resource/vinuni_logo.webp" alt="VinUni Logo" style="height: 100px; width: 300px; height: 180px;">
+                <div class="col-auto" style="width: 20rem; margin-bottom: 2rem;">
+                    <img src="resource/vinuni_logo.webp" alt="VinUni Logo" style="width: max(10rem, min(20vw, 15rem));">
                 </div>
         
-                <div style="margin-left: 10rem;">
-                    <div class="col text-center ml-auto" style="padding-left: 0;">
+                <div>
+                    <div class="col text-center ml-auto">
                         <h2>Stay <span class="highlight1">Ahead</span>, Stay <span class="highlight1">Organized</span> with our</h2>
                         <h1>Assignment Calculator</h1>
                         <h2>Your Roadmap to <span class="highlight1">A+</span> grades!</h2>
@@ -171,27 +181,25 @@
             <b-row>
                 <b-col>
                     <div class="form">
-                        <b-form-group>
-                            <!-- First Row of Icons -->
-                            <b-card-group deck class = "justify-content-center">
-                                <b-button @click="pickAssignment('researchEssay')" variant="outline-info">
-                                    <img src="https://media-public.canva.com/9bqGM/MAFazw9bqGM/1/t.png" />
-                                    <h5>RESEARCH ESSAYS</h5>
-                                </b-button>
-                                <b-button @click="pickAssignment('stemPosterPresentation')" variant="outline-info">
-                                    <img src="https://media-public.canva.com/CFjdg/MAFpI2CFjdg/1/t.png" />
-                                    <h5>POSTER PRESENTATION</h5>
-                                </b-button>
-                                <b-button @click="pickAssignment('criticalReflection')" variant="outline-info">
-                                    <img src="https://media-public.canva.com/1iDCg/MAEoTO1iDCg/1/t.png" />
-                                    <h5>CRITICAL REFLECTION</h5>
-                                </b-button>
-                                <b-button @click="pickAssignment('literatureReview')" variant="outline-info">
-                                    <img src="https://media-public.canva.com/NKiIY/MAFbFRNKiIY/1/t.png" />
-                                    <h5>LITERATURE REVIEW</h5>
-                                </b-button>
-                            </b-card-group>
-                        </b-form-group>
+                        <!-- First Row of Icons -->
+                        <b-card-group deck class = "justify-content-center">
+                            <b-button @click="pickAssignment('researchEssay')" variant="outline-info">
+                                <img src="https://media-public.canva.com/9bqGM/MAFazw9bqGM/1/t.png" />
+                                <h5>RESEARCH ESSAYS</h5>
+                            </b-button>
+                            <b-button @click="pickAssignment('stemPosterPresentation')" variant="outline-info">
+                                <img src="https://media-public.canva.com/CFjdg/MAFpI2CFjdg/1/t.png" />
+                                <h5>POSTER PRESENTATION</h5>
+                            </b-button>
+                            <b-button @click="pickAssignment('criticalReflection')" variant="outline-info">
+                                <img src="https://media-public.canva.com/1iDCg/MAEoTO1iDCg/1/t.png" />
+                                <h5>CRITICAL REFLECTION</h5>
+                            </b-button>
+                            <b-button @click="pickAssignment('literatureReview')" variant="outline-info">
+                                <img src="https://media-public.canva.com/NKiIY/MAFbFRNKiIY/1/t.png" />
+                                <h5>LITERATURE REVIEW</h5>
+                            </b-button>
+                        </b-card-group>
                     </div>
                 </b-col>
             </b-row>
