@@ -113,6 +113,12 @@ div.card {
   }
 }
 
+.printing-steps {
+  > .row .col > button {
+    background-color: rgb(61, 81, 131);
+    text-align: left;
+  }
+}
 .container {
   margin-bottom: 0px;
 }
@@ -129,4 +135,28 @@ div.card {
   > .row > .col {
     min-width: 20rem;
   }
+}
+#to-print {
+  display: none;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #to-print,
+  #to-print * {
+    display: block;
+    visibility: visible;
+  }
+  #to-print {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+label {
+  font-size: 1.1rem;
 }

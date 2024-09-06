@@ -108,22 +108,37 @@
                     </div>
                 </b-col>
             </b-row>
+            <b-row>
+                <div class="form">  
+                    <label>Save your assignment:</label>
+                    <button onclick="window.print()">Print now</button>
+                </div>
+            </b-row>
         </b-container>
-        <div class="alert-container">
-            <b-alert show dismissible fade>
-                Success! You have <span class="highlight1">{{ calcTotalDays() }} days</span> to finish your assignment.
-            </b-alert>
-        </div>
         <template v-if="isDatescategory()">
+            <div class="alert-container">
+                <b-alert show dismissible fade>
+                    Success! You have <span class="highlight1">{{ calcTotalDays() }} days</span> to finish your assignment.
+                </b-alert>
+            </div>
             <steps v-bind:stepobject='annotatedBibliography1'></steps>
             <steps v-bind:stepobject='annotatedBibliography2'></steps>
             <steps v-bind:stepobject='annotatedBibliography3'></steps>
             <steps v-bind:stepobject='annotatedBibliography4'></steps>
             <steps v-bind:stepobject='annotatedBibliography5'></steps>
             <steps v-bind:stepobject='annotatedBibliography6'></steps>
-            <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib light-purple" href="#top">Back to top ^</a>
         </template> 
-
+        <div id="to-print">
+            <template v-if="isDatescategory()">
+                <printing-steps v-bind:stepobject='annotatedBibliography1'></printing-steps>
+                <printing-steps v-bind:stepobject='annotatedBibliography2'></printing-steps>
+                <printing-steps v-bind:stepobject='annotatedBibliography3'></printing-steps>
+                <printing-steps v-bind:stepobject='annotatedBibliography4'></printing-steps>
+                <printing-steps v-bind:stepobject='annotatedBibliography5'></printing-steps>
+                <printing-steps v-bind:stepobject='annotatedBibliography6'></printing-steps>
+            </template> 
+        </div>
+        <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib light-purple" href="#top">Back to top ^</a>
         <script src="//unpkg.com/vue@2.6.12/dist/vue.min.js"></script>
         <script src="//unpkg.com/bootstrap-vue@2.23.0/dist/bootstrap-vue.js"></script>
         <script src="//unpkg.com/bootstrap-vue@2.23.0/dist/bootstrap-vue-icons.js"></script>
@@ -298,6 +313,71 @@
             
             };
 
+            // TEMPLATE for <printing-steps>
+            var PrintingStep = {
+                props: ['stepobject'],
+
+                computed: {
+                    calcDueDate: function () {
+                        // initialize dates.  must use suffix to include my timezone GMT-5
+                        var ISOsuffix = 'T00:00:00.000-05:00';
+                        var fromDateObject = new Date(vm.fromDate + ISOsuffix);
+                        var toDateObject = new Date(vm.toDate + ISOsuffix);
+                        var daysBetween = this.diffDays(fromDateObject, toDateObject);
+                        var numDays = this.calcNumDays(daysBetween, this.stepobject.percentage);
+                        var dueDate_String = this.nextDueDate(fromDateObject, numDays);
+                        console.log(dueDate_String)
+                        return dueDate_String;
+                    },
+                    collapseId: function() {
+                        return 'collapse-' + this.stepobject.step; // Generates a unique ID using the step number
+                    }
+                },
+
+                methods: {
+                    // calculate number of days between both dates
+                    diffDays: function (fromDate, toDate) {
+                        var oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+                        return Math.round(Math.abs((fromDate.getTime() - toDate.getTime()) / (oneDay)));
+                    },
+
+                    // will calculate number of days based off percentage.  This number will be used to add to fromDate to make dueDate
+                    calcNumDays: function (diffDays, percentage) {
+                        return (Math.floor(diffDays * percentage * 0.01)); // using floor to round down since it's an off by 1 (Nov 1 + 3 days = Nov 3?)
+                    },
+
+                    // input fromDate, and numberofDaysToAdd, will output duedate in string format.  This will be used to show when each step is due.
+                    nextDueDate: function (fromDate, numDays) {
+                        var ISOsuffix = 'T00:00:00.000-05:00';
+                        var dueDate = new Date(vm.fromDate + ISOsuffix); // this will be a varying calculated value for each step
+                        dueDate.setDate(fromDate.getDate() + numDays);
+                        return dueDate.toDateString();
+                    },
+                },
+                
+                template: `<b-container class="printing-steps">\
+                <b-row>\
+                    <b-col>\
+                        <b-button block v-b-toggle="'collapse-' + stepobject.step" size="lg" class="m-1"><b>Step {{ stepobject.step }}: {{ stepobject.heading }}.</b> <span class="float-right">Finish by {{ calcDueDate }}</span></b-button>\
+                        <b-collapse visible>\
+                            <b-card>\
+                                <b-card-text>\
+                                    <p><b> (Percent time spent on this step: {{ stepobject.truePercent}}%) </b></p>\
+                                    <p v-html="stepobject.todos"> </p>\
+                                </b-card-text>\
+                                <!-- <b-button variant="outline-info">\
+                                    <h5>Video: Taming your research topic <b-icon icon="hand-index"\
+                                            aria-hidden="true"></b-icon>\
+                                    </h5>\
+                                </b-button>\ -->\
+                            </b-card>\
+                        </b-collapse>\
+                    </b-col>\
+                </b-row>\
+            </b-container>`
+
+            
+            };
             var vm = new Vue({
                 el: '#app',
                 data: {
@@ -308,7 +388,7 @@
                     picked: '',
                     stepobject: '',  // will be determined in the HTML <steps v-bind...>
                     name: '',
-                    show: false,
+                    show: true,
                     blank: '',
                     value: '',
                     context: null,
@@ -415,7 +495,6 @@
                         if (this.fromDate > this.toDate) {
                             this.dueDateValid = false;
                         }
-                        this.show = !this.show
                     },
                     dismissed() {
                         console.log('Alert dismissed')
@@ -426,7 +505,8 @@
                 },
 
                 components: {
-                    'steps': Step
+                    'steps': Step,
+                    'printing-steps': PrintingStep
                 }
             });
 
