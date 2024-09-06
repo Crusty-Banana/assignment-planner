@@ -2588,16 +2588,20 @@ var vm = new Vue({
 
   computed: {
     dueDateFeedback() {
-      const currentScript = document.currentScript;
-      const scriptSrc = currentScript ? currentScript.src : "";
-      const fileName = scriptSrc.substring(scriptSrc.lastIndexOf("/") + 1);
       if (this.toDate == "") {
-        if ("Vi" in fileName) return "Làm ơn nhập hạn nộp bài.";
         return "Please enter a due date.";
       }
       if (this.toDate < this.fromDate) {
-        if ("Vi" in fileName) return "Hạn nộp phải trễ hơn ngày bắt đầu.";
         return "Due date must be later than the begin date.";
+      }
+      return null;
+    },
+    dueDateFeedbackVi() {
+      if (this.toDate == "") {
+        return "Làm ơn nhập hạn nộp bài.";
+      }
+      if (this.toDate < this.fromDate) {
+        return "Hạn nộp phải trễ hơn ngày bắt đầu.";
       }
       return null;
     },
@@ -2675,10 +2679,14 @@ var vm = new Vue({
           alert("Error sending email");
         });
     },
-    pickAssignment(assignmentType) {
+    pickAssignment(assignmentType, lang = 0) {
       console.log("pick", assignmentType);
       this.picked = assignmentType;
-      window.location.href = assignmentType + ".html";
+      if (lang) {
+        window.location.href = assignmentType + "Vi.html";
+      } else {
+        window.location.href = assignmentType + ".html";
+      }
     },
     validateAssignmentName() {
       this.assignmentNameValid = this.assignmentName !== "";
