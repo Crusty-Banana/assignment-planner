@@ -1,0 +1,126 @@
+body {
+  text-align: center;
+  font-family: "Montserrat";
+}
+
+.highlight1 {
+  color: red;
+  white-space: nowrap;
+}
+
+h1 {
+  font-size: max(2rem, min(4vw, 3rem));
+  font-family: "Titan One";
+  margin-bottom: 2rem;
+  color: rgb(61, 81, 131);
+}
+
+h2 {
+  font-size: max(1rem, min(2vw, 1.5rem));
+}
+
+.section {
+  background: rgb(61, 81, 131);
+  font-size: max(1rem, min(2vw, 1.5rem));
+  color: white;
+  padding: 20px;
+  margin: 0 0 1rem;
+}
+
+.form {
+  text-align: left;
+
+  > .form-group label {
+    font-size: 1.1rem;
+  }
+}
+
+.content {
+  text-align: left;
+}
+
+div.card {
+  .card-body {
+    text-align: center;
+    padding: 1.25rem;
+  }
+
+  > img {
+    width: 80%;
+    margin: 20px auto 0;
+  }
+}
+
+.btn-primary {
+  font-size: 1.5rem;
+  font-weight: 600;
+  width: 400px;
+  margin: 20px 20px;
+  padding: 15px;
+}
+
+.jumbotron {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  padding-top: min(5vh, 2rem);
+  align-items: center;
+}
+
+.card-deck {
+  display: flex;
+  flex-flow: row wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  > button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: min(2vw, 1rem) min(2vw, 2rem);
+    border-radius: 1rem;
+    margin: 0.5rem;
+    width: 11%;
+    min-width: 70px;
+
+    > img {
+      width: 100px;
+    }
+
+    > h5 {
+      margin: 0.5rem 0 0;
+      font-weight: bold;
+      font-size: max(0.5rem, min(1vw, 0.8rem));
+    }
+  }
+}
+
+.alert-info {
+  background-color: rgb(218, 236, 220);
+  font-size: 1.2rem;
+}
+
+.alert-container {
+  display: flex;
+  justify-content: center; /* Centers the alert horizontally */
+  align-items: center; /* Centers the alert vertically, if needed */
+  text-align: center; /* Centers the text within the alert */
+}
+
+.steps {
+  > .row .col > button {
+    background-color: rgb(61, 81, 131);
+    text-align: left;
+  }
+}
+
+.container {
+  margin-bottom: 0px;
+}
+.bv-example-row {
+  max-width: 1440px;
+  .input-button-group {
+    display: flex; /* This will enable flexbox */
+    align-items: center; /* This will vertically center align the items */
+    gap: 10px; /* This adds space between the input and the buttons */
+  }
+}
