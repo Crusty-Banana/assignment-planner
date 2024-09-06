@@ -2437,8 +2437,18 @@ var StepVi = {
       var toDateObject = new Date(vm.toDate + ISOsuffix);
       var daysBetween = this.diffDays(fromDateObject, toDateObject);
       var numDays = this.calcNumDays(daysBetween, this.stepobject.percentage);
-      var dueDate_String = this.nextDueDate(fromDateObject, numDays);
-      console.log(dueDate_String);
+      var dueDate = this.nextDueDate(fromDateObject, numDays);
+
+      // Format date to Vietnamese locale
+      var options = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      };
+      var formatter = new Intl.DateTimeFormat("vi-VN", options);
+      return formatter.format(new Date(dueDate));
+
       return dueDate_String;
     },
     collapseId: function () {
@@ -2503,8 +2513,18 @@ var PrintingStepVi = {
       var toDateObject = new Date(vm.toDate + ISOsuffix);
       var daysBetween = this.diffDays(fromDateObject, toDateObject);
       var numDays = this.calcNumDays(daysBetween, this.stepobject.percentage);
-      var dueDate_String = this.nextDueDate(fromDateObject, numDays);
-      console.log(dueDate_String);
+      var dueDate = this.nextDueDate(fromDateObject, numDays);
+
+      // Format date to Vietnamese locale
+      var options = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      };
+      var formatter = new Intl.DateTimeFormat("vi-VN", options);
+      return formatter.format(new Date(dueDate));
+
       return dueDate_String;
     },
     collapseId: function () {
