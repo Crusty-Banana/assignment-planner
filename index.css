@@ -124,3 +124,9 @@ div.card {
     gap: 10px; /* This adds space between the input and the buttons */
   }
 }
+
+.bv-example-row {
+  > .row > .col {
+    min-width: 20rem;
+  }
+}
