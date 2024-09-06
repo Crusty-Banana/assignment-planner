@@ -48,7 +48,7 @@
         </b-jumbotron>
               
 
-        <div class="section">
+        <div class="return-section">
             <a href="Assignment-planner-vi.html" style="color: white">
                 ⬅ Quay lại trang trước
             </a>
@@ -111,306 +111,39 @@
                     </div>
                 </b-col>
             </b-row>
+            <b-row>
+                <div class="form">  
+                    <label>Lưu bài tập của bạn:</label>
+                    <button onclick="window.print()">In ngay</button>
+                </div>
+            </b-row>
         </b-container>
-        <div class="alert-container">
-            <b-alert show dismissible fade>
-                Thành công! Bạn còn <span class="highlight1">{{ calcTotalDays() }} ngày</span> để hoàn thành bài tập.
-            </b-alert>
-        </div>
         <template v-if="isDatescategory()">
-            <steps v-bind:stepobject='criticalReflection1'></steps>
-            <steps v-bind:stepobject='criticalReflection2'></steps>
-            <steps v-bind:stepobject='criticalReflection3'></steps>
-            <steps v-bind:stepobject='criticalReflection4'></steps>
-            <steps v-bind:stepobject='criticalReflection5'></steps>
-            <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib light-purple" href="#top">Quay lên đầu ^</a>
+            <div class="alert-container">
+                <b-alert show dismissible fade>
+                    Thành công! Bạn còn <span class="highlight1">{{ calcTotalDays() }} ngày</span> để hoàn thành bài tập.
+                </b-alert>
+            </div>
+            <steps-vi v-bind:stepobject='criticalReflectionVi1'></steps-vi>
+            <steps-vi v-bind:stepobject='criticalReflectionVi2'></steps-vi>
+            <steps-vi v-bind:stepobject='criticalReflectionVi3'></steps-vi>
+            <steps-vi v-bind:stepobject='criticalReflectionVi4'></steps-vi>
+            <steps-vi v-bind:stepobject='criticalReflectionVi5'></steps-vi>
         </template> 
-
+        <div id="to-print">
+            <template v-if="isDatescategory()">
+                <printing-steps-vi v-bind:stepobject='criticalReflectionVi1'></printing-steps-vi>
+                <printing-steps-vi v-bind:stepobject='criticalReflectionVi2'></printing-steps-vi>
+                <printing-steps-vi v-bind:stepobject='criticalReflectionVi3'></printing-steps-vi>
+                <printing-steps-vi v-bind:stepobject='criticalReflectionVi4'></printing-steps-vi>
+                <printing-steps-vi v-bind:stepobject='criticalReflectionVi5'></printing-steps-vi>
+            </template> 
+        </div>
+        <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib light-purple" href="#top">Quay lên đầu ^</a>
         <script src="//unpkg.com/vue@2.6.12/dist/vue.min.js"></script>
         <script src="//unpkg.com/bootstrap-vue@2.23.0/dist/bootstrap-vue.js"></script>
         <script src="//unpkg.com/bootstrap-vue@2.23.0/dist/bootstrap-vue-icons.js"></script>
-        <script>
-            var criticalReflection1 = {
-                step: '1',
-                heading: 'Khởi động',
-                todos: '<div class="content"> \
-                <p><strong>A. Hiểu yêu cầu/đề bài/nhiệm vụ cần làm</strong></p> \
-                <p>Hãy dành thời gian đọc kỹ hướng dẫn và đảm bảo bạn hiểu tất cả các yêu cầu, bao gồm chủ đề, hình thức, độ dài và thời hạn, v.v. Đừng bao giờ ngần ngại hỏi các thầy cô nếu bạn cần làm rõ điều gì. </p> \
-                \
-                <p><strong>B. Thu hẹp chủ đề </strong></p> \
-                <p>Bài suy ngẫm có thể đề cập đến một loạt các chủ đề, chẳng hạn như một khóa học đầy đủ hoặc các phần cụ thể của một khóa học. Để quản lý công việc tốt hơn, hãy hạn chế phạm vi của bài tập này vào một vấn đề hoặc chủ đề cụ thể.</p> \
-                </div>',
-                percentage: '10',
-                truePercent: '10'
-            };
-
-            var criticalReflection2 = {
-                step: '2',
-                heading: 'Suy ngẫm ',
-                todos: '<div class="content"> \
-                <ul> \
-                    <li>Xác định bất kỳ định kiến hoặc giả thuyết nào bạn có bằng cách suy nghĩ về những cảm xúc ban đầu bạn có. </li> \
-                    <li>Sau đó, phân tích các giả định, giả thuyết hoặc khái niệm cơ bản liên quan đến chủ đề. Hãy suy nghĩ về trải nghiệm cá nhân của bạn và cách chúng liên quan đến tài liệu khóa học.</li> \
-                    <li>Hãy đặt các câu hỏi về các sự thật và lập luận được đưa ra. </li> \
-                    <li>Tổng kết lại những điều bạn đã tìm hiểu, chỉ ra các lĩnh vực cần nghiên cứu thêm và hãy viết xuống quá trình viết suy ngẫm đã thay đổi quan điểm của bạn về chủ đề như thế nào.</li> \
-                </ul> \
-                </div>',
-                percentage: '40',
-                truePercent: '30'
-            };
-
-            var criticalReflection3 = {
-                step: '3',
-                heading: 'Viết dàn ý',
-                todos: '<div class="content"> \
-                <p><strong>A. Viết câu chủ đề:</strong></p> \
-                <p>Luận điểm của bạn nên là một câu cụ thể, ngắn gọn, tóm tắt ý chính của bài luận và bày tỏ ý kiến của bạn về chủ đề này. </p> \
-                \
-                <p><strong>B. Viết dàn ý:</strong></p> \
-                <p>Mặc dù một bài suy ngẫm có thể được viết theo nhiều cách khác nhau, thường nó tuân theo một cấu trúc tương tự như một bài luận nghiên cứu, với một phần giới thiệu, luận điểm, các đoạn thân bài và phần kết luận.</p> \
-                \
-                <p><strong>C. Thu thập các nguồn thông tin: </strong></p> \
-                <p>Tổng hợp và sắp xếp tài liệu khóa học hoặc nghiên cứu khác có lợi cho việc phân tích của bạn. Bạn có thể sử dụng các tài liệu này khi bắt đầu bài luận ban đầu của bạn.</p> \
-                </div>',
-                percentage: '55',
-                truePercent: '15'
-            };
-
-            var criticalReflection4 = {
-                step: '4',
-                heading: 'Viết bản nháp đầu tiên ',
-                todos: '<div class="content">\
-                <p>Trong bản nháp đầu tiên, hãy viết những suy nghĩ của bạn thành những câu chữ mà không cần lo lắng quá nhiều về độ chính xác của chúng. Điều bạn cần lưu ý duy nhất ở đây là tính logic từ đầu đến cuối bài luận của bạn.</p> \
-                </div>',
-                percentage: '80',
-                truePercent: '25'
-            };
-
-            var criticalReflection5 = {
-                step: '5',
-                heading: 'Rà soát lại những gì bạn đã viết ',
-                todos: '<div class="content">\
-                <p><strong>A. Đánh giá bản viết nháp của bạn và tiến hành nghiên cứu bổ sung khi cần thiết:</strong></p> \
-                <p>Khi kiểm tra lại bài bạn cần để ý đến mạch viết bài của mình xem nó đã rõ ràng và logic chưa? Không chỉ như vậy bạn cần xem cách đánh vần của từng từ hay ngữ pháp, dấu câu đã sử dụng đúng chưa? Nếu cần, hãy viết lại thêm vài bản nháp nữa để bài viết của bạn trở nên hoàn chỉnh hơn.</p> \
-                \
-                <p><strong>B. Chỉnh sửa bản thảo của bạn </strong></p> \
-                <p>Xem lại cách tổ chức bài luận của bạn để đảm bảo rằng các suy nghĩ của bạn được sắp xếp rõ ràng và mạch lạc. Đảm bảo rằng mỗi đoạn đều hỗ trợ lập luận cốt lõi của bạn. Hãy chú ý đến ngữ pháp, dấu câu và chính tả để cải thiện khả năng đọc tổng thể. Ngoài ra, hãy tìm kiếm phản hồi từ đồng nghiệp hoặc giảng viên hướng dẫn của bạn, xem xét các đề xuất thích hợp để cải thiện nghiên cứu của bạn. </p> \
-                \
-                <p><strong>C. Đánh giá bản thảo thứ hai của bạn và viết lại nếu cần </strong></p> \
-                <p>Xây dựng luận điểm. Tập trung vào các vấn đề liên quan đến đoạn văn, chẳng hạn như logic, phân tích, quy trình viết và chuyển tiếp đoạn văn. </p> \
-                \
-                <p><strong>D. Hiệu chỉnh và đưa bài viết của bạn vào định dạng cuối cùng </strong></p> \
-                <p>Hãy đọc kỹ để nắm bắt hết những lỗi nhỏ đó nhé. Dành thời gian để đảm bảo bài viết của bạn tuân theo các quy tắc được nêu trong hướng dẫn về văn phong phù hợp. Ghi nhớ số trang, tiêu đề, lề, danh sách tài liệu tham khảo và trích dẫn. \Để được trợ giúp thêm, hãy xem trang web thư viện VinUniversity để biết LibGuides về các thông liên quan đến trích dẫn. </p> \
-                </div>',
-                percentage: '100',
-                truePercent: '20'
-            };
-            // TEMPLATE for <steps>
-            var Step = {
-                props: ['stepobject'],
-
-                computed: {
-
-                    calcDueDate: function () {
-                        // initialize dates.  must use suffix to include my timezone GMT-5
-                        var ISOsuffix = 'T00:00:00.000-05:00';
-                        var fromDateObject = new Date(vm.fromDate + ISOsuffix);
-                        var toDateObject = new Date(vm.toDate + ISOsuffix);
-                        var daysBetween = this.diffDays(fromDateObject, toDateObject);
-                        var numDays = this.calcNumDays(daysBetween, this.stepobject.percentage);
-                        var dueDate = this.nextDueDate(fromDateObject, numDays);
-
-                        // Format date to Vietnamese locale
-                        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                        var formatter = new Intl.DateTimeFormat('vi-VN', options);
-                        return formatter.format(new Date(dueDate));
-
-                        return dueDate_String;
-                    },
-                    collapseId: function() {
-                        return 'collapse-' + this.stepobject.step; // Generates a unique ID using the step number
-                    }
-                },
-
-                methods: {
-                    // calculate number of days between both dates
-                    diffDays: function (fromDate, toDate) {
-                        var oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-                        return Math.round(Math.abs((fromDate.getTime() - toDate.getTime()) / (oneDay)));
-                    },
-
-                    // will calculate number of days based off percentage.  This number will be used to add to fromDate to make dueDate
-                    calcNumDays: function (diffDays, percentage) {
-                        return (Math.floor(diffDays * percentage * 0.01)); // using floor to round down since it's an off by 1 (Nov 1 + 3 days = Nov 3?)
-                    },
-
-                    // input fromDate, and numberofDaysToAdd, will output duedate in string format.  This will be used to show when each step is due.
-                    nextDueDate: function (fromDate, numDays) {
-                        var ISOsuffix = 'T00:00:00.000-05:00';
-                        var dueDate = new Date(vm.fromDate + ISOsuffix); // this will be a varying calculated value for each step
-                        dueDate.setDate(fromDate.getDate() + numDays);
-                        return dueDate.toDateString();
-                    },
-                },
-                
-                template: `<b-container class="steps">\
-                <b-row>\
-                    <b-col>\
-                        <b-button block v-b-toggle="'collapse-' + stepobject.step" size="lg" class="m-1"><b>Bước {{ stepobject.step }}: {{ stepobject.heading }}.</b> <span class="float-right">Hoàn thành vào {{ calcDueDate }}</span></b-button>\
-                        <b-collapse invisible :id="'collapse-' + stepobject.step">\
-                            <b-card>\
-                                <b-card-text>\
-                                    <p><b> (Phần trăm thời gian cho bước này: {{ stepobject.truePercent}}%) </b></p>\
-                                    <p v-html="stepobject.todos"> </p>\
-                                </b-card-text>\
-                                <!-- <b-button variant="outline-info">\
-                                    <h5>Video: Taming your research topic <b-icon icon="hand-index"\
-                                            aria-hidden="true"></b-icon>\
-                                    </h5>\
-                                </b-button>\ -->\
-                            </b-card>\
-                        </b-collapse>\
-                    </b-col>\
-                </b-row>\
-            </b-container>`
-
-            
-            };
-
-            var vm = new Vue({
-                el: '#app',
-                data: {
-                    tempFromDate: '',
-                    tempToDate: '',
-                    fromDate: '',
-                    toDate: '',
-                    picked: '',
-                    stepobject: '',  // will be determined in the HTML <steps v-bind...>
-                    name: '',
-                    show: false,
-                    blank: '',
-                    value: '',
-                    context: null,
-                    suffix : 'T00:00:00.000-05:00',
-                    totalDays: 0,
-                    assignmentName: '',
-                    assignmentNameValid: null,
-                    beginDateValid: null,
-                    dueDateValid: null,
-                    assignmentTypeValid : null,
-                },
-                mounted() {
-                    this.fromDate = this.getToday();
-                    this.toDate = this.getTodayNextMonth();
-                    this.tempFromDate = this.getToday();
-                    this.tempToDate = this.getTodayNextMonth();
-                },
-                
-                computed: {
-                    dueDateFeedback() {
-                        if (this.toDate == '') {
-                            return "Làm ơn chọn hạn nộp bài.";
-                        }
-                        if (this.toDate <= this.fromDate) {
-                            return "Hạn nộp bài phải trễ hơn ngày bắt đầu.";
-                        }
-                        return null;
-                    },
-                },
-                methods: {
-                    getToday() {
-                        const date = new Date();
-                        const year = date.getFullYear();
-                        const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
-                        const day = String(date.getDate()).padStart(2, '0');
-                        return `${year}-${month}-${day}`;
-                    },
-                    getTodayNextMonth() {
-                        const date = new Date();
-                        date.setDate(date.getDate() + 31);
-                        const year = date.getFullYear();
-                        const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
-                        const day = String(date.getDate()).padStart(2, '0');
-                        return `${year}-${month}-${day}`;
-                    },
-                    isDatescategory: function () {
-                        // check to make sure both date fields are filled and in chronological order
-                        if (this.fromDate !== '' && this.toDate !== '' && vm.toDate >= vm.fromDate) {
-                            return true;
-                        } else {
-                            return false;
-                        }
-                    },
-                    isAssignment: function(assignmentType) {
-                        if (this.picked==assignmentType) {
-                            return true;
-                        } else {
-                            return false;
-                        }
-                    },
-                    calcTotalDays: function(){
-                        if (this.fromDate !== '' && this.toDate !== '' && vm.toDate > vm.fromDate){
-                            var fromDateObject = new Date(vm.fromDate + this.suffix);
-                            var toDateObject = new Date(vm.toDate + this.suffix);
-                            var oneDay = 24 * 60 * 60 * 1000;
-                            return Math.round(Math.abs((fromDateObject.getTime() - toDateObject.getTime()) / (oneDay)));
-                        }
-                        else{
-                            return 0;
-                        }
-                    },
-                    sendEmail() {
-                        var params = {
-                            assignmentName: document.getElementById('assignmentName').value,
-                            emailTo: document.getElementById('emailTo').value,
-                        };
-
-                        const serviceID = "service_5r78bbg";
-                        const templateID = "template_ftc406h";
-
-                        emailjs.send(serviceID, templateID, params).then(
-                            (res) => {
-                                document.getElementById('assignmentName').value = "";
-                                document.getElementById('emailTo').value = "";
-                                console.log(res);
-                                alert("Email sent successfully");
-                            })
-                        .catch((err) => {
-                            console.log(err);
-                            alert("Error sending email");
-                        })
-                    },
-                    pickAssignment(assignmentType) {
-                        console.log('pick', assignmentType)
-                        this.picked = assignmentType
-                    },
-                    validateAssignmentName() {
-                        this.assignmentNameValid = this.assignmentName !== '';
-                    },
-                    toggle() {
-                        console.log('Toggle button clicked')
-                        this.fromDate = this.tempFromDate
-                        this.toDate = this.tempToDate
-                        if (this.fromDate > this.toDate) {
-                            this.dueDateValid = false;
-                        }
-                        this.show = !this.show
-                    },
-                    dismissed() {
-                        console.log('Alert dismissed')
-                    },
-                    onContext(ctx) {
-                        this.context = ctx
-                    }
-                },
-
-                components: {
-                    'steps': Step
-                }
-            });
-
-
-        </script>
+        <script src="index.js"></script>
 </body>
 
 </html>

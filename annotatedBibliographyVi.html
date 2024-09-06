@@ -48,7 +48,7 @@
         </b-jumbotron>
               
 
-        <div class="section">
+        <div class="return-section">
             <a href="Assignment-planner-vi.html" style="color: white">
                 ⬅ Quay lại trang trước
             </a>
@@ -110,336 +110,41 @@
                     </div>
                 </b-col>
             </b-row>
+            <b-row>
+                <div class="form">  
+                    <label>Lưu bài tập của bạn:</label>
+                    <button onclick="window.print()">In ngay</button>
+                </div>
+            </b-row>
         </b-container>
-        <div class="alert-container">
-            <b-alert show dismissible fade>
-                Thành công! Bạn còn <span class="highlight1">{{ calcTotalDays() }} ngày</span> để hoàn thành bài tập.
-            </b-alert>
-        </div>
         <template v-if="isDatescategory()">
-            <steps v-bind:stepobject='annotatedBibliography1'></steps>
-            <steps v-bind:stepobject='annotatedBibliography2'></steps>
-            <steps v-bind:stepobject='annotatedBibliography3'></steps>
-            <steps v-bind:stepobject='annotatedBibliography4'></steps>
-            <steps v-bind:stepobject='annotatedBibliography5'></steps>
-            <steps v-bind:stepobject='annotatedBibliography6'></steps>
-            <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib light-purple" href="#top">Quay lên đầu ^</a>
+            <div class="alert-container">
+                <b-alert show dismissible fade>
+                    Thành công! Bạn còn <span class="highlight1">{{ calcTotalDays() }} ngày</span> để hoàn thành bài tập.
+                </b-alert>
+            </div>
+            <steps-vi v-bind:stepobject='annotatedBibliographyVi1'></steps-vi>
+            <steps-vi v-bind:stepobject='annotatedBibliographyVi2'></steps-vi>
+            <steps-vi v-bind:stepobject='annotatedBibliographyVi3'></steps-vi>
+            <steps-vi v-bind:stepobject='annotatedBibliographyVi4'></steps-vi>
+            <steps-vi v-bind:stepobject='annotatedBibliographyVi5'></steps-vi>
+            <steps-vi v-bind:stepobject='annotatedBibliographyVi6'></steps-vi>
         </template> 
-
+        <div id="to-print">
+            <template v-if="isDatescategory()">
+                <printing-steps-vi v-bind:stepobject='annotatedBibliographyVi1'></printing-steps-vi>
+                <printing-steps-vi v-bind:stepobject='annotatedBibliographyVi2'></printing-steps-vi>
+                <printing-steps-vi v-bind:stepobject='annotatedBibliographyVi3'></printing-steps-vi>
+                <printing-steps-vi v-bind:stepobject='annotatedBibliographyVi4'></printing-steps-vi>
+                <printing-steps-vi v-bind:stepobject='annotatedBibliographyVi5'></printing-steps-vi>
+                <printing-steps-vi v-bind:stepobject='annotatedBibliographyVi6'></printing-steps-vi>
+            </template> 
+        </div>
+        <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib light-purple" href="#top">Quay lên đầu ^</a>
         <script src="//unpkg.com/vue@2.6.12/dist/vue.min.js"></script>
         <script src="//unpkg.com/bootstrap-vue@2.23.0/dist/bootstrap-vue.js"></script>
         <script src="//unpkg.com/bootstrap-vue@2.23.0/dist/bootstrap-vue-icons.js"></script>
-        <script>
-            // STEPS CONTENT IN JSON OBJECT FORMAT
-            var annotatedBibliography1 = {
-                step: '1',
-                heading: 'Understand your assignment',
-                todos: '<div class="content"> \
-                <p>Annotated bibliography assignments are commonplace, yet their structure and breadth can differ based on their intended purpose and the preferences of the instructor. It\'s crucial to be well-informed about the specific requirements for your assignment.</p> \
-                \
-                <p>Each entry within an annotated bibliography comprises two essential components:</p> \
-                <ul> \
-                <li>A. The citation: This presents bibliographic information concerning the source, including details like the author, title, and publication date. These particulars are formatted following a designated citation style, such as APA, IEEE, Chicago, Notes & Bibliography, or MLA.</li> \
-                <li>B. The annotation: Typically consisting of one to two paragraphs, the annotation serves the purpose of describing and assessing the source.</li> \
-                </ul> \
-                <p>If there are aspects of the assignment that are unclear, do not hesitate to seek clarification from your instructor or teaching assistant.</p> \
-                </div>',
-                percentage: '5',
-                truePercent: '5'
-            };
-
-            var annotatedBibliography2 = {
-                step: '2',
-                heading: 'Choose a topic for your bibliography',
-                todos: '<div class="content"> \
-                <p>Your topic should interest you and match the scope and requirements of the assignment. To write a strong paper, you must have a focused and specific topic. Achieving this involves developing, choosing, and further refining your topic.</p> \
-                \
-                <p><b>A. Developing Your Topic:</b></p> \
-                <ul> \
-                <li>Conduct research, brainstorm ideas, and discuss them with others to strengthen your topic.</li> \
-                <li>Preliminary research reveals what experts in the field are interested in.</li> \
-                <li>Brainstorming techniques include freewriting, asking questions about your topic, and creating topic maps.</li> \
-                <li>Engaging in discussions with others can help you view your ideas from a reader\'s perspective.</li> \
-                </ul> \
-                \
-                <p><b>B. Narrowing Your Topic:</b></p> \
-                <ul> \
-                <li>Narrowing down your topic makes your work more manageable and increases the likelihood of a successful paper.</li> \
-                <li>A well-crafted paper delves deep into a specific aspect of a broader issue.</li> \
-                <li>A concrete topic is more manageable. As you narrow your focus, the subject matter becomes more precise.</li> \
-                <li>Add specific details to your subtopics to further refine your topic.</li> \
-                </ul> \
-                <p><b>Tip:</b> To ensure your topic is narrow enough, keep narrowing it down until it becomes more specific. You can employ traditional journalistic questions (Who, What, Where, When, Why) to help refine your topic further.</p> \
-                </div>',
-                percentage: '15',
-                truePercent: '10'
-            };
-
-            var annotatedBibliography3 = {
-                step: '3',
-                heading: 'Find sources',
-                todos: '<div class="content"> \
-                <p>The materials you choose to incorporate in your annotated bibliography should be closely related to the overarching topic or theme. Here are three suggestions to assist you in commencing and staying on course:</p> \
-                <p><b>A. Refer to a research guide relevant to your subject.</b></p> \
-                <p><b>B. Gather the materials that exhibit promise.</b></p> \
-                <p>If they are available online, save links or download them directly from the catalog, databases, or the web. For print materials such as books or government documents, submit requests through the catalog by providing your last name and the 14-digit barcode number on your Watcard. You can specify the library to which you want the item(s) to be delivered.</p> \
-                \
-                <p><b>C. Maintain a record of essential citation details for each source,</b> including the author, article title, journal title, and publication date. This information will be indispensable in constructing comprehensive citations for the items featured in your annotated bibliography.</p> \
-                </div>',
-                percentage: '40',
-                truePercent: '25'
-            };
-
-            var annotatedBibliography4 = {
-                step: '4',
-                heading: 'Evaluate your sources',
-                todos: '<div class="content"> \
-                <p>Review the materials you\'ve gathered and make choices about which ones to incorporate into your bibliography. Evaluate their content and quality to determine if they merit inclusion. Utilizing the RADAR method can assist you in assessing their relevance, authority, publication date, accuracy, and the purpose behind their creation.</p> \
-                \
-                <p>While going through your sources, make note of significant aspects like the primary arguments or hypotheses, the theoretical frameworks employed by the author, their research design, and the outcomes or conclusions. Identify any aspects that raise questions, such as weak links in an argument or a limited sample size in a study. Also, highlight the strengths of the work and how it specifically contributes to your research topic or question.</p> \
-                </div>',
-                percentage: '55',
-                truePercent: '15'
-            };
-
-            var annotatedBibliography5 = {
-                step: '5',
-                heading: 'Write and revise',
-                todos: '<div class="content"> \
-                <p>Generate citations for each of the sources following the specified citation style, such as APA, Chicago, or MLA. Subsequently, for each citation, compose a brief annotation by drawing upon your notes about the source. It\'s essential to both summarize and assess the source in the following ways:</p> \
-                <ol> \
-                <li>Provide an overview of the source\'s content and its primary focus.</li> \
-                <li>Evaluate the methods, conclusions, or reliability of the source.</li> \
-                <li>Express your own thoughts and impressions of the work, while elucidating why it merits inclusion in your research.</li> \
-                </ol> \
-                <p>Once you\'ve written a complete draft, set it aside for a period. Upon your return, revisit your annotations and contemplate how to enhance them. Consider whether each item significantly contributes to your research topic. Can you make your annotations clearer or more concise? Have you overlooked any critical points? Do they flow logically and cohesively?</p> \
-                </div>',
-                percentage: '85',
-                truePercent: '30'
-            };
-
-            var annotatedBibliography6 = {
-                step: '6',
-                heading: 'Proofread and polish',
-                todos: '<div class="content"> \
-                <p>Once you are content with the quality of your annotations, set your assignment aside once more. Upon revisiting it, your objective is to identify and rectify any punctuation, grammar, and other mechanical errors. It is advisable to review your work multiple times and, at a minimum, proofread from a physical printout.</p> \
-                <p>Make certain of the following:</p> \
-                <ol> \
-                <li>Each entry\'s citation is thorough and adheres to the specified bibliographic style.</li> \
-                <li>Every annotation is coherent and devoid of errors.</li> \
-                <li>Your paper is correctly formatted and aligns with the stipulated assignment criteria.</li> \
-                </ol> \
-                </div>',
-                percentage: '100',
-                truePercent: '15'
-            };
-
-            // TEMPLATE for <steps>
-            var Step = {
-                props: ['stepobject'],
-
-                computed: {
-
-                    calcDueDate: function () {
-                        // initialize dates.  must use suffix to include my timezone GMT-5
-                        var ISOsuffix = 'T00:00:00.000-05:00';
-                        var fromDateObject = new Date(vm.fromDate + ISOsuffix);
-                        var toDateObject = new Date(vm.toDate + ISOsuffix);
-                        var daysBetween = this.diffDays(fromDateObject, toDateObject);
-                        var numDays = this.calcNumDays(daysBetween, this.stepobject.percentage);
-                        var dueDate = this.nextDueDate(fromDateObject, numDays);
-
-                        // Format date to Vietnamese locale
-                        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                        var formatter = new Intl.DateTimeFormat('vi-VN', options);
-                        return formatter.format(new Date(dueDate));
-
-                        return dueDate_String;
-                    },
-                    collapseId: function() {
-                        return 'collapse-' + this.stepobject.step; // Generates a unique ID using the step number
-                    }
-                },
-
-                methods: {
-                    // calculate number of days between both dates
-                    diffDays: function (fromDate, toDate) {
-                        var oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-                        return Math.round(Math.abs((fromDate.getTime() - toDate.getTime()) / (oneDay)));
-                    },
-
-                    // will calculate number of days based off percentage.  This number will be used to add to fromDate to make dueDate
-                    calcNumDays: function (diffDays, percentage) {
-                        return (Math.floor(diffDays * percentage * 0.01)); // using floor to round down since it's an off by 1 (Nov 1 + 3 days = Nov 3?)
-                    },
-
-                    // input fromDate, and numberofDaysToAdd, will output duedate in string format.  This will be used to show when each step is due.
-                    nextDueDate: function (fromDate, numDays) {
-                        var ISOsuffix = 'T00:00:00.000-05:00';
-                        var dueDate = new Date(vm.fromDate + ISOsuffix); // this will be a varying calculated value for each step
-                        dueDate.setDate(fromDate.getDate() + numDays);
-                        return dueDate.toDateString();
-                    },
-                },
-                
-                template: `<b-container class="steps">\
-                <b-row>\
-                    <b-col>\
-                        <b-button block v-b-toggle="'collapse-' + stepobject.step" size="lg" class="m-1"><b>Bước {{ stepobject.step }}: {{ stepobject.heading }}.</b> <span class="float-right">Hoàn thành vào {{ calcDueDate }}</span></b-button>\
-                        <b-collapse invisible :id="'collapse-' + stepobject.step">\
-                            <b-card>\
-                                <b-card-text>\
-                                    <p><b> (Phần trăm thời gian cho bước này: {{ stepobject.truePercent}}%) </b></p>\
-                                    <p v-html="stepobject.todos"> </p>\
-                                </b-card-text>\
-                                <!-- <b-button variant="outline-info">\
-                                    <h5>Video: Taming your research topic <b-icon icon="hand-index"\
-                                            aria-hidden="true"></b-icon>\
-                                    </h5>\
-                                </b-button>\ -->\
-                            </b-card>\
-                        </b-collapse>\
-                    </b-col>\
-                </b-row>\
-            </b-container>`
-
-            
-            };
-
-            var vm = new Vue({
-                el: '#app',
-                data: {
-                    tempFromDate: '',
-                    tempToDate: '',
-                    fromDate: '',
-                    toDate: '',
-                    picked: '',
-                    stepobject: '',  // will be determined in the HTML <steps v-bind...>
-                    name: '',
-                    show: false,
-                    blank: '',
-                    value: '',
-                    context: null,
-                    suffix : 'T00:00:00.000-05:00',
-                    totalDays: 0,
-                    assignmentName: '',
-                    assignmentNameValid: null,
-                    beginDateValid: null,
-                    dueDateValid: null,
-                    assignmentTypeValid : null,
-                },
-                mounted() {
-                    this.fromDate = this.getToday();
-                    this.toDate = this.getTodayNextMonth();
-                    this.tempFromDate = this.getToday();
-                    this.tempToDate = this.getTodayNextMonth();
-                },
-                
-                computed: {
-                    dueDateFeedback() {
-                        if (this.toDate == '') {
-                            return "Làm ơn chọn hạn nộp bài.";
-                        }
-                        if (this.toDate <= this.fromDate) {
-                            return "Hạn nộp bài phải trễ hơn ngày bắt đầu.";
-                        }
-                        return null;
-                    },
-                },
-                methods: {
-                    getToday() {
-                        const date = new Date();
-                        const year = date.getFullYear();
-                        const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
-                        const day = String(date.getDate()).padStart(2, '0');
-                        return `${year}-${month}-${day}`;
-                    },
-                    getTodayNextMonth() {
-                        const date = new Date();
-                        date.setDate(date.getDate() + 31);
-                        const year = date.getFullYear();
-                        const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
-                        const day = String(date.getDate()).padStart(2, '0');
-                        return `${year}-${month}-${day}`;
-                    },
-                    isDatescategory: function () {
-                        // check to make sure both date fields are filled and in chronological order
-                        if (this.fromDate !== '' && this.toDate !== '' && vm.toDate >= vm.fromDate) {
-                            return true;
-                        } else {
-                            return false;
-                        }
-                    },
-                    isAssignment: function(assignmentType) {
-                        if (this.picked==assignmentType) {
-                            return true;
-                        } else {
-                            return false;
-                        }
-                    },
-                    calcTotalDays: function(){
-                        if (this.fromDate !== '' && this.toDate !== '' && vm.toDate > vm.fromDate){
-                            var fromDateObject = new Date(vm.fromDate + this.suffix);
-                            var toDateObject = new Date(vm.toDate + this.suffix);
-                            var oneDay = 24 * 60 * 60 * 1000;
-                            return Math.round(Math.abs((fromDateObject.getTime() - toDateObject.getTime()) / (oneDay)));
-                        }
-                        else{
-                            return 0;
-                        }
-                    },
-                    sendEmail() {
-                        var params = {
-                            assignmentName: document.getElementById('assignmentName').value,
-                            emailTo: document.getElementById('emailTo').value,
-                        };
-
-                        const serviceID = "service_5r78bbg";
-                        const templateID = "template_ftc406h";
-
-                        emailjs.send(serviceID, templateID, params).then(
-                            (res) => {
-                                document.getElementById('assignmentName').value = "";
-                                document.getElementById('emailTo').value = "";
-                                console.log(res);
-                                alert("Email sent successfully");
-                            })
-                        .catch((err) => {
-                            console.log(err);
-                            alert("Error sending email");
-                        })
-                    },
-                    pickAssignment(assignmentType) {
-                        console.log('pick', assignmentType)
-                        this.picked = assignmentType
-                    },
-                    validateAssignmentName() {
-                        this.assignmentNameValid = this.assignmentName !== '';
-                    },
-                    toggle() {
-                        console.log('Toggle button clicked')
-                        this.fromDate = this.tempFromDate
-                        this.toDate = this.tempToDate
-                        if (this.fromDate > this.toDate) {
-                            this.dueDateValid = false;
-                        }
-                        this.show = !this.show
-                    },
-                    dismissed() {
-                        console.log('Alert dismissed')
-                    },
-                    onContext(ctx) {
-                        this.context = ctx
-                    }
-                },
-
-                components: {
-                    'steps': Step
-                }
-            });
-
-
-        </script>
+        <script src="index.js"></script>
 </body>
 
 </html>

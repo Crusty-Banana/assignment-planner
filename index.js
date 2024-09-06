@@ -2588,10 +2588,15 @@ var vm = new Vue({
 
   computed: {
     dueDateFeedback() {
+      const currentScript = document.currentScript;
+      const scriptSrc = currentScript ? currentScript.src : "";
+      const fileName = scriptSrc.substring(scriptSrc.lastIndexOf("/") + 1);
       if (this.toDate == "") {
+        if ("Vi" in fileName) return "Làm ơn nhập hạn nộp bài.";
         return "Please enter a due date.";
       }
       if (this.toDate < this.fromDate) {
+        if ("Vi" in fileName) return "Hạn nộp phải trễ hơn ngày bắt đầu.";
         return "Due date must be later than the begin date.";
       }
       return null;

@@ -110,330 +110,39 @@
                     </div>
                 </b-col>
             </b-row>
+            <b-row>
+                <div class="form">  
+                    <label>Lưu bài tập của bạn:</label>
+                    <button onclick="window.print()">In ngay</button>
+                </div>
+            </b-row>
         </b-container>
-        <div class="alert-container">
-            <b-alert show dismissible fade>
-                Thành công! Bạn còn <span class="highlight1">{{ calcTotalDays() }} ngày</span> để hoàn thành bài tập.
-            </b-alert>
-        </div>
         <template v-if="isDatescategory()">
-            <steps v-bind:stepobject='infographic1'></steps>
-            <steps v-bind:stepobject='infographic2'></steps>
-            <steps v-bind:stepobject='infographic3'></steps>
-            <steps v-bind:stepobject='infographic4'></steps>
-            <steps v-bind:stepobject='infographic5'></steps>
-            <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib light-purple" href="#top">Quay lên đầu ^</a>
+            <div class="alert-container">
+                <b-alert show dismissible fade>
+                    Thành công! Bạn còn <span class="highlight1">{{ calcTotalDays() }} ngày</span> để hoàn thành bài tập.
+                </b-alert>
+            </div>
+            <steps-vi v-bind:stepobject='infographicVi1'></steps-vi>
+            <steps-vi v-bind:stepobject='infographicVi2'></steps-vi>
+            <steps-vi v-bind:stepobject='infographicVi3'></steps-vi>
+            <steps-vi v-bind:stepobject='infographicVi4'></steps-vi>
+            <steps-vi v-bind:stepobject='infographicVi5'></steps-vi>
         </template> 
-
+        <div id="to-print">
+            <template v-if="isDatescategory()">
+                <printing-steps-vi v-bind:stepobject='infographicVi1'></printing-steps-vi>
+                <printing-steps-vi v-bind:stepobject='infographicVi2'></printing-steps-vi>
+                <printing-steps-vi v-bind:stepobject='infographicVi3'></printing-steps-vi>
+                <printing-steps-vi v-bind:stepobject='infographicVi4'></printing-steps-vi>
+                <printing-steps-vi v-bind:stepobject='infographicVi5'></printing-steps-vi>
+            </template> 
+        </div>
+        <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib light-purple" href="#top">Quay lên đầu ^</a>
         <script src="//unpkg.com/vue@2.6.12/dist/vue.min.js"></script>
         <script src="//unpkg.com/bootstrap-vue@2.23.0/dist/bootstrap-vue.js"></script>
         <script src="//unpkg.com/bootstrap-vue@2.23.0/dist/bootstrap-vue-icons.js"></script>
-        <script>
-            // STEPS CONTENT IN JSON OBJECT FORMAT
-            var infographic1 = {
-                step: '1',
-                heading: 'Getting Started',
-                todos: '<div class="content"> \
-                <p><strong>A. Understand the assignment</strong></p>\
-                <p>Take your time reading the instruction carefully and make sure you understand all the requirements, including the topic, design, length, and deadline, etc. Never hesitate to ask your instructor for clarification if something is unclear.\
-                To efficiently organize your time, break the assignment down into smaller activities and make a detailed timeline. For more information, please visit Understand Your Assignment.</p>\
-                <p><strong>B. Consider your audience</strong></p>\
-                <p>Be succinct if your audience comprises industry professionals. You are able to immediately get into the in-depth details of your research when presenting in your field because you will not have to define all technical terms or go over the basics. </p>\
-                <p>If your target audience is non-specialists, more background information is needed. Describe any technical terminology then emphasize the significance of your research.</p>\
-                </div>',
-                percentage: '10',
-                truePercent: '10'
-            };
-
-            var infographic2 = {
-                step: '2',
-                heading: 'Gathering Data',
-                todos: '<div class="content"> \
-                <p><strong>A. Conduct research:</strong></p>\
-                <p>Choose a research subject or topic that interests you and meets the requirement of the assignment. Do preliminary research to compile background data and evaluate whether reliable sources are accessible. Narrow down your topics (here are some Strategies for Narrowing the Research Topic) and start gathering data by using reliable search tools, academic databases, and libraries to find sources that are applicable to your subject of study.</p>\
-                <p>Consider the author\'s credentials, the source\'s reputation, and the source\'s publication date when evaluating sources. Books from credible publishers, government publications, and peer-reviewed journals are frequently reliable sources.\
-                Assess the source\'s approach and supporting data carefully as well to judge its quality and applicability to your research. You can create a well-supported and well-rounded research essay by cross-referencing data with several sources and being critical of biases or conflicts of interest.</p>\
-                <p>RADAR test can be used to evaluate sources.</p>\
-                <p><strong>B. Organize information:</strong></p>\
-                <p>Information graphics can be demonstrated and presented in a variety of different formats, including websites, videos, PowerPoint presentations, posters, ... However, an infographic usually include of the following parts:</p>\
-                <ul> \
-                <li> Title: Conveys the main message or topic of the infographic.</li>\
-                <li> Introduction: Provides context and sets the tone for the infographic. </li>\
-                <li> Main Ideas </li>\
-                <li> Key Takeaways/Conclusion: Summarize main points by recaping the most important information. </li>\
-                <li> References </li>\
-                </ul> \
-                <p>Remember to be concise since the poster has limited space </p> \
-                </div>',
-                percentage: '45',
-                truePercent: '35'
-            };
-
-            var infographic3 = {
-                step: '3',
-                heading: 'Design',
-                todos: '<div class="content"> \
-                <p><strong>A. Make a layout</strong></p>\
-                <p>Consider factors that can affect your choice of size and design, such as the timing, target audience, and venue of the presentation. \
-                Pick a design platform that works for you and the other team members (Canva, Adobe Illustrators, Power point, etc)</p>\
-                <p>Make a layout plan for your poster. Remember that the mix of text and graphics is visually appealing. Organize the material in a logical flow. \
-                Include illustrations to support your main ideas, such as charts, diagrams, and pictures. Use a consistent font style and size and leave some white space for a tidy, uncomplicated appearance.</p> \
-                <p><strong>B. Create the poster</strong></p>\
-                <p>Tips on visual design</p>\
-                <ul> \
-                <li> Use a clear, dark, legible font on a light background to make text easier to read. </li>\
-                <li> Use two to three complementing colors to increase visual impact.</li>\
-                <li> Keep the space on your infographic clear.</li>\
-                <li> Consider eliminating a component if it does not enhance the clarity of your research.</li>\
-                <li> Data visualizations such as tables, charts and other images are a common way to turn complex data sets into clear and accessible information.</li>\
-                <li> Copyright restrictions may apply if you use any text, image, or table that you did not make yourself. </li>\
-                </ul> \
-                <p> Tips for text </p> \
-                <ul> \
-                <li> Aim for short and to-the-point sentences </li>\
-                <li> Bolding can be used to emphasize a few key details but be careful not to overuse it. </li>\
-                </ul> \
-                </div>',
-                percentage: '80',
-                truePercent: '35'
-            };
-
-            var infographic4 = {
-                step: '4',
-                heading: 'Revising and proofreading',
-                todos: '<div class="content"> \
-                <p>Review your presentation design, seek feedback from your peers or instructors and consider appropriate recommendations to improve your work.</p> \
-                <p>Read attentively to catch all of those little mistakes. There are some strategies for proofreading you should check </p> \
-                <p>For additional help, check out the VinUniversity library website for LibGuides about citation resources. </p> \
-                </div>',
-                percentage: '90',
-                truePercent: '10'
-            };
-
-            var infographic5 = {
-                step: '5',
-                heading: 'Presentation',
-                todos: '<div class="content"> \
-                <p>Prepare a speech for your poster.</p>\
-                <ul> \
-                <li> Speak clearly. </li>\
-                <li> Project your voice. </li>\
-                <li> Make eye contact and interact with your audience. </li>\
-                <li> Gesture to appropriate visuals. </li>\
-                <li> Eliminate filler words such as "um", "like" and "you know".</li>\
-                </ul> \
-                <p>During your presentation, interacting with people is important</p> \
-                <p>For more practical presentation skills, checkout These presentation techniques. \
-                </div>',
-                percentage: '100',
-                truePercent: '10'
-            };
-            // TEMPLATE for <steps>
-            var Step = {
-                props: ['stepobject'],
-
-                computed: {
-
-                    calcDueDate: function () {
-                        // initialize dates.  must use suffix to include my timezone GMT-5
-                        var ISOsuffix = 'T00:00:00.000-05:00';
-                        var fromDateObject = new Date(vm.fromDate + ISOsuffix);
-                        var toDateObject = new Date(vm.toDate + ISOsuffix);
-                        var daysBetween = this.diffDays(fromDateObject, toDateObject);
-                        var numDays = this.calcNumDays(daysBetween, this.stepobject.percentage);
-                        var dueDate = this.nextDueDate(fromDateObject, numDays);
-
-                        // Format date to Vietnamese locale
-                        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                        var formatter = new Intl.DateTimeFormat('vi-VN', options);
-                        return formatter.format(new Date(dueDate));
-
-                        return dueDate_String;
-                    },
-                    collapseId: function() {
-                        return 'collapse-' + this.stepobject.step; // Generates a unique ID using the step number
-                    }
-                },
-
-                methods: {
-                    // calculate number of days between both dates
-                    diffDays: function (fromDate, toDate) {
-                        var oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-                        return Math.round(Math.abs((fromDate.getTime() - toDate.getTime()) / (oneDay)));
-                    },
-
-                    // will calculate number of days based off percentage.  This number will be used to add to fromDate to make dueDate
-                    calcNumDays: function (diffDays, percentage) {
-                        return (Math.floor(diffDays * percentage * 0.01)); // using floor to round down since it's an off by 1 (Nov 1 + 3 days = Nov 3?)
-                    },
-
-                    // input fromDate, and numberofDaysToAdd, will output duedate in string format.  This will be used to show when each step is due.
-                    nextDueDate: function (fromDate, numDays) {
-                        var ISOsuffix = 'T00:00:00.000-05:00';
-                        var dueDate = new Date(vm.fromDate + ISOsuffix); // this will be a varying calculated value for each step
-                        dueDate.setDate(fromDate.getDate() + numDays);
-                        return dueDate.toDateString();
-                    },
-                },
-                
-                template: `<b-container class="steps">\
-                <b-row>\
-                    <b-col>\
-                        <b-button block v-b-toggle="'collapse-' + stepobject.step" size="lg" class="m-1"><b>Bước {{ stepobject.step }}: {{ stepobject.heading }}.</b> <span class="float-right">Hoàn thành vào {{ calcDueDate }}</span></b-button>\
-                        <b-collapse invisible :id="'collapse-' + stepobject.step">\
-                            <b-card>\
-                                <b-card-text>\
-                                    <p><b> (Phần trăm thời gian cho bước này: {{ stepobject.truePercent}}%) </b></p>\
-                                    <p v-html="stepobject.todos"> </p>\
-                                </b-card-text>\
-                                <!-- <b-button variant="outline-info">\
-                                    <h5>Video: Taming your research topic <b-icon icon="hand-index"\
-                                            aria-hidden="true"></b-icon>\
-                                    </h5>\
-                                </b-button>\ -->\
-                            </b-card>\
-                        </b-collapse>\
-                    </b-col>\
-                </b-row>\
-            </b-container>`
-
-            
-            };
-
-            var vm = new Vue({
-                el: '#app',
-                data: {
-                    tempFromDate: '',
-                    tempToDate: '',
-                    fromDate: '',
-                    toDate: '',
-                    picked: '',
-                    stepobject: '',  // will be determined in the HTML <steps v-bind...>
-                    name: '',
-                    show: false,
-                    blank: '',
-                    value: '',
-                    context: null,
-                    suffix : 'T00:00:00.000-05:00',
-                    totalDays: 0,
-                    assignmentName: '',
-                    assignmentNameValid: null,
-                    beginDateValid: null,
-                    dueDateValid: null,
-                    assignmentTypeValid : null,
-                },
-                mounted() {
-                    this.fromDate = this.getToday();
-                    this.toDate = this.getTodayNextMonth();
-                    this.tempFromDate = this.getToday();
-                    this.tempToDate = this.getTodayNextMonth();
-                },
-                
-                computed: {
-                    dueDateFeedback() {
-                        if (this.toDate == '') {
-                            return "Làm ơn chọn hạn nộp bài.";
-                        }
-                        if (this.toDate <= this.fromDate) {
-                            return "Hạn nộp bài phải trễ hơn ngày bắt đầu.";
-                        }
-                        return null;
-                    },
-                },
-                methods: {
-                    getToday() {
-                        const date = new Date();
-                        const year = date.getFullYear();
-                        const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
-                        const day = String(date.getDate()).padStart(2, '0');
-                        return `${year}-${month}-${day}`;
-                    },
-                    getTodayNextMonth() {
-                        const date = new Date();
-                        date.setDate(date.getDate() + 31);
-                        const year = date.getFullYear();
-                        const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
-                        const day = String(date.getDate()).padStart(2, '0');
-                        return `${year}-${month}-${day}`;
-                    },
-                    isDatescategory: function () {
-                        // check to make sure both date fields are filled and in chronological order
-                        if (this.fromDate !== '' && this.toDate !== '' && vm.toDate >= vm.fromDate) {
-                            return true;
-                        } else {
-                            return false;
-                        }
-                    },
-                    isAssignment: function(assignmentType) {
-                        if (this.picked==assignmentType) {
-                            return true;
-                        } else {
-                            return false;
-                        }
-                    },
-                    calcTotalDays: function(){
-                        if (this.fromDate !== '' && this.toDate !== '' && vm.toDate > vm.fromDate){
-                            var fromDateObject = new Date(vm.fromDate + this.suffix);
-                            var toDateObject = new Date(vm.toDate + this.suffix);
-                            var oneDay = 24 * 60 * 60 * 1000;
-                            return Math.round(Math.abs((fromDateObject.getTime() - toDateObject.getTime()) / (oneDay)));
-                        }
-                        else{
-                            return 0;
-                        }
-                    },
-                    sendEmail() {
-                        var params = {
-                            assignmentName: document.getElementById('assignmentName').value,
-                            emailTo: document.getElementById('emailTo').value,
-                        };
-
-                        const serviceID = "service_5r78bbg";
-                        const templateID = "template_ftc406h";
-
-                        emailjs.send(serviceID, templateID, params).then(
-                            (res) => {
-                                document.getElementById('assignmentName').value = "";
-                                document.getElementById('emailTo').value = "";
-                                console.log(res);
-                                alert("Email sent successfully");
-                            })
-                        .catch((err) => {
-                            console.log(err);
-                            alert("Error sending email");
-                        })
-                    },
-                    pickAssignment(assignmentType) {
-                        console.log('pick', assignmentType)
-                        this.picked = assignmentType
-                    },
-                    validateAssignmentName() {
-                        this.assignmentNameValid = this.assignmentName !== '';
-                    },
-                    toggle() {
-                        console.log('Toggle button clicked')
-                        this.fromDate = this.tempFromDate
-                        this.toDate = this.tempToDate
-                        if (this.fromDate > this.toDate) {
-                            this.dueDateValid = false;
-                        }
-                        this.show = !this.show
-                    },
-                    dismissed() {
-                        console.log('Alert dismissed')
-                    },
-                    onContext(ctx) {
-                        this.context = ctx
-                    }
-                },
-
-                components: {
-                    'steps': Step
-                }
-            });
-
-
-        </script>
+        <script src="index.js"></script>
 </body>
 
 </html>

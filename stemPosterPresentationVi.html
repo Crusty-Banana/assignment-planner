@@ -48,7 +48,7 @@
         </b-jumbotron>
               
 
-        <div class="section">
+        <div class="return-section">
             <a href="Assignment-planner-vi.html" style="color: white">
                 ⬅ Quay lại trang trước
             </a>
@@ -111,311 +111,35 @@
                     </div>
                 </b-col>
             </b-row>
+            <b-row>
+                <div class="form">  
+                    <label>Lưu bài tập của bạn:</label>
+                    <button onclick="window.print()">In ngay</button>
+                </div>
+            </b-row>
         </b-container>
-        <div class="alert-container">
-            <b-alert show dismissible fade>
-                Thành công! Bạn còn <span class="highlight1">{{ calcTotalDays() }} ngày</span> để hoàn thành bài tập.
-            </b-alert>
-        </div>
         <template v-if="isDatescategory()">
-            <steps v-bind:stepobject='stemPosterPresentation1'></steps>
-            <steps v-bind:stepobject='stemPosterPresentation2'></steps>
-            <steps v-bind:stepobject='stemPosterPresentation3'></steps>
-            <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib light-purple" href="#top">Quay lên đầu ^</a>
+            <div class="alert-container">
+                <b-alert show dismissible fade>
+                    Thành công! Bạn còn <span class="highlight1">{{ calcTotalDays() }} ngày</span> để hoàn thành bài tập.
+                </b-alert>
+            </div>
+            <steps-vi v-bind:stepobject='stemPosterPresentationVi1'></steps-vi>
+            <steps-vi v-bind:stepobject='stemPosterPresentationVi2'></steps-vi>
+            <steps-vi v-bind:stepobject='stemPosterPresentationVi3'></steps-vi>
         </template> 
-
+        <div id="to-print">
+            <template v-if="isDatescategory()">
+                <printing-steps-vi v-bind:stepobject='stemPosterPresentationVi1'></printing-steps-vi>
+                <printing-steps-vi v-bind:stepobject='stemPosterPresentationVi2'></printing-steps-vi>
+                <printing-steps-vi v-bind:stepobject='stemPosterPresentationVi3'></printing-steps-vi>
+            </template> 
+        </div>
+        <a class="f6 link dim br-pill ba ph3 pv2 mb2 dib light-purple" href="#top">Quay lên đầu ^</a>
         <script src="//unpkg.com/vue@2.6.12/dist/vue.min.js"></script>
         <script src="//unpkg.com/bootstrap-vue@2.23.0/dist/bootstrap-vue.js"></script>
         <script src="//unpkg.com/bootstrap-vue@2.23.0/dist/bootstrap-vue-icons.js"></script>
-        <script>
-            var stemPosterPresentation1 = {
-                step: '1',
-                heading: 'Nội dung',
-                todos: '<div class="content"> \
-                <p><strong>A. Hiểu yêu cầu/nhiệm vụ</strong></p> \
-                <p>Hãy dành thời gian đọc kỹ hướng dẫn và đảm bảo bạn hiểu tất cả các yêu cầu, bao gồm chủ đề, hình thức, độ dài và thời hạn, v.v. Đừng bao giờ ngần ngại hỏi các thầy cô nếu bạn cần làm rõ điều gì. Để sắp xếp thời gian một cách hiệu quả, hãy chia bài tập thành các các phần nhỏ hơn tương ứng với kế hoạch bạn lập sẵn.</p> \
-                \
-                <p><strong>B. Tìm hiểu đối tượng mục tiêu:</strong></p> \
-                <ul> \
-                    <li> Nếu đối tượng của bạn là các chuyên gia trong ngành, hãy trình bày ngắn gọn. Bạn có thể ngay lập tức đi vào phần chuyên môn trong nghiên cứu của mình vì bạn sẽ không cần phải giải thích các thuật ngữ.</li> \
-                    <li> Nếu đối tượng mục tiêu của bạn không phải là chuyên gia, thì bạn nên chuẩn bị thêm các thông tin cơ bản để giải thích thêm về những thuật ngữ học thuật và hãy nhấn mạnh những điều quan trọng. </li> \
-                </ul> \
-                \
-                <p><strong>C. Xây dựng nội dung:</strong></p> \
-                <ul> \
-                <li>Tiến hành nghiên cứu: Chọn một chủ đề nghiên cứu mà bạn quan tâm và đáp ứng các yêu cầu của bài làm. Sử dụng các công cụ tìm kiếm đáng tin cậy, cơ sở dữ liệu học thuật và thư viện để tìm các nguồn tài liệu phù hợp với đề tài nghiên cứu. Thu hẹp chủ đề của bạn và sau đó bắt đầu thu thập dữ liệu bằng cách sử dụng các công cụ tìm kiếm, cơ sở dữ liệu học thuật và thư viện đáng tin cậy để tìm các nguồn có thể áp dụng cho chủ đề nghiên cứu của bạn.\ Hãy xem xét thông tin xác thực của tác giả, danh tiếng của nguồn và ngày xuất bản của nguồn khi đánh giá nguồn. Sách từ các nhà xuất bản đáng tin cậy, các ấn phẩm của chính phủ và các tạp chí được bình duyệt thường là những nguồn tài nguyên đáng tin cậy. Đánh giá cách tiếp cận của nguồn và dữ liệu hỗ trợ một cách cẩn thận cũng như đánh giá chất lượng và khả năng ứng dụng của nó cho nghiên cứu của bạn.</li> \
-                <li>Sắp xếp các thông tin bạn tìm được: Thông thường, các bài thuyết trình sử dụng áp phích có khoảng 750 từ, bao gồm các phần dưới đây: </li> \
-                    <ul>\
-                        <li>Tóm tắt (tùy chọn): Tóm tắt nội dung nghiên cứu của bạn là gì? </li>\
-                        <li>Giới thiệu: Tại sao bạn nghiên cứu điều này? Câu hỏi nghiên cứu của bạn là gì?</li>\
-                        <li>Phương pháp: Khi nào, ở đâu và bạn đã làm điều đó như thế nào? Bạn đã sử dụng phương pháp gì? </li>\
-                        <li>Nghiên cứu: Bạn đã tìm thấy gì? Bạn có đúng không? </li>\
-                        <li>Thảo luận: Tại sao việc nghiên cứu của bạn lại quan trọng? Bước tiếp theo là gì? </li>\
-                        <li>Danh mục tài liệu tham khảo </li>\
-                    </ul>\
-                </ul> \
-                <p>Hãy nhớ trình bày thật ngắn gọn vì áp phích có không gian hạn chế </p>\
-                </div>',
-                percentage: '50',
-                truePercent: '50'
-            };
-
-            var stemPosterPresentation2 = {
-                step: '2',
-                heading: 'Thiết kế ',
-                todos: '<div class="content"> \
-                <p><strong>A. Tạo bố cục </strong></p> \
-                <p>Xem xét các yếu tố có thể ảnh hưởng đến sự lựa chọn kích thước và thiết kế của bạn, chẳng hạn như thời gian, đối tượng mục tiêu và địa điểm của bài thuyết trình. Chọn một nền tảng thiết kế phù hợp với bạn và các thành viên khác trong nhóm. </p> \
-                <p>Để thu hút sự chú ý, bạn nên kết hợp song song văn bản và hình ảnh. Để tấm áp phích của bạn được rõ ràng và hợp lí hãy trình bày nó từ trái sang phải, từ trên xuống dưới. Hãy sử dụng tiêu đề, gạch đầu dòng, hình minh họa để hỗ trợ các ý tưởng chính của bạn. Bạn nên sử dụng phông chữ và kích thước chữ nhất quán và để lại một số khoảng trắng để tạo sự gọn gàng và đơn giản. Cuối cùng nhưng không kém phần quan trọng, đừng quên để thông tin liên hệ của bạn cho những cuộc trao đổi trong tương lai.</p>\
-                \
-                <p><strong>B. Thiết kế áp phích</strong></p> \
-                <ul> \
-                <li>Lưu ý về thiết kế:</li> \
-                    <ul>\
-                        <li>Sử dụng phông chữ rõ ràng có màu tối để dễ dàng đọc trên nền sáng</li>\
-                        <li>Sử dụng hai đến ba màu để tấm áp phích của bạn trở nên thu hút hơn </li>\
-                        <li>Giữ những khoảng trống để tấm áp phích trở nên thông thoáng, dễ nhìn </li>\
-                        <li>Hãy loại bỏ những phần không bổ trợ cho bài nghiên cứu của bạn </li>\
-                        <li>Trực quan hóa dữ liệu như bảng, biểu đồ và các hình ảnh khác là một cách phổ biến để biến các tập dữ liệu phức tạp thành thông tin rõ ràng và dễ tiếp cận.</li>\
-                        <li>Hạn chế sử dụng những tài liệu có bản quyền nếu bạn sử dụng bất kỳ văn bản, hình ảnh hoặc bảng nào mà bạn không tự tạo ra. </li>\
-                    </ul>\
-                <li>Lưu ý về trình bày nội dung:</li> \
-                    <ul>\
-                        <li>Sử dụng những câu ngắn gọn và đi thẳng vào vấn đề.</li>\
-                        <li>Dùng chữ in đậm để nhấn mạnh một vài chi tiết chính nhưng không lạm dụng nó </li>\
-                    </ul>\
-                </ul> \
-                \
-                <p><strong>C. Hiệu đính</strong></p> \
-                <p>Hãy rà soát lại và nghe thêm nhận xét, lời đề xuất từ bạn bè hoặc thầy cô của bạn để cải thiện thêm tám áp phích của bạn. </p> \
-                </div>',
-                percentage: '90',
-                truePercent: '40'
-            };
-
-            var stemPosterPresentation3 = {
-                step: '3',
-                heading: 'Trình bày',
-                todos: '<div class="content"> \
-                <p><strong>Chuẩn bị một bài thuyết trình:</strong></p> \
-                <ul> \
-                    <li>Trình bày rõ ràng. </li> \
-                    <li>Kiểm soát giọng nói của bạn.</li> \
-                    <li>Giao tiếp/Tương tác bằng mắt.</li> \
-                    <li>Sử dụng ngôn ngữ hình thể </li> \
-                    <li>Tránh nói "ừm", “kiểu" và "bạn biết đấy".</li>\
-                </ul> \
-                <p>Một việc quan trọng xuyên suốt bài thuyết trình của bạn là tương tác với khán giả. </p> \
-                </div>',
-                percentage: '100',
-                truePercent: '10'
-            };
-            // TEMPLATE for <steps>
-            var Step = {
-                props: ['stepobject'],
-
-                computed: {
-
-                    calcDueDate: function () {
-                        // initialize dates.  must use suffix to include my timezone GMT-5
-                        var ISOsuffix = 'T00:00:00.000-05:00';
-                        var fromDateObject = new Date(vm.fromDate + ISOsuffix);
-                        var toDateObject = new Date(vm.toDate + ISOsuffix);
-                        var daysBetween = this.diffDays(fromDateObject, toDateObject);
-                        var numDays = this.calcNumDays(daysBetween, this.stepobject.percentage);
-                        var dueDate = this.nextDueDate(fromDateObject, numDays);
-
-                        // Format date to Vietnamese locale
-                        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                        var formatter = new Intl.DateTimeFormat('vi-VN', options);
-                        return formatter.format(new Date(dueDate));
-
-                        return dueDate_String;
-                    },
-                    collapseId: function() {
-                        return 'collapse-' + this.stepobject.step; // Generates a unique ID using the step number
-                    }
-                },
-
-                methods: {
-                    // calculate number of days between both dates
-                    diffDays: function (fromDate, toDate) {
-                        var oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-                        return Math.round(Math.abs((fromDate.getTime() - toDate.getTime()) / (oneDay)));
-                    },
-
-                    // will calculate number of days based off percentage.  This number will be used to add to fromDate to make dueDate
-                    calcNumDays: function (diffDays, percentage) {
-                        return (Math.floor(diffDays * percentage * 0.01)); // using floor to round down since it's an off by 1 (Nov 1 + 3 days = Nov 3?)
-                    },
-
-                    // input fromDate, and numberofDaysToAdd, will output duedate in string format.  This will be used to show when each step is due.
-                    nextDueDate: function (fromDate, numDays) {
-                        var ISOsuffix = 'T00:00:00.000-05:00';
-                        var dueDate = new Date(vm.fromDate + ISOsuffix); // this will be a varying calculated value for each step
-                        dueDate.setDate(fromDate.getDate() + numDays);
-                        return dueDate.toDateString();
-                    },
-                },
-                
-                template: `<b-container class="steps">\
-                <b-row>\
-                    <b-col>\
-                        <b-button block v-b-toggle="'collapse-' + stepobject.step" size="lg" class="m-1"><b>Bước {{ stepobject.step }}: {{ stepobject.heading }}.</b> <span class="float-right">Hoàn thành vào {{ calcDueDate }}</span></b-button>\
-                        <b-collapse invisible :id="'collapse-' + stepobject.step">\
-                            <b-card>\
-                                <b-card-text>\
-                                    <p><b> (Phần trăm thời gian cho bước này: {{ stepobject.truePercent}}%) </b></p>\
-                                    <p v-html="stepobject.todos"> </p>\
-                                </b-card-text>\
-                                <!-- <b-button variant="outline-info">\
-                                    <h5>Video: Taming your research topic <b-icon icon="hand-index"\
-                                            aria-hidden="true"></b-icon>\
-                                    </h5>\
-                                </b-button>\ -->\
-                            </b-card>\
-                        </b-collapse>\
-                    </b-col>\
-                </b-row>\
-            </b-container>`
-
-            
-            };
-
-            var vm = new Vue({
-                el: '#app',
-                data: {
-                    tempFromDate: '',
-                    tempToDate: '',
-                    fromDate: '',
-                    toDate: '',
-                    picked: '',
-                    stepobject: '',  // will be determined in the HTML <steps v-bind...>
-                    name: '',
-                    show: false,
-                    blank: '',
-                    value: '',
-                    context: null,
-                    suffix : 'T00:00:00.000-05:00',
-                    totalDays: 0,
-                    assignmentName: '',
-                    assignmentNameValid: null,
-                    beginDateValid: null,
-                    dueDateValid: null,
-                    assignmentTypeValid : null,
-                },
-                mounted() {
-                    this.fromDate = this.getToday();
-                    this.toDate = this.getTodayNextMonth();
-                    this.tempFromDate = this.getToday();
-                    this.tempToDate = this.getTodayNextMonth();
-                },
-                
-                computed: {
-                    dueDateFeedback() {
-                        if (this.toDate == '') {
-                            return "Làm ơn chọn hạn nộp bài.";
-                        }
-                        if (this.toDate <= this.fromDate) {
-                            return "Hạn nộp bài phải trễ hơn ngày bắt đầu.";
-                        }
-                        return null;
-                    },
-                },
-                methods: {
-                    getToday() {
-                        const date = new Date();
-                        const year = date.getFullYear();
-                        const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
-                        const day = String(date.getDate()).padStart(2, '0');
-                        return `${year}-${month}-${day}`;
-                    },
-                    getTodayNextMonth() {
-                        const date = new Date();
-                        date.setDate(date.getDate() + 31);
-                        const year = date.getFullYear();
-                        const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
-                        const day = String(date.getDate()).padStart(2, '0');
-                        return `${year}-${month}-${day}`;
-                    },
-                    isDatescategory: function () {
-                        // check to make sure both date fields are filled and in chronological order
-                        if (this.fromDate !== '' && this.toDate !== '' && vm.toDate >= vm.fromDate) {
-                            return true;
-                        } else {
-                            return false;
-                        }
-                    },
-                    isAssignment: function(assignmentType) {
-                        if (this.picked==assignmentType) {
-                            return true;
-                        } else {
-                            return false;
-                        }
-                    },
-                    calcTotalDays: function(){
-                        if (this.fromDate !== '' && this.toDate !== '' && vm.toDate > vm.fromDate){
-                            var fromDateObject = new Date(vm.fromDate + this.suffix);
-                            var toDateObject = new Date(vm.toDate + this.suffix);
-                            var oneDay = 24 * 60 * 60 * 1000;
-                            return Math.round(Math.abs((fromDateObject.getTime() - toDateObject.getTime()) / (oneDay)));
-                        }
-                        else{
-                            return 0;
-                        }
-                    },
-                    sendEmail() {
-                        var params = {
-                            assignmentName: document.getElementById('assignmentName').value,
-                            emailTo: document.getElementById('emailTo').value,
-                        };
-
-                        const serviceID = "service_5r78bbg";
-                        const templateID = "template_ftc406h";
-
-                        emailjs.send(serviceID, templateID, params).then(
-                            (res) => {
-                                document.getElementById('assignmentName').value = "";
-                                document.getElementById('emailTo').value = "";
-                                console.log(res);
-                                alert("Email sent successfully");
-                            })
-                        .catch((err) => {
-                            console.log(err);
-                            alert("Error sending email");
-                        })
-                    },
-                    pickAssignment(assignmentType) {
-                        console.log('pick', assignmentType)
-                        this.picked = assignmentType
-                    },
-                    validateAssignmentName() {
-                        this.assignmentNameValid = this.assignmentName !== '';
-                    },
-                    toggle() {
-                        console.log('Toggle button clicked')
-                        this.fromDate = this.tempFromDate
-                        this.toDate = this.tempToDate
-                        if (this.fromDate > this.toDate) {
-                            this.dueDateValid = false;
-                        }
-                        this.show = !this.show
-                    },
-                    dismissed() {
-                        console.log('Alert dismissed')
-                    },
-                    onContext(ctx) {
-                        this.context = ctx
-                    }
-                },
-
-                components: {
-                    'steps': Step
-                }
-            });
-
-
-        </script>
+        <script src="index.js"></script>
 </body>
 
 </html>
