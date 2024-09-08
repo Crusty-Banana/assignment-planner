@@ -86,7 +86,7 @@ div.card {
     padding: min(2vw, 1rem) min(2vw, 2rem);
     border-radius: 1rem;
     margin: 0.5rem;
-    width: 11%;
+    width: 10.4%;
     min-width: 70px;
 
     > img {
@@ -168,7 +168,25 @@ div.card {
 label {
   font-size: 1.1rem;
 }
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(61, 81, 131);
+  color: white;
+  text-align: center;
+  > a {
+    color: white;
+  }
+}
 
+.profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
 /* remove this when Vietnamese version is ready */
 a {
   > img {
