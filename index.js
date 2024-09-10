@@ -749,35 +749,34 @@ var labReportVi8 = {
 
 var policyBriefVi1 = {
   step: "1",
-  heading: "Get started",
+  heading: "Bắt Đầu",
   todos:
-    "<div class=\"content\"> \
-              <p><strong>A. Understand Your Assignment</strong></p> \
-              <p>Ensure a comprehensive understanding of your assignment by discerning its specific requirements. Meticulously read the assignment instructions to discern the intended purpose, target audience, scope, format, and length.</p> \
-              <p>It's important to note that policy briefs can manifest in diverse forms. To gather ideas and inspiration, consider exploring sample policy briefs from various organizations.</p> \
-              <p><strong>B. Familiarize Yourself with the Subject Matter</strong></p> \
-              <p>In some instances, you may receive a designated topic and problem, while in others, you might have the freedom to select your own. Irrespective of the scenario, it's imperative to engage in preliminary reading about the subject and issue at hand.</p> \
-              <p>Employing the classic journalistic interrogatives (who, what, where, when, why) can serve as a guide to pinpointing the focal points of your policy brief, facilitating your research and analysis.</p> \
-              </div>",
+    '<div class="content"> \
+              <p><strong>A.	Đọc hiểu yêu cầu bài tập của bạn </strong></p> \
+              <p>Đảm bảo sự hiểu biết toàn diện về nhiệm vụ của bạn bằng cách đọc các yêu cầu cụ thể. Đọc kỹ hướng dẫn bài tập để phân biệt mục đích dự định, đối tượng mục tiêu, phạm vi, định dạng và độ dài. </p> \
+              <p>Điều quan trọng cần lưu ý là bản tóm tắt chính sách có thể được biểu hiện dưới nhiều hình thức khác nhau. Để thu thập ý tưởng và nguồn cảm hứng, hãy cân nhắc việc khám phá các bản tóm tắt chính sách mẫu từ nhiều tổ chức khác nhau. </p> \
+              <p><strong>B. Làm quen với chủ đề </strong></p> \
+              <p>Trong một số trường hợp, bạn có thể nhận được một chủ đề và vấn đề được chỉ định, trong khi ở những trường hợp khác, bạn có thể có quyền tự do lựa chọn chủ đề và vấn đề của riêng mình. Bất kể tình huống nào, việc đọc sơ bộ về chủ đề và vấn đề trước mắt là điều bắt buộc. Việc sử dụng các câu hỏi báo chí cổ điển (ai, cái gì, ở đâu, khi nào, tại sao) có thể dùng làm hướng dẫn để xác định chính xác các trọng tâm trong bản tóm tắt chính sách của bạn, tạo điều kiện thuận lợi cho việc nghiên cứu và phân tích của bạn.</p> \
+              </div>',
   percentage: "10",
   truePercent: "10",
 };
 
 var policyBriefVi2 = {
   step: "2",
-  heading: "Research your policy issue",
+  heading: "Nghiên cứu",
   todos:
     '<div class="content"> \
-              <p><strong>A. Develop Your Research Strategy</strong></p> \
+              <p><strong>A. Phát triển chiến lược nghiên cứu của bạn </strong></p> \
               <ol> \
-              <li>List the terms and concepts linked to your policy issue.</li> \
-              <li>Identify the core concepts among them, which will be the keywords you use when searching library catalogs and databases to uncover pertinent books, journal articles, and various reports.</li> \
+              <li>Liệt kê các thuật ngữ và khái niệm liên quan đến vấn đề chính sách của bạn. </li> \
+              <li>Xác định các khái niệm cốt lõi trong số đó, đây sẽ là từ khóa bạn sử dụng khi tìm kiếm danh mục và cơ sở dữ liệu thư viện để khám phá những cuốn sách, bài báo và báo cáo khác nhau có liên quan. </li> \
               </ol> \
-              <p><strong>B. Locate and Assess Your Sources</strong></p> \
-              <p>Ensure the sources you select are both pertinent and current. It\'s crucial to incorporate academically reputable sources, such as peer-reviewed books and journal articles, along with materials like government publications, documents from policy institutes (think tanks), and content that conveys the perspectives of individuals or groups affected by the issue, particularly those marginalized or mistreated in some manner.</p> \
-              <p>Remember that not all sources possess equal relevance or accurately represent the subject matter.</p> \
-              <p><strong>C. Choose and Systematize Your Discoveries</strong></p> \
-              <p>Accumulate your research findings and maintain a meticulous record of your sources throughout the process.</p> \
+              <p><strong>B. Xác định và đánh giá nguồn của bạn </strong></p> \
+              <p>Đảm bảo các nguồn bạn chọn đều phù hợp và cập nhật. Điều quan trọng là phải kết hợp các nguồn có uy tín về mặt học thuật, chẳng hạn như sách và bài báo được bình duyệt, cùng với các tài liệu như ấn phẩm của chính phủ, tài liệu từ các viện chính sách và nội dung truyền tải quan điểm của các cá nhân hoặc nhóm bị ảnh hưởng bởi vấn đề này, đặc biệt là những người bị gạt ra ngoài lề xã hội. </p> \
+              <p>Hãy nhớ rằng không phải tất cả các nguồn đều có mức độ liên quan như nhau hoặc thể hiện chính xác vấn đề. </p> \
+              <p><strong>C. Chọn và hệ thống hóa những khám phá của bạn </strong></p> \
+              <p>Tích lũy kết quả nghiên cứu của bạn và duy trì hồ sơ tỉ mỉ về các nguồn của bạn trong suốt quá trình.</p> \
               </div>',
   percentage: "45",
   truePercent: "35",
@@ -785,90 +784,83 @@ var policyBriefVi2 = {
 
 var policyBriefVi3 = {
   step: "3",
-  heading: "Begin to organize your brief",
+  heading: "Bắt đầu viết báo cáo tóm tắt chính sách",
   todos:
-    "<div class=\"content\"> \
-              <p>Utilize your policy brief outline (from Step 1B) to populate the sections of your policy brief with preliminary ideas, which can be in point form. It's worth noting that, although the executive summary traditionally comes at the beginning, it may be more practical to tackle it towards the end of the process.</p> \
-              <p><strong>A. Identifying Your Audience</strong></p> \
+    '<div class="content"> \
+              <p>Sử dụng bản phác thảo tóm tắt chính sách của bạn (từ Bước 1B) để đưa các ý tưởng sơ bộ vào các phần tóm tắt chính sách của bạn, có thể ở dạng điểm chính. Cần lưu ý rằng, mặc dù bản tóm tắt điều hành thường xuất hiện ở phần đầu, nhưng có thể thực tế hơn khi giải quyết nó vào cuối quá trình.</p> \
+              <p><strong>A. Xác định đối tượng của bạn</strong></p> \
               <ul> \
-              <li>Who is your target audience and who do you need to persuade? (This will impact your tone and evidence presentation.)</li> \
-              <li>Define the informed but non-specialist readers of your brief.</li> \
-              <li>Predict how these readers perceive the issue and discuss it.</li> \
-              <li>What key message do you aim to convey that will resonate with them? Summarize this in two sentences to maintain focus.</li> \
+              <li>Đối tượng mục tiêu của bạn là ai và bạn cần thuyết phục ai? (Điều này sẽ ảnh hưởng đến giọng văn và cách trình bày của bạn.)</li> \
+              <li>Xác định những người đọc có hiểu biết nhưng không phải là chuyên gia.</li> \
+              <li>Dự đoán cách những người đọc này nhận thức vấn đề và thảo luận về vấn đề đó.</li> \
+              <li>Bạn muốn truyền tải thông điệp chính nào? Tóm tắt thông tin này trong hai câu để duy trì sự tập trung.</li> \
               </ul> \
-              <p><strong>B. Problem Statement</strong></p> \
+              <p><strong>B. Tuyên bố vấn đề</strong></p> \
               <ul> \
-              <li>Define the problem's scope and magnitude.</li> \
-              <li>What evidence can you provide to illustrate its significance, urgency, or scale?</li> \
-              <li>Identify the facts, graphs, images, quotes, statistics, or maps that can support your arguments.</li> \
+              <li>Xác định phạm vi và quy mô của vấn đề.</li> \
+              <li>Bạn có thể cung cấp bằng chứng nào để minh họa cho tầm quan trọng, tính cấp thiết hoặc quy mô của vấn đề?</li> \
+              <li>Xác định các sự kiện, biểu đồ, hình ảnh, trích dẫn, số liệu thống kê hoặc bản đồ có thể hỗ trợ cho lập luận của bạn.</li> \
               </ul> \
-              <p><strong>C. Stakeholders</strong></p> \
+              <p><strong>C. Các bên liên quan</strong></p> \
               <ul> \
-              <li>Enumerate all stakeholders and describe how the issue affects them.</li> \
-              <li>Consider the varied perspectives, especially those of marginalized or smaller communities and underrepresented voices, which may differ from government officials or corporate leaders. Include these perspectives if pertinent to the issue and your recommendations.</li> \
+              <li>Liệt kê tất cả các bên liên quan và mô tả cách vấn đề ảnh hưởng đến họ.</li> \
+              <li>Xem xét các quan điểm khác nhau, đặc biệt là quan điểm của các cộng đồng thiểu số hoặc nhỏ hơn và tiếng nói không được đại diện, có thể khác với các quan chức chính phủ hoặc lãnh đạo doanh nghiệp. Đề cập đến các quan điểm này nếu có liên quan đến vấn đề của bạn.</li> \
               </ul> \
-              <p><strong>D. Policy Options</strong></p> \
+              <p><strong>D. Các lựa chọn chính sách</strong></p> \
               <ul> \
-              <li>Determine if you will present multiple options with a recommendation or just a single option.</li> \
-              <li>Prepare arguments and evidence to substantiate your case.</li> \
-              <li>Clarify how the option(s) will impact various stakeholders.</li> \
+              <li>Xác định xem bạn sẽ trình bày nhiều lựa chọn với một khuyến nghị hay chỉ một lựa chọn duy nhất.</li> \
+              <li>Chuẩn bị các lập luận và bằng chứng để chứng minh cho trường hợp của bạn.</li> \
+              <li>Làm rõ cách các lựa chọn sẽ tác động đến các bên liên quan khác nhau.</li> \
               </ul> \
-              <p><strong>E. Recommendations</strong></p> \
+              <p><strong>E. Các khuyến nghị</strong></p> \
               <ul> \
-              <li>Specify the necessary actions or measures and the responsible parties for instigating change.</li> \
-              <li>Decide if you will conclude with a call to action, which might be placed in the conclusion section if applicable.</li> \
+              <li>Chỉ định các hành động hoặc biện pháp cần thiết và các bên chịu trách nhiệm thúc đẩy thay đổi.</li> \
+              <li>Quyết định xem bạn sẽ kết thúc bằng lời kêu gọi hành động hay không, có thể được đưa vào phần kết luận nếu có.</li> \
               </ul> \
-              <p><strong>F. Sources Consulted</strong></p> \
+              <p><strong>F. Các nguồn tham khảo</strong></p> \
               <ul> \
-              <li>Confirm the inclusion of a list of credible references supporting your points.</li> \
-              <li>Ensure that these references encompass a range of perspectives.</li> \
+              <li>Xác nhận việc đưa vào danh sách các tài liệu tham khảo đáng tin cậy hỗ trợ cho các quan điểm.</li> \
               </ul> \
-              <p><strong>G. Executive Summary</strong></p> \
-              <ul> \
-              <li>Review if the executive summary captures key aspects of the rationale and problem.</li> \
-              <li>Evaluate whether the summary effectively entices readers to delve deeper into the brief.</li> \
-              </ul> \
-              </div>",
+              </div>',
   percentage: "65",
   truePercent: "20",
 };
 
 var policyBriefVi4 = {
   step: "4",
-  heading: "Write the first draft",
+  heading: "Viết",
   todos:
-    "<div class=\"content\"> \
-              <p>It's time to start writing! When you're working on your first draft, your primary aim is to get your ideas onto paper. Don't worry if your thoughts aren't fully developed at this stage. Release the desire for perfection and write swiftly. You can refine and revise your work later on.</p> \
-              </div>",
+    '<div class="content"> \
+              <p>Đã đến lúc bắt đầu viết! Khi bạn đang làm bản thảo đầu tiên, mục tiêu chính của bạn là đưa ý tưởng của mình lên giấy. Đừng lo lắng nếu suy nghĩ của bạn chưa được phát triển đầy đủ ở giai đoạn này. Bạn có thể tinh chỉnh và sửa đổi bài viết của mình sau này.</p> \
+              </div>',
   percentage: "85",
   truePercent: "20",
 };
 
 var policyBriefVi5 = {
   step: "5",
-  heading: "Revise and proofread",
+  heading: "Đọc và chỉnh sửa",
   todos:
     '<div class="content"> \
-              <p><strong>A. Assess Your First Draft and Perform Additional Research as Necessary</strong></p> \
+              <p><strong>A. Đánh giá bản thảo đầu tiên và thực hiện nghiên cứu bổ sung nếu cần</strong></p> \
               <ul> \
-              <li>Examine your initial draft to identify any gaps or areas where your arguments lack sufficient evidence.</li> \
-              <li>If you identify deficiencies, conduct further research to bolster your arguments.</li> \
+              <li>Kiểm tra bản thảo ban đầu của bạn để xác định bất kỳ vấn đề hoặc lĩnh vực nào mà lập luận của bạn thiếu đủ bằng chứng.</li> \
+              <li>Nếu bạn xác định được thiếu sót, hãy tiến hành nghiên cứu thêm để củng cố lập luận của bạn.</li> \
               </ul> \
-              <p><strong>B. Revise Your Draft</strong></p> \
+              <p><strong>B. Sửa bản thảo của bạn</strong></p> \
               <ul> \
-              <li>Print out a hard copy of your brief and work from it.</li> \
-              <li>Thoroughly read through your document, initially focusing on higher-order issues like organization, structure, evidence, and analysis.</li> \
+              <li>Đọc kỹ tài liệu của bạn, trước tiên tập trung vào các vấn đề cấp cao hơn như tổ chức, cấu trúc, bằng chứng và phân tích.</li> \
               </ul> \
-              <p><strong>C. Evaluate Your Second Draft and Make Revisions</strong></p> \
+              <p><strong>C. Đánh giá bản thảo thứ hai của bạn và thực hiện các bản sửa đổi</strong></p> \
               <ul> \
-              <li>Refine your revision process by concentrating on paragraph-level matters, such as sentence flow and transitions.</li> \
+              <li>Tinh chỉnh quy trình sửa đổi của bạn bằng cách tập trung vào các vấn đề cấp đoạn văn, chẳng hạn như dòng câu và chuyển tiếp.</li> \
               </ul> \
-              <p><strong>D. Proofread the Final Version of Your Brief</strong></p> \
+              <p><strong>D. Đọc lại bản tóm tắt cuối cùng của bạn</strong></p> \
               <ul> \
-              <li>In this final step, carefully review your work to catch minor errors. Utilize effective proofreading techniques.</li> \
-              <li>Ensure your brief adheres to the style guide recommended in your assignment or by your instructor. Pay attention to details like titles, margins, and page numbers. Confirm whether a cover sheet is necessary.</li> \
-              <li>Your list of sources should encompass key references used in crafting your brief. Adhere to the citation style guide specified in your assignment or by your instructor.</li> \
-              <li>Consider using reference management software such as RefWorks and Write-N-Cite to help manage your citations as you write. These tools are valuable for building your bibliography.</li> \
+              <li>Trong bước cuối cùng này, hãy xem xét cẩn thận để phát hiện các lỗi nhỏ. Sử dụng các kỹ thuật đọc lại hiệu quả. Tham khảo thêm tại: <a href="https://libguides.usc.edu/writingguide/proofreading">Chiến thuật đọc soát văn bản</a></li> \
+              <li>Đảm bảo bản tóm tắt của bạn tuân thủ hướng dẫn về phong cách được khuyến nghị trong bài tập của bạn hoặc do người hướng dẫn của bạn đề xuất. Chú ý đến các chi tiết như tiêu đề, lề và số trang. Xác nhận xem có cần trang bìa hay không.</li> \
+              <li>Danh sách các nguồn của bạn phải bao gồm các tài liệu tham khảo chính được sử dụng để soạn thảo bản tóm tắt của bạn. Tuân thủ hướng dẫn về phong cách trích dẫn được chỉ định trong bài tập của bạn hoặc do giảng viên của bạn nêu.</li> \
+              <li>Cân nhắc sử dụng phần mềm quản lý tham chiếu như RefWorks và Write-N-Cite để giúp quản lý trích dẫn khi bạn viết. Các công cụ này rất có giá trị để xây dựng danh mục tài liệu tham khảo của bạn.</li> \
               </ul> \
               </div>',
   percentage: "100",
