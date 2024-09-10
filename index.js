@@ -505,17 +505,17 @@ var articleReviewVi5 = {
 
 var annotatedBibliographyVi1 = {
   step: "1",
-  heading: "Understand your assignment",
+  heading: "Hiểu về bài tập",
   todos:
     '<div class="content"> \
-              <p>Annotated bibliography assignments are commonplace, yet their structure and breadth can differ based on their intended purpose and the preferences of the instructor. It\'s crucial to be well-informed about the specific requirements for your assignment.</p> \
-              \
-              <p>Each entry within an annotated bibliography comprises two essential components:</p> \
+              <p>Danh sách tài liệu tham khảo có chú thích là mục thường thấy trong các bài viết học thuật, có thể khác nhau theo từng khu vực, đất nước, cơ sở giáo dục,.</p>\
+              <p>Mỗi danh sách tài liệu tham khảo có chú thích thường có 2 phần:<p>\
+              </p> \
               <ul> \
-              <li>A. The citation: This presents bibliographic information concerning the source, including details like the author, title, and publication date. These particulars are formatted following a designated citation style, such as APA, IEEE, Chicago, Notes & Bibliography, or MLA.</li> \
-              <li>B. The annotation: Typically consisting of one to two paragraphs, the annotation serves the purpose of describing and assessing the source.</li> \
+              <li>A. Trích dẫn: trình bày thông tin thư mục liên quan đến nguồn, bao gồm các chi tiết như tác giả, tiêu đề và ngày xuất bản. Những thông tin cụ thể này được định dạng theo kiểu trích dẫn được chỉ định, chẳng hạn như APA, IEEE, Chicago, Notes & Bibliography hoặc MLA. </li> \
+              <li>B. Chú thích: thường bao gồm một đến hai đoạn văn, phục vụ mục đích mô tả và đánh giá nguồn.</li> \
               </ul> \
-              <p>If there are aspects of the assignment that are unclear, do not hesitate to seek clarification from your instructor or teaching assistant.</p> \
+              <p>Hãy hỏi lại người hướng dẫn nếu bạn cần trợ giúp.</p> \
               </div>',
   percentage: "5",
   truePercent: "5",
@@ -523,27 +523,23 @@ var annotatedBibliographyVi1 = {
 
 var annotatedBibliographyVi2 = {
   step: "2",
-  heading: "Choose a topic for your bibliography",
+  heading: "Chọn chủ đề",
   todos:
     '<div class="content"> \
-              <p>Your topic should interest you and match the scope and requirements of the assignment. To write a strong paper, you must have a focused and specific topic. Achieving this involves developing, choosing, and further refining your topic.</p> \
-              \
-              <p><b>A. Developing Your Topic:</b></p> \
+              <p><b>A. Phát triển chủ đề:</b></p> \
               <ul> \
-              <li>Conduct research, brainstorm ideas, and discuss them with others to strengthen your topic.</li> \
-              <li>Preliminary research reveals what experts in the field are interested in.</li> \
-              <li>Brainstorming techniques include freewriting, asking questions about your topic, and creating topic maps.</li> \
-              <li>Engaging in discussions with others can help you view your ideas from a reader\'s perspective.</li> \
+              <li>Tiến hành nghiên cứu, động não các ý tưởng và thảo luận với người khác để củng cố chủ đề của bạn. </li> \
+              <li>Nghiên cứu sơ bộ cho thấy những gì các chuyên gia trong lĩnh vực này quan tâm. </li> \
+              <li>Kỹ thuật động não bao gồm viết tự do, đặt câu hỏi về chủ đề của bạn và tạo bản đồ chủ đề. </li> \
+              <li>Tham gia thảo luận với người khác có thể giúp bạn xem xét ý tưởng của mình từ góc độ của người đọc. </li> \
               </ul> \
               \
-              <p><b>B. Narrowing Your Topic:</b></p> \
+              <p><b>B. Thu hẹp chủ đề của bạn:</b></p> \
               <ul> \
-              <li>Narrowing down your topic makes your work more manageable and increases the likelihood of a successful paper.</li> \
-              <li>A well-crafted paper delves deep into a specific aspect of a broader issue.</li> \
-              <li>A concrete topic is more manageable. As you narrow your focus, the subject matter becomes more precise.</li> \
-              <li>Add specific details to your subtopics to further refine your topic.</li> \
+              <li>Việc thu hẹp chủ đề giúp công việc của bạn dễ quản lý hơn và tăng khả năng thành công của bài viết. Một bài viết tốt sẽ đi sâu vào một khía cạnh cụ thể của một vấn đề rộng hơn.</li> \
+              <li>Khi bạn thu hẹp chủ đề, bài viết sẽ trở nên chính xác hơn, không bị lạc đề.</li> \
               </ul> \
-              <p><b>Tip:</b> To ensure your topic is narrow enough, keep narrowing it down until it becomes more specific. You can employ traditional journalistic questions (Who, What, Where, When, Why) to help refine your topic further.</p> \
+              <p><b>Mẹo:</b> Để đảm bảo chủ đề của bạn đủ chi tiết, hãy tiếp tục thu hẹp chủ đề cho đến khi nó trở nên cụ thể hơn. Bạn có thể sử dụng các câu hỏi báo chí truyền thống (Ai, Cái gì, Ở đâu, Khi nào, Tại sao) để giúp tinh chỉnh chủ đề của bạn hơn nữa. </p> \
               </div>',
   percentage: "15",
   truePercent: "10",
@@ -551,15 +547,15 @@ var annotatedBibliographyVi2 = {
 
 var annotatedBibliographyVi3 = {
   step: "3",
-  heading: "Find sources",
+  heading: "Tìm tài liệu",
   todos:
     '<div class="content"> \
-              <p>The materials you choose to incorporate in your annotated bibliography should be closely related to the overarching topic or theme. Here are three suggestions to assist you in commencing and staying on course:</p> \
-              <p><b>A. Refer to a research guide relevant to your subject.</b></p> \
-              <p><b>B. Gather the materials that exhibit promise.</b></p> \
-              <p>If they are available online, save links or download them directly from the catalog, databases, or the web. For print materials such as books or government documents, submit requests through the catalog by providing your last name and the 14-digit barcode number on your Watcard. You can specify the library to which you want the item(s) to be delivered.</p> \
+              <p>Các tài liệu bạn đưa vào thư mục chú thích của mình phải liên quan chặt chẽ đến chủ đề hoặc chủ đề bao quát. Dưới đây là ba gợi ý để hỗ trợ bạn trong việc bắt đầu và duy trì lộ trình: </p> \
+              <p><b>A. Tham khảo hướng dẫn nghiên cứu liên quan đến chủ đề của bạn. </b></p> \
+              <p><b>B. Thu thập những tài liệu có triển vọng.</b></p> \
+              <p>Nếu chúng có sẵn trực tuyến, hãy lưu liên kết hoặc tải xuống trực tiếp từ danh mục, cơ sở dữ liệu hoặc web. Đối với các tài liệu in như sách hoặc tài liệu của chính phủ, bạn có thể tìm tại các thư viện. </p> \
               \
-              <p><b>C. Maintain a record of essential citation details for each source,</b> including the author, article title, journal title, and publication date. This information will be indispensable in constructing comprehensive citations for the items featured in your annotated bibliography.</p> \
+              <p><b>C. Duy trì hồ sơ chi tiết trích dẫn cần thiết cho từng nguồn, </b> bao gồm tác giả, tên bài báo, tên tạp chí và ngày xuất bản. Thông tin này sẽ không thể thiếu trong thư mục chú thích của bạn.</p> \
               </div>',
   percentage: "40",
   truePercent: "25",
@@ -567,45 +563,48 @@ var annotatedBibliographyVi3 = {
 
 var annotatedBibliographyVi4 = {
   step: "4",
-  heading: "Evaluate your sources",
+  heading: "Đánh giá nguồn",
   todos:
-    '<div class="content"> \
-              <p>Review the materials you\'ve gathered and make choices about which ones to incorporate into your bibliography. Evaluate their content and quality to determine if they merit inclusion. Utilizing the RADAR method can assist you in assessing their relevance, authority, publication date, accuracy, and the purpose behind their creation.</p> \
-              \
-              <p>While going through your sources, make note of significant aspects like the primary arguments or hypotheses, the theoretical frameworks employed by the author, their research design, and the outcomes or conclusions. Identify any aspects that raise questions, such as weak links in an argument or a limited sample size in a study. Also, highlight the strengths of the work and how it specifically contributes to your research topic or question.</p> \
-              </div>',
+    "<div class='content'> \
+              <p>Sự dụng các công cụ nghiên cứu uy tín, các số liệu học thuật, và <a href='https://vinuni.libguides.com/c.php?g=934922&p=6759514'>thư viện</a> chính thống để tìm những tài liệu cần thiết cho bài nghiên cứu của bạn. </p> \
+              <p>Hãy tìm hiểu cẩn thận về thông tin xác thực của tác giả các tài liệu cũng như thông tin về dữ liệu bạn tìm được (<a href='https://guides.library.pdx.edu/evaluate'>evaluating sources</a>). \
+              Các nguồn sách từ các nhà xuất bản uy tín, các thông tin đã được xác thực của chính phủ, các nguồn tin đáng tin cậy. \
+              Bên cạnh thông tin của các nguồn nghiên cứu, bạn cũng đồng thời phải tìm hiểu kĩ các nội dung của tài liệu bạn tìm được, \
+              đảm bảo rằng các dữ liệu này phù hợp và liên quan đến chủ đề bạn đang nghiên cứu. </p>\
+              <p><a href='https://www.youtube.com/watch?v=CLSLFssRQ_E'>RADAR test</a>– Tham khảo thêm phương pháp để đánh giá và áp dụng một nguồn tài liệu.</p>\
+              </div>",
   percentage: "55",
   truePercent: "15",
 };
 
 var annotatedBibliographyVi5 = {
   step: "5",
-  heading: "Write and revise",
+  heading: "Viết",
   todos:
-    "<div class=\"content\"> \
-              <p>Generate citations for each of the sources following the specified citation style, such as APA, Chicago, or MLA. Subsequently, for each citation, compose a brief annotation by drawing upon your notes about the source. It's essential to both summarize and assess the source in the following ways:</p> \
+    '<div class="content"> \
+              <p>Tạo trích dẫn cho từng nguồn theo kiểu trích dẫn đã quy định ở các bước trên, chẳng hạn như APA, Chicago hoặc MLA. Sau đó, đối với mỗi trích dẫn, hãy soạn một chú thích ngắn gọn bằng cách rút ra những ghi chú của bạn về nguồn. </p> \
+              <p>Điều cần thiết là phải tóm tắt và đánh giá nguồn theo những cách sau: </p>\
               <ol> \
-              <li>Provide an overview of the source's content and its primary focus.</li> \
-              <li>Evaluate the methods, conclusions, or reliability of the source.</li> \
-              <li>Express your own thoughts and impressions of the work, while elucidating why it merits inclusion in your research.</li> \
+              <li>Cung cấp cái nhìn tổng quan về nội dung của nguồn và trọng tâm chính của nguồn. </li> \
+              <li>Đánh giá phương pháp, kết luận hoặc độ tin cậy của nguồn. </li> \
+              <li>Thể hiện suy nghĩ và ấn tượng của riêng bạn về tác phẩm, đồng thời làm rõ lý do tại sao nó đáng được đưa vào nghiên cứu của bạn. </li> \
               </ol> \
-              <p>Once you've written a complete draft, set it aside for a period. Upon your return, revisit your annotations and contemplate how to enhance them. Consider whether each item significantly contributes to your research topic. Can you make your annotations clearer or more concise? Have you overlooked any critical points? Do they flow logically and cohesively?</p> \
-              </div>",
+              <p>Khi bạn đã viết xong một bản nháp hoàn chỉnh, hãy đặt nó sang một bên trong một khoảng thời gian. Khi quay lại, hãy xem lại các chú thích của bạn và suy ngẫm cách cải thiện chúng. Xem xét liệu mỗi mục có đóng góp đáng kể cho chủ đề nghiên cứu của bạn hay không. Bạn có thể làm cho chú thích của mình rõ ràng hơn hoặc ngắn gọn hơn không? </p> \
+              </div>',
   percentage: "85",
   truePercent: "30",
 };
 
 var annotatedBibliographyVi6 = {
   step: "6",
-  heading: "Proofread and polish",
+  heading: "Đọc và chỉnh sửa",
   todos:
     '<div class="content"> \
-              <p>Once you are content with the quality of your annotations, set your assignment aside once more. Upon revisiting it, your objective is to identify and rectify any punctuation, grammar, and other mechanical errors. It is advisable to review your work multiple times and, at a minimum, proofread from a physical printout.</p> \
-              <p>Make certain of the following:</p> \
+              <p>Đọc kiểm tra các lỗi về dấu câu, ngữ pháp. Bạn nên đọc lại bài của mình nhiều lần. Hãy chắc chắn những điều sau khi chỉnh sửa: </p> \
               <ol> \
-              <li>Each entry\'s citation is thorough and adheres to the specified bibliographic style.</li> \
-              <li>Every annotation is coherent and devoid of errors.</li> \
-              <li>Your paper is correctly formatted and aligns with the stipulated assignment criteria.</li> \
+              <li>Mỗi trích dẫn của mục đều phải kỹ lưỡng và tuân thủ phong cách thư mục đã chỉ định.</li> \
+              <li>Mọi chú thích đều mạch lạc và không có sai sót. </li> \
+              <li>Bài viết của bạn được định dạng chính xác và phù hợp với tiêu chí bài tập quy định.s</li> \
               </ol> \
               </div>',
   percentage: "100",
