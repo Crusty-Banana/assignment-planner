@@ -187,9 +187,3 @@ label {
   border-radius: 10px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
-/* remove this when Vietnamese version is ready */
-a {
-  > img {
-    display: none;
-  }
-}
