@@ -613,29 +613,30 @@ var annotatedBibliographyVi6 = {
 
 var labReportVi1 = {
   step: "1",
-  heading: "Write your introduction",
+  heading: "Viết giới thiệu ",
   todos:
-    "<div class=\"content\"> \
-              <p>The introduction to a lab report usually includes the following elements:</p> \
+    '<div class="content"> \
+              <p>Phần giới thiệu báo cáo phòng thí nghiệm thường bao gồm các yếu tố sau:</p> \
               <ol> \
-              <li>Background information about scientific concepts related to the lab;</li> \
-              <li>The lab's purpose;</li> \
-              <li>The lab's objective(s);</li> \
-              <li>Your hypothesis for the experiment;</li> \
-              <li>Reasons for your hypothesis.</li> \
+              <li>Thông tin cơ bản về các khái niệm khoa học liên quan đến phòng thí nghiệm;</li> \
+              <li>Mục đích của phòng thí nghiệm;</li> \
+              <li>Mục tiêu của phòng thử nghiệm;</li> \
+              <li>Giả thuyết về thí nghiệm;</li> \
+              <li>Lý do cho giả thuyết của bạn.</li> \
               </ol> \
-              </div>",
+              <p>Tham khảo thêm cách viết tại <a href="https://writeonline.ca/labreport.php?content=section4">WriteOnline.ca’s Lab Report instruction</a></p>\
+              </div>',
   percentage: "10",
   truePercent: "10",
 };
 
 var labReportVi2 = {
   step: "2",
-  heading: "Write your materials and methods",
+  heading: "Viết phương pháp thí nghiệm",
   todos:
     '<div class="content"> \
-              <p>Craft a narrative outlining the methodology you employed. While depicting your procedure, make reference to the equipment and analytical tools you utilized. Your objective is to offer a concise, focused account.</p> \
-              <p>Include only the essential particulars required for replicating the experiment. Omit any discussion of procedures and tools that your peers would already be acquainted with.</p> \
+              <p>Viết về phương pháp bạn đã sử dụng trong thí nghiệm. Trong khi mô tả quy trình của bạn, hãy tham khảo thiết bị và công cụ phân tích mà bạn đã sử dụng. Mục tiêu là viết để người đọc biết thí nghiệm này đã dùng cách nào để đạt được kết quả. </p> \
+              <p>Tham khảo thêm cách viết tại <a href="https://writeonline.ca/labreport.php?content=section4">WriteOnline.ca’s Lab Report instruction</a></p> \
               </div>',
   percentage: "15",
   truePercent: "5",
@@ -643,15 +644,16 @@ var labReportVi2 = {
 
 var labReportVi3 = {
   step: "3",
-  heading: "Develop tables and graphs. Write a summary of your results",
+  heading: "Phát triển biểu đồ, bảng dữ liệu, viết sơ lực kết quả ",
   todos:
     '<div class="content"> \
-              <p>What were your observations? Your aim is to present the trends, patterns, and connections within your data. The initial step involves creating tables and graphs to construct a narrative illustrating your observations. Subsequently, integrate these visual representations into a written account of your findings. It\'s essential to focus on what you saw, rather than delving into explanations of why it occurred. Your results section should encompass the following:</p> \
+              <p>Quan sát nhìn thấy được là gì? Mục đích là trình bày các xu hướng, mẫu và kết nối trong dữ liệu của bạn. Bước đầu tiên bao gồm việc tạo các bảng và biểu đồ để minh họa những quan sát của bạn. Sau đó, hãy tích hợp những cách trình bày trực quan này vào một bản tường trình bằng văn bản về những phát hiện của bạn. Điều cần thiết là tập trung vào những gì bạn đã thấy thay vì đi sâu vào giải thích lý do tại sao nó xảy ra. Phần kết quả của bạn phải bao gồm những nội dung sau:</p> \
               <ol> \
-              <li>An initial summary that outlines your noteworthy observations and the trend(s) you have identified.</li> \
-              <li>Body paragraphs where you elucidate your observations.</li> \
-              <li>Visual aids, such as graphs, tables, and figures, to substantiate your observations.</li> \
+              <li>Bản tóm tắt ban đầu phác thảo những quan sát đáng chú ý của bạn và (các) đặc điểm bạn đã xác định.</li> \
+              <li>Các đoạn thân bài nếu chi tiết hơn những quan sát của mình.</li> \
+              <li>Các phương tiện trực quan như đồ thị, bảng biểu và hình ảnh để chứng minh quan sát của bạn.</li> \
               </ol> \
+              <p>Tham khảo thêm cách viết tại <a href="https://writeonline.ca/labreport.php?content=section4">WriteOnline.ca’s Lab Report instruction</a></p> \
               </div>',
   percentage: "40",
   truePercent: "25",
@@ -659,34 +661,36 @@ var labReportVi3 = {
 
 var labReportVi4 = {
   step: "4",
-  heading: "Discussion section prep. Analyze your results",
+  heading: "Bàn Luận, phân tích kết quả",
   todos:
-    "<div class=\"content\"> \
-              <p>Now, it's time to delve deeper into the meaning of your results. Why did you obtain the specific results you did? How do these results deviate from those in previous studies, other class experiments, or your classmates' findings? What are the implications of these distinctions? Employ the following approaches to analyze the significance of your results:</p> \
+    '<div class="content"> \
+              <p>Phân tích sâu hơn về ý nghĩa kết quả của bạn. Tại sao bạn đạt được kết quả cụ thể mà bạn đã làm? Những kết quả này khác biệt như thế nào so với kết quả trong các nghiên cứu trước đây, các thí nghiệm khác trong lớp hoặc phát hiện của bạn cùng lớp? Ý nghĩa của những khác biệt này là gì? </p> \
+              <p>Sử dụng các phương pháp sau để phân tích tầm quan trọng của kết quả: </p>\
               <ol> \
-              <li>Review your lab notes to gain further insight.</li> \
-              <li>Contrast your findings with those of your peers in the class.</li> \
-              <li>Seek out and examine articles or other relevant materials linked to your laboratory experiment.</li> \
+              <li>Xem lại các ghi chép trong phòng thí nghiệm của bạn để hiểu rõ hơn. </li> \
+              <li>Đối chiếu những phát hiện của bạn với những phát hiện của các bạn trong lớp. </li> \
+              <li>Tìm kiếm và kiểm tra các bài báo hoặc tài liệu liên quan khác có liên quan đến thí nghiệm trong phòng thí nghiệm của bạn.</li> \
               </ol> \
-              </div>",
+              </div>',
   percentage: "55",
   truePercent: "15",
 };
 
 var labReportVi5 = {
   step: "5",
-  heading: "Write your discussion",
+  heading: "Viết luận điểm cá nhân",
   todos:
     '<div class="content"> \
-              <p>Utilize the research and analysis you conducted in Step 4 to engage in a critical reflection on your experiment and its outcomes. It\'s advisable to consult your lab manual, Teaching Assistant (TA), or instructor for specific guidelines on what to include. A discussion section can encompass the following components:</p> \
+              <p>Sử dụng nghiên cứu và phân tích mà bạn đã thực hiện ở Bước 4 để đưa ra những phản ánh quan trọng về thử nghiệm của bạn và kết quả của nó. Bạn nên tham khảo Trợ lý Giảng dạy (TA) hoặc người hướng dẫn để biết hướng dẫn cụ thể về những nội dung cần đưa vào. Phần thảo luận có thể bao gồm các thành phần sau:</p> \
               <ol> \
-              <li>A summary of your findings.</li> \
-              <li>An explanation of your findings (What led to the specific results you obtained?).</li> \
-              <li>A comparison between your results and prior research or alternative findings.</li> \
-              <li>A consideration of the limitations and weaknesses of your experiment.</li> \
-              <li>An evaluation of the significance of the results (What is the meaning of these outcomes? Why do they matter?).</li> \
-              <li>Suggestions or recommendations for future research endeavors.</li> \
+              <li>Tóm tắt những phát hiện của bạn.</li> \
+              <li>Giải thích về những phát hiện của bạn (Điều gì dẫn đến những kết quả cụ thể mà bạn thu được?).</li> \
+              <li>So sánh giữa kết quả của bạn với nghiên cứu trước đó hoặc các phát hiện thay thế.</li> \
+              <li>Xem xét những hạn chế và điểm yếu trong thử nghiệm của bạn.</li> \
+              <li>Đánh giá tầm quan trọng của các kết quả (Ý nghĩa của những kết quả này là gì? Tại sao chúng lại quan trọng?).</li> \
+              <li>Đề xuất hoặc khuyến nghị cho những nỗ lực nghiên cứu trong tương lai.</li> \
               </ol> \
+              <p>Tham khảo thêm cách viết tại <a href="https://writeonline.ca/labreport.php?content=section4">WriteOnline.ca’s Lab Report instruction</a></p> \
               </div>',
   percentage: "65",
   truePercent: "10",
@@ -696,35 +700,37 @@ var labReportVi6 = {
   step: "6",
   heading: "Write your conclusion",
   todos:
-    "<div class=\"content\"> \
-              <p>Compose a concise conclusion for your lab report by:</p> \
+    '<div class="content"> \
+              <p>Soạn một kết luận ngắn gọn cho báo cáo thí nghiệm của bạn bằng cách: </p> \
               <ol> \
-              <li>Summarizing the key findings.</li> \
-              <li>Relating the results to the experiment's objectives.</li> \
-              <li>Stating whether the data supports your hypothesis.</li> \
-              <li>Mentioning any unexpected results or limitations.</li> \
-              <li>Explaining the broader implications of the findings, if applicable.</li> \
-              <li>Ending with a brief statement that ties back to the experiment's purpose.</li> \
+              <li>Tóm tắt những phát hiện chính. </li> \
+              <li>Liên hệ kết quả với mục tiêu của thí nghiệm. </li> \
+              <li>Cho biết liệu dữ liệu có ủng hộ giả thuyết của bạn hay không. </li> \
+              <li>Đề cập đến những kết quả hoặc hạn chế không mong muốn. </li> \
+              <li>Giải thích ý nghĩa rộng hơn của các phát hiện, nếu có. </li> \
+              <li>Kết thúc bằng một tuyên bố ngắn gọn liên quan đến mục đích của thí nghiệm.</li> \
               </ol> \
-              </div>",
+              <p>Tham khảo thêm cách viết tại <a href="https://writeonline.ca/labreport.php?content=section4">WriteOnline.ca’s Lab Report instruction</a></p> \
+              </div>',
   percentage: "75",
   truePercent: "10",
 };
 
 var labReportVi7 = {
   step: "7",
-  heading: "Write the abstract. Prepare a bibliography",
+  heading: "Viết Tóm tắt, soạn thư mục ",
   todos:
     '<div class="content"> \
-              <p>An abstract, located at the beginning of your paper, serves as a concise summary of your report, typically spanning 100-200 words. The abstract should encompass the following details:</p> \
+              <p>Một bản tóm tắt, nằm ở đầu bài viết, đóng vai trò là bản tóm tắt ngắn gọn về báo cáo của bạn, thường kéo dài 100-200 từ. Bản tóm tắt phải bao gồm các chi tiết sau:</p> \
               <ol> \
-              <li>The lab\'s objectives and your primary hypothesis.</li> \
-              <li>A succinct outline of the procedures followed.</li> \
-              <li>A summary of the overall findings and their alignment with your initial hypothesis.</li> \
-              <li>An exposition of the conclusions drawn.</li> \
-              <li>The scientific principles you gained insights into during the lab.</li> \
+              <li>Mục tiêu của phòng thí nghiệm và giả thuyết chính của bạn.</li> \
+              <li>Tóm tắt ngắn gọn các quy trình tiếp theo.</li> \
+              <li>Bản tóm tắt các phát hiện tổng thể và sự liên kết của chúng với giả thuyết ban đầu của bạn.</li> \
+              <li>Trình bày các kết luận rút ra.</li> \
+              <li>Những nguyên tắc khoa học mà bạn đã hiểu rõ hơn trong phòng thí nghiệm.</li> \
               </ol> \
-              <p>In your bibliography, make sure to include reference details for all the sources employed in crafting your report. Format it in accordance with the citation style guide recommended in your lab manual or by your instructor.</p> \
+              <p>Trong thư mục của bạn, hãy đảm bảo bao gồm các chi tiết tham khảo cho tất cả các nguồn được sử dụng để tạo báo cáo của bạn. Định dạng trích dẫn theo hướng dẫn quy định.</p> \
+              <p>Truy cập website Thư viện của VinUni để tham khảo cách trích dẫn nguồn, danh sách tham khảo <a href="https://vinuni.libguides.com/citation">LibGuides about citation resources.</a></p> \
               </div>',
   percentage: "85",
   truePercent: "10",
@@ -732,11 +738,10 @@ var labReportVi7 = {
 
 var labReportVi8 = {
   step: "8",
-  heading: "Put the lab report in final form. Revise and edit",
+  heading: "Đọc, sửa và hoàn thiện",
   todos:
     '<div class="content"> \
-              <p>Before finalizing your document, scrutinize the formatting, images, and references. For precise formatting instructions, refer to your lab manual and consult with your Teaching Assistant (TA) for additional guidance.</p> \
-              <p>As is the case with all forms of writing, the initial draft of your lab report may contain omissions, issues with structure and lucidity, and grammatical or spelling mistakes. To produce a successful report, dedicate time to the revision and editing process.</p> \
+              <p>Trước khi hoàn thiện tài liệu của bạn, hãy xem xét kỹ lưỡng định dạng, hình ảnh và tài liệu tham khảo. Để biết hướng dẫn định dạng chính xác, hãy tham khảo ý kiến Trợ lý Giảng dạy (TA) của bạn để được hướng dẫn thêm. Để tạo ra một báo cáo thành công, hãy dành thời gian cho quá trình đọc và chỉnh sửa.</p> \
               </div>',
   percentage: "100",
   truePercent: "15",
