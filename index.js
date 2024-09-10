@@ -261,14 +261,24 @@ var criticalReflectionVi5 = {
 
 var literatureReviewVi1 = {
   step: "1",
-  heading: "Get started",
+  heading: "Bắt đầu",
   todos:
     '<div class="content"> \
-              <p><strong>A. Understand your assignment</strong></p> \
-              <p>Take your time reading the instructions carefully and make sure you understand all the requirements, including the topic, format, length, and deadline, etc. Never hesitate to ask your instructor for clarification if something is unclear. To efficiently organize your time, break the assignment down into smaller activities and make a detailed timeline.</p> \
-              \
-              <p><strong>B. Form a research question</strong></p> \
-              <p>After doing quick initial research, narrow down your topic to identify a particular problem. Then develop it into a direct, precise question. Make sure your research question is clear, simple, and able to be answered. Additionally, it must be relevant and capable of expanding the field.</p> \
+              <p><strong>A. Đọc hiểu yêu cầu đề bài, chủ đề</strong></p> \
+              <p>Hãy dành thời gian đọc hướng dẫn cẩn thận và đảm bảo bạn hiểu tất cả các yêu cầu, bao gồm chủ \
+                đề, định dạng, cấu trúc độ dài và thời hạn, v.v. Đừng bao giờ ngần ngại hỏi người hướng dẫn của \
+                bạn để làm rõ nếu có điều gì không rõ ràng. Để sắp xếp thời gian một cách hiệu quả, hãy chia \
+                nhiệm vụ thành các hoạt động nhỏ hơn và lập lịch trình chi tiết. Để biết thêm thông tin, vui lòng \
+                truy cập: <a href="https://uwaterloo.ca/writing-and-communication-centre/understand-your-assignment"> Các bước để phân tích đề bài, chủ đề, yêu cầu </a>\
+              </p> \
+              <p><strong>B. Tìm hiểu khái quát</strong></p> \
+              <p>Bước này sẽ đặt nền tảng cho bài luận nghiên cứu của bạn một hướng đi cụ thể. Dưới đây là một số bước để bắt đầu Tìm hiểu khái quát</p> \
+              <ul> \
+                  <li>Chọn một đề tài, chủ đề nghiên cứu mà bạn quan tâm cho bài luận. Hãy đảm bảo chủ đề này phù hợp với đề bài, yêu cầu đã có.</li> \
+                  <li>Bắt đầu nghiên cứu khái quát về số liệu, tài liệu có sẵn. Đánh giá xem những nguồn tài liệu này có uy tín và có thể tiếp cận, sử dụng được không.</li> \
+              </ul> \
+              <p><strong>C. Thu hẹp chủ đề</strong></p> \
+              <p>Đánh giá tầm quan trọng, tính khả thi và mức độ liên quan của từng chủ đề. Xin lời khuyên từ người hướng dẫn của bạn nếu cần thiết. Chọn một vấn đề nghiên cứu hoặc chủ đề cụ thể phù hợp với phạm vi nhiệm vụ của bạn, phù hợp với mục tiêu nghiên cứu của bạn và có khả năng phân tích sâu sắc. Cân nhắc sử dụng các câu hỏi báo chí truyền thống (Ai?, Cái gì?, Ở đâu?, Khi nào?, Tại sao? ). Dưới đây là: <a href="https://libguides.usc.edu/writingguide/narrowtopic">Một số cách thu hẹp chủ đề nghiên cứu</a> </p> \
               </div>',
   percentage: "10",
   truePercent: "10",
@@ -276,20 +286,24 @@ var literatureReviewVi1 = {
 
 var literatureReviewVi2 = {
   step: "2",
-  heading: "Research",
+  heading: "Nghiên cứu",
   todos:
     "<div class=\"content\"> \
-              <p><strong>A. Create a research strategy</strong></p> \
-              <p>Depending on your research objectives, select suitable research methods, whether they be qualitative, quantitative, or mixed methodologies. Create an organized plan for collecting data, laying out the sources, tools, and procedures you are going to employ.</p> \
+              <p><strong>A. Tạo lập chiến lược nghiên cứu</strong></p> \
+              <p>Phụ thuộc vào chủ đề nghiên cứu của bạn, chọn một vài phương pháp nghiên cứu phù hợp, có thể là nghiên cứu định tính, định lượng hoặc kết hợp cả hai. Lập ra một kế hoạch sắp xếp cụ thể về việc thu thập dữ liệu, quản lí nguồn, công cụ. </p>\
               \
-              <p><strong>B. Research</strong></p> \
-              <p>Using reliable search tools, academic databases, and libraries to find sources that are applicable to your subject of study.</p> \
-              \
-              <p><strong>C. Evaluate sources for alignment with your topic</strong></p> \
-              <p>After collecting resources, evaluate and appraise the content to fit with your topic. Consider the author's credentials, the source's reputation, and the source's publication date when evaluating sources. Books from credible publishers, government publications, and peer-reviewed journals are frequently reliable resources. Assess the source's approach and supporting data carefully as well to judge its quality and applicability to your research.</p> \
-              \
-              <p><strong>D. Research critically</strong></p> \
-              <p>Pay attention to the research techniques and supporting data utilized in the papers, articles, or any material you are reading as you go along, assessing their validity and applicability to your own research. Compare and contrast various sources, looking for similarities and differences. Remember to take notes or highlight any details that emphasize important points, discoveries, and your own thoughts.</p> \
+              <p><strong>B. Tìm và đánh giá các nguồn dữ liệu </strong></p> \
+              <p>Sự dụng các công cụ nghiên cứu uy tín, các số liệu học thuật, và <a href='https://vinuni.libguides.com/c.php?g=934922&p=6759514'>thư viện</a> chính thống để tìm những tài liệu cần thiết cho bài nghiên cứu của bạn. </p> \
+              <p>Hãy tìm hiểu cẩn thận về thông tin xác thực của tác giả các tài liệu cũng như thông tin về dữ liệu bạn tìm được (<a href='https://guides.library.pdx.edu/evaluate'>evaluating sources</a>). \
+              Các nguồn sách từ các nhà xuất bản uy tín, các thông tin đã được xác thực của chính phủ, các nguồn tin đáng tin cậy. \
+              Bên cạnh thông tin của các nguồn nghiên cứu, bạn cũng đồng thời phải tìm hiểu kĩ các nội dung của tài liệu bạn tìm được, \
+              đảm bảo rằng các dữ liệu này phù hợp và liên quan đến chủ đề bạn đang nghiên cứu. </p>\
+              <p><a href='https://www.youtube.com/watch?v=CLSLFssRQ_E'>RADAR test</a>– Tham khảo thêm phương pháp để đánh giá và áp dụng một nguồn tài liệu.</p>\
+              <p><strong>C. Nghiên cứu</strong></p> \
+              <p>Khi bạn bắt đầu nghiên cứu, hãy thu thập tất cả các nguồn thông tin cần thiết bạn vừa tìm được, \
+              chú thíc, đánh dấu những chi tiết, số liệu, lập luận quan trọng liên quan đến chủ đề của bạn. Bạn \
+              cũng có thể viết lại những ý tưởng, bình luận, lập luận của bạn về những nguồn thông tin này. \
+              <a href='https://vinuni.instructure.com/courses/1630/pages/reading-and-note-taking?module_item_id=64273'>Tìm hiểu thêm Chiến thuật Đọc và ghi chú</a>\
               </div>",
   percentage: "40",
   truePercent: "30",
@@ -297,14 +311,27 @@ var literatureReviewVi2 = {
 
 var literatureReviewVi3 = {
   step: "3",
-  heading: "Organize your literature review",
+  heading: "Sắp xếp và lên dàn ý",
   todos:
     '<div class="content"> \
-              <p><strong>A. Identify themes and organize</strong></p> \
-              <p>Create a citation management system as you collect pertinent sources to keep track of your references, such as Zotero, Mendeley, or EndNote. After gathering your sources, group them into themes or subtopics to identify common patterns and gaps. Look for organizational patterns like same ideas, theories, themes, corporate structures, regional emphasis, data set, historical development, problem-solution.</p> \
-              \
-              <p><strong>B. Thesis statement</strong></p> \
-              <p>Write a thesis statement that summarizes a general picture of the available research on the topic, using the themes and conclusions you established in the earlier rounds. Your thesis statement should be a succinct, declarative sentence that wraps up your essay\'s major idea and expresses your opinion on the topic.</p> \
+              <p><strong>A. Xác định chủ đề và bố cục toàn bài: </strong></p> \
+              <p>Tìm và nghiên cứu thêm thông tin hỗ trợ, củng cố luận điểm, \
+              phân tích của bạn. Nếu có quá nhiều thông tin, có thể tham khảo các công cụ dưới đây để quản lí, \
+              sắp xếp gọn gàng các nguồn tham khảo: <a href="https://www.youtube.com/watch?v=ui8vPKUK5sQ">Zotero</a>, \
+              <a href="https://guides.lib.umich.edu/c.php?g=283006&p=1885648">Mendeley</a>, <a href="https://vinuni.libguides.com/EndNote">EndNote</a> </p> \
+              <p> Sau khi thu thập tài liệu, hay nhóm các tài liệu cùng chủ đề vào các đề mục nhỏ hơn, phân tích điểm giống và khác của từng nguồn thông tin.\
+              Dưới đấy là một số cách nhóm các tài liệu liên quan:</p>\
+              <ul>\
+                <li> Cùng ý tưởng, lý thuyết, chủ đề </li>\
+                <li>Cơ cấu tổ chức </li>\
+                <li>Nhấn mạnh vào nghiên cứu khu vực</li>\
+                <li>Phân tích số liệu</li>\
+                <li>Phân tích lịch sử phát triển</li>\
+                <li>Vấn đề - giải pháp </li>\
+              </lu>\
+              <p><strong>B. Luận điểm cốt lõi (Thesis statement)</strong></p> \
+              <p>Viết câu luận điểm cốt lõi (<a href="https://writingcenter.fas.harvard.edu/thesis">thesis statement</a>) tổng hợp lại một bức tranh tổng quan, góc nhìn toàn diện về chủ đề. \
+              Câu chủ đề nên ngắn gọn, súc tích, bao hàm các ý chính trong bài và bày tỏ suy nghĩ cá nhân của bạn với chủ đề</p>\
               </div>',
   percentage: "60",
   truePercent: "20",
@@ -312,20 +339,23 @@ var literatureReviewVi3 = {
 
 var literatureReviewVi4 = {
   step: "4",
-  heading: "First draft",
+  heading: "Đặt bút viết",
   todos:
     "<div class=\"content\"> \
-              <p><strong>A. Verify the style guide requirements</strong></p> \
-              <p>For more information on the required style guide, consult your course curriculum or your instructor. Common citation styles include the Chicago style guide, APA style guide, IEEE style guide, MLA style guide. Check out the VinUniversity library website for LibGuides about citation resources.</p> \
-              \
-              <p><strong>B. Introduction</strong></p> \
-              <p>Introduce the broad topic and its importance to the academic field. Gradually narrow down the review's focus, mentioning the major issues, differences, and gaps in the literature. Indicate your review's aim/ thesis statement. Give readers a roadmap for what to expect in the next parts by explaining the organization of your review.</p> \
-              \
-              <p><strong>C. Body paragraphs</strong></p> \
-              <p>Each paragraph should begin with a topic sentence that clearly states the major idea or theme you'll be addressing. Then, give a summary or analysis of the literature on that particular subject, stressing the main conclusions, hypotheses, or arguments from the sources you have read. Link the sources together and make similarities or contrasts if needed. Maintain a coherent flow from one paragraph to the next while supporting your views with evidence and examples from the literature. Remember to give proper credit to your sources and assess the reliability and significance of each reference.</p> \
-              \
-              <p><strong>D. Conclusion</strong></p> \
-              <p>Restate the main research question or review's goal. Briefly summarize the major topics, recurring patterns, and significant research covered in your literature review. Emphasize the importance of the readings you've done and how they've shaped your understanding of the subject as a whole. Point out any shortcomings or gaps in the current body of knowledge and offer potential directions for further study if needed.</p> \
+              <p><strong>A. Xác định cách trích dẫn </strong></p> \
+              <p>Để biết thêm thông tin yêu cầu của đề bài, cách trích dẫn cần làm, hãy xem lại hướng dẫn của thầy cô, quy định chung. Một số cách trích dẫn phổ biến là: Chicago style guide, APA style guide, IEEE style guide, MLA style guide.</p> \
+              <p> Tìm hiểu thêm cách trích dẫn tại website thư viện VinUni <a href='https://vinuni.libguides.com/citation'>LibGuides about citation resources.</a></p>\
+              <p><strong>B. Mở bài</strong></p> \
+              <p>Giới thiệu chủ đề tổng quát và tầm quan trọng của đối với lĩnh vực học thuật. Sau đó, dần dần thu hẹp trọng tâm đánh giá, đề cập đến những vấn đề chính, những khác biệt và vấn đề trong tài liệu. </p> \
+              <p>Cho biết mục tiêu/ luận điểm của bài đánh giá của bạn. Cung cấp cho người đọc tổng quan về các phần tiếp theo bằng cách giải thích cách sắp xếp bài đánh giá của bạn.</p>\
+              <p><strong>C. Đoạn thân bài</strong></p> \
+              <p>Mỗi đoạn văn nên bắt đầu bằng một câu chủ đề nêu rõ ý tưởng hoặc chủ đề chính mà bạn sẽ giải quyết. </p> \
+              <p>Sau đó, đưa ra một đoạn tóm tắt hoặc phân tích tài liệu về chủ đề cụ thể đó, nhấn mạnh các kết luận, giả thuyết hoặc lập luận chính từ các nguồn bạn đã đọc.</p>\
+              <p>Đảm bảo liên kết các nguồn với nhau và tạo ra những điểm tương đồng hoặc tương phản nếu cần. Duy trì sự mạch lạc từ đoạn này sang đoạn tiếp theo, đồng thời củng cố quan điểm của bạn các ví dụ, trích dẫn từ tài liệu.</p>\
+              <p>Hãy nhớ ghi chú thích phù hợp cho các nguồn của bạn và đánh giá độ tin cậy cũng như tầm quan trọng của từng tài liệu tham khảo.</p>\
+              <p><strong>D. Kết luận</strong></p> \
+              <p>Nhắc lại câu hỏi nghiên cứu chính hoặc mục tiêu của bài đánh giá. Sau đó, tóm tắt ngắn gọn các chủ đề chính, các mô hình định kỳ và nghiên cứu quan trọng đã được đề cập trong bài đánh giá tài liệu của bạn. Trong bài luận của bạn, hãy nhớ nhấn mạnh tầm quan trọng của những bài đọc bạn đã đọc.</p> \
+              <p>Chỉ ra một số thiếu sót hoặc lỗ hổng nào trong kiến thức hiện tại và đưa ra các hướng tiềm năng để nghiên cứu thêm nếu cần.</p> \
               </div>",
   percentage: "80",
   truePercent: "20",
@@ -333,35 +363,44 @@ var literatureReviewVi4 = {
 
 var literatureReviewVi5 = {
   step: "5",
-  heading: "Revising and proofreading",
+  heading: "Đọc và sửa bài",
   todos:
     '<div class="content"> \
-              <p><strong>A. Evaluate your first draft and conduct additional research as needed</strong></p> \
-              <p>Review your first draft and, if necessary, do further additional research.</p> \
-              \
-              <p><strong>B. Revise your draft</strong></p> \
-              <p>Review the organization of your essay to ensure that your thoughts are arranged clearly and coherently. Ensure that each paragraph supports your core argument. Pay attention to grammar, punctuation, and spelling to improve readability overall. Additionally, seek feedback from your peers or instructors and consider appropriate recommendations to improve your work.</p> \
-              \
-              <p><strong>C. Evaluate your second draft and rewrite as needed</strong></p> \
-              <p>Focus on issues within the paragraph level, such as logic, analysis, flow, and transitions.</p> \
-              \
-              <p><strong>D. Proofread and put your paper into its final format</strong></p> \
-              <p>Read attentively to catch all of those little mistakes. Spend time making sure your paper follows the rules outlined in the suitable style guide. Remember the page numbers, titles, margins, reference lists, and citations. For additional help, check out the VinUniversity library website for LibGuides about citation resources.</p> \
-              </div>',
+              <p><strong>A.	Đọc lại lần đầu</strong></p>\
+              <p><a href="https://www.scribbr.com/language-rules/what-is-proofreading/">Đọc lại bài viết</a> và nếu cần thiết, hãy nghiên cứu, tìm thêm tài liệu bổ sung</p>\
+              <p><strong>B.	Đọc và sửa bài</strong></p>\
+              <p>Chú ý đến khung bài luận để chắc chăn rằng các luận điểm của bạn được sắp xếp hợp lí, mạch lạc, các ý phụ củng cố luận điểm chính. Đòng thời chú ý tới chính tả và câu văn toàn bài</p>\
+              <p>Nếu được, hãy tìm một người trợ giúp, nhận xét bài cho bạn để giúp bài bạn tốt hơn. </p>\
+              <p><strong>C.	Viết lại, chỉnh sửa</strong></p>\
+              <p>Chú trọng vào từng đoạn văn nhỏ, chú ý đến logic, phân tích và kết nối giữa các câu, giữa các đoạn. </p>\
+              <p><strong>D.	Đọc lần cuối và chỉnh sửa định dạng </strong></p>\
+              <p>Đọc và tìm những lỗi nhỏ nhặt. Chỉnh sửa bài nghiên cứu của bạn đúng với định dạng tiêu chuẩn hoặc định dạng theo yêu cầu. Đừng quên đánh số trang, thêm tiêu đề, chỉnh lề, danh sách tài liệu tham khảo. Tham khảo thêm tại: <a href="https://libguides.usc.edu/writingguide/proofreading">Chiến thuật đọc soát văn bản</a></p>\
+              <p>Truy cập website Thư viện của VinUni để tham khảo cách trích dẫn nguồn, danh sách tham khảo <a href="https://vinuni.libguides.com/citation">LibGuides about citation resources.</a></p>\
+</div>',
   percentage: "100",
   truePercent: "20",
 };
 
 var articleReviewVi1 = {
   step: "1",
-  heading: "Get started",
+  heading: "Bắt đầu",
   todos:
     '<div class="content"> \
-              <p><strong>A. Understand the assignment</strong></p> \
-              <p>Take your time reading the instructions carefully and make sure you understand all the requirements, including the topic, format, length, and deadline, etc. Never hesitate to ask your instructor for clarification if something is unclear. To efficiently organize your time, break the assignment down into smaller activities and make a detailed timeline.</p> \
-              \
-              <p><strong>B. Choose your research article</strong></p> \
-              <p>Use the article that the instructor has provided or look up academic papers on the relevant subject. Pick three to five articles to read. After reading the abstract and introduction of each article, choose one article that is relevant to the course, is of interest to you, and you understand.</p> \
+              <p><strong>A. Đọc hiểu yêu cầu đề bài, chủ đề</strong></p> \
+              <p>Hãy dành thời gian đọc hướng dẫn cẩn thận và đảm bảo bạn hiểu tất cả các yêu cầu, bao gồm chủ \
+                đề, định dạng, cấu trúc độ dài và thời hạn, v.v. Đừng bao giờ ngần ngại hỏi người hướng dẫn của \
+                bạn để làm rõ nếu có điều gì không rõ ràng. Để sắp xếp thời gian một cách hiệu quả, hãy chia \
+                nhiệm vụ thành các hoạt động nhỏ hơn và lập lịch trình chi tiết. Để biết thêm thông tin, vui lòng \
+                truy cập: <a href="https://uwaterloo.ca/writing-and-communication-centre/understand-your-assignment"> Các bước để phân tích đề bài, chủ đề, yêu cầu </a>\
+              </p> \
+              <p><strong>B. Tìm hiểu khái quát</strong></p> \
+              <p>Bước này sẽ đặt nền tảng cho bài luận nghiên cứu của bạn một hướng đi cụ thể. Dưới đây là một số bước để bắt đầu Tìm hiểu khái quát</p> \
+              <ul> \
+                  <li>Chọn một đề tài, chủ đề nghiên cứu mà bạn quan tâm cho bài luận. Hãy đảm bảo chủ đề này phù hợp với đề bài, yêu cầu đã có.</li> \
+                  <li>Bắt đầu nghiên cứu khái quát về số liệu, tài liệu có sẵn. Đánh giá xem những nguồn tài liệu này có uy tín và có thể tiếp cận, sử dụng được không.</li> \
+              </ul> \
+              <p><strong>C. Thu hẹp chủ đề</strong></p> \
+              <p>Đánh giá tầm quan trọng, tính khả thi và mức độ liên quan của từng chủ đề. Xin lời khuyên từ người hướng dẫn của bạn nếu cần thiết. Chọn một vấn đề nghiên cứu hoặc chủ đề cụ thể phù hợp với phạm vi nhiệm vụ của bạn, phù hợp với mục tiêu nghiên cứu của bạn và có khả năng phân tích sâu sắc. Cân nhắc sử dụng các câu hỏi báo chí truyền thống (Ai?, Cái gì?, Ở đâu?, Khi nào?, Tại sao? ). Dưới đây là: <a href="https://libguides.usc.edu/writingguide/narrowtopic">Một số cách thu hẹp chủ đề nghiên cứu</a> </p> \
               </div>',
   percentage: "10",
   truePercent: "10",
@@ -369,74 +408,97 @@ var articleReviewVi1 = {
 
 var articleReviewVi2 = {
   step: "2",
-  heading: "Read the article",
+  heading: "Nghiên cứu",
   todos:
-    '<div class="content"> \
-              <p><strong>A. First reading</strong></p> \
-              <p>Determine the author’s research question, thesis, and findings.</p> \
+    "<div class=\"content\"> \
+              <p><strong>A. Tạo lập chiến lược nghiên cứu</strong></p> \
+              <p>Phụ thuộc vào chủ đề nghiên cứu của bạn, chọn một vài phương pháp nghiên cứu phù hợp, có thể là nghiên cứu định tính, định lượng hoặc kết hợp cả hai. Lập ra một kế hoạch sắp xếp cụ thể về việc thu thập dữ liệu, quản lí nguồn, công cụ. </p>\
               \
-              <p><strong>B. Subsequent reading</strong></p> \
-              <p>Analyze the author\'s methods, findings, techniques, and conclusions. Throughout the reading process, remember to take notes or highlight any details that emphasize important points, discoveries, and your own thoughts.</p> \
-              </div>',
+              <p><strong>B. Tìm và đánh giá các nguồn dữ liệu </strong></p> \
+              <p>Sự dụng các công cụ nghiên cứu uy tín, các số liệu học thuật, và <a href='https://vinuni.libguides.com/c.php?g=934922&p=6759514'>thư viện</a> chính thống để tìm những tài liệu cần thiết cho bài nghiên cứu của bạn. </p> \
+              <p>Hãy tìm hiểu cẩn thận về thông tin xác thực của tác giả các tài liệu cũng như thông tin về dữ liệu bạn tìm được (<a href='https://guides.library.pdx.edu/evaluate'>evaluating sources</a>). \
+              Các nguồn sách từ các nhà xuất bản uy tín, các thông tin đã được xác thực của chính phủ, các nguồn tin đáng tin cậy. \
+              Bên cạnh thông tin của các nguồn nghiên cứu, bạn cũng đồng thời phải tìm hiểu kĩ các nội dung của tài liệu bạn tìm được, \
+              đảm bảo rằng các dữ liệu này phù hợp và liên quan đến chủ đề bạn đang nghiên cứu. </p>\
+              <p><a href='https://www.youtube.com/watch?v=CLSLFssRQ_E'>RADAR test</a>– Tham khảo thêm phương pháp để đánh giá và áp dụng một nguồn tài liệu.</p>\
+              <p><strong>C. Nghiên cứu</strong></p> \
+              <p>Khi bạn bắt đầu nghiên cứu, hãy thu thập tất cả các nguồn thông tin cần thiết bạn vừa tìm được, \
+              chú thíc, đánh dấu những chi tiết, số liệu, lập luận quan trọng liên quan đến chủ đề của bạn. Bạn \
+              cũng có thể viết lại những ý tưởng, bình luận, lập luận của bạn về những nguồn thông tin này. \
+              <a href='https://vinuni.instructure.com/courses/1630/pages/reading-and-note-taking?module_item_id=64273'>Tìm hiểu thêm Chiến thuật Đọc và ghi chú</a>\
+              </div>",
   percentage: "35",
   truePercent: "25",
 };
 
 var articleReviewVi3 = {
   step: "3",
-  heading: "Evaluate the article",
+  heading: "Sắp xếp và lên dàn ý",
   todos:
-    "<div class=\"content\"> \
-              <p>Evaluate the author's credentials and any bias that might exist. Think about the article's relevance to your field of study and its contribution to the field. Analyze the writing's clarity, the way the concepts are presented, and the references that were used to support it. Analyze the persuasiveness of the arguments and the reliability of the supporting evidence. Finally, provide a fair analysis, pointing out the article's advantages and disadvantages while, if required, making helpful recommendations for development. </p> \
-              <ul> \
-              <li>Who conducted this research and what are his or her credentials?</li> \
-              <li>What is the aim of this study?</li> \
-              <li>Does the author identify existing literature on the subject?</li> \
-              <li>What do the results suggest for future research?</li> \
-              <li>Does the author mention the study's limitations?</li> \
-              <li>Do you observe any further shortcomings, biases, or oversights?</li> \
-              <li>Does the author successfully support the thesis?</li> \
-              </ul> \
-              </div>",
+    '<div class="content"> \
+              <p><strong>A. Xác định chủ đề và bố cục toàn bài: </strong></p> \
+              <p>Tìm và nghiên cứu thêm thông tin hỗ trợ, củng cố luận điểm, \
+              phân tích của bạn. Nếu có quá nhiều thông tin, có thể tham khảo các công cụ dưới đây để quản lí, \
+              sắp xếp gọn gàng các nguồn tham khảo: <a href="https://www.youtube.com/watch?v=ui8vPKUK5sQ">Zotero</a>, \
+              <a href="https://guides.lib.umich.edu/c.php?g=283006&p=1885648">Mendeley</a>, <a href="https://vinuni.libguides.com/EndNote">EndNote</a> </p> \
+              <p> Sau khi thu thập tài liệu, hay nhóm các tài liệu cùng chủ đề vào các đề mục nhỏ hơn, phân tích điểm giống và khác của từng nguồn thông tin.\
+              Dưới đấy là một số cách nhóm các tài liệu liên quan:</p>\
+              <ul>\
+                <li> Cùng ý tưởng, lý thuyết, chủ đề </li>\
+                <li>Cơ cấu tổ chức </li>\
+                <li>Nhấn mạnh vào nghiên cứu khu vực</li>\
+                <li>Phân tích số liệu</li>\
+                <li>Phân tích lịch sử phát triển</li>\
+                <li>Vấn đề - giải pháp </li>\
+              </lu>\
+              <p><strong>B. Luận điểm cốt lõi (Thesis statement)</strong></p> \
+              <p>Viết câu luận điểm cốt lõi (<a href="https://writingcenter.fas.harvard.edu/thesis">thesis statement</a>) tổng hợp lại một bức tranh tổng quan, góc nhìn toàn diện về chủ đề. \
+              Câu chủ đề nên ngắn gọn, súc tích, bao hàm các ý chính trong bài và bày tỏ suy nghĩ cá nhân của bạn với chủ đề</p>\
+              </div>',
   percentage: "55",
   truePercent: "20",
 };
 
 var articleReviewVi4 = {
   step: "4",
-  heading: "Plan and write",
+  heading: "Đặt bút viết",
   todos:
-    '<div class="content"> \
-              <p><strong>A. Citation style for the article</strong></p> \
-              <p>For more information on the required style guide, consult your course curriculum or your instructor. Common citation styles include the Chicago style guide, APA style guide, IEEE style guide, MLA style guide. Check out the VinUniversity library website for LibGuides about citation resources.</p> \
-              \
-              <p><strong>B. Plan the first draft</strong></p> \
-              <p>List the points to include in your summary of the article. Outline your arguments to further develop the article review. Develop a draft thesis statement. A thesis statement should summarize a general picture of the available research on the topic, using the themes and conclusions you established in the earlier rounds. Your thesis statement should be a succinct, declarative sentence that wraps up your essay\'s major idea and expresses your opinion on the topic.</p> \
-              \
-              <p><strong>C. First draft</strong></p> \
-              <p>Write your ideas down on paper without worrying too much about accuracy. The first draft is about creating content and putting your thoughts into words. Pay attention to the logical flow from the beginning to the end of your essay.</p> \
-              </div>',
+    "<div class=\"content\"> \
+              <p><strong>A. Xác định cách trích dẫn </strong></p> \
+              <p>Để biết thêm thông tin yêu cầu của đề bài, cách trích dẫn cần làm, hãy xem lại hướng dẫn của thầy cô, quy định chung. Một số cách trích dẫn phổ biến là: Chicago style guide, APA style guide, IEEE style guide, MLA style guide.</p> \
+              <p> Tìm hiểu thêm cách trích dẫn tại website thư viện VinUni <a href='https://vinuni.libguides.com/citation'>LibGuides about citation resources.</a></p>\
+              <p><strong>B. Mở bài</strong></p> \
+              <p>Giới thiệu chủ đề tổng quát và tầm quan trọng của đối với lĩnh vực học thuật. Sau đó, dần dần thu hẹp trọng tâm đánh giá, đề cập đến những vấn đề chính, những khác biệt và vấn đề trong tài liệu. </p> \
+              <p>Cho biết mục tiêu/ luận điểm của bài đánh giá của bạn. Cung cấp cho người đọc tổng quan về các phần tiếp theo bằng cách giải thích cách sắp xếp bài đánh giá của bạn.</p>\
+              <p><strong>C. Đoạn thân bài</strong></p> \
+              <p>Mỗi đoạn văn nên bắt đầu bằng một câu chủ đề nêu rõ ý tưởng hoặc chủ đề chính mà bạn sẽ giải quyết. </p> \
+              <p>Sau đó, đưa ra một đoạn tóm tắt hoặc phân tích tài liệu về chủ đề cụ thể đó, nhấn mạnh các kết luận, giả thuyết hoặc lập luận chính từ các nguồn bạn đã đọc.</p>\
+              <p>Đảm bảo liên kết các nguồn với nhau và tạo ra những điểm tương đồng hoặc tương phản nếu cần. Duy trì sự mạch lạc từ đoạn này sang đoạn tiếp theo, đồng thời củng cố quan điểm của bạn các ví dụ, trích dẫn từ tài liệu.</p>\
+              <p>Hãy nhớ ghi chú thích phù hợp cho các nguồn của bạn và đánh giá độ tin cậy cũng như tầm quan trọng của từng tài liệu tham khảo.</p>\
+              <p><strong>D. Kết luận</strong></p> \
+              <p>Nhắc lại câu hỏi nghiên cứu chính hoặc mục tiêu của bài đánh giá. Sau đó, tóm tắt ngắn gọn các chủ đề chính, các mô hình định kỳ và nghiên cứu quan trọng đã được đề cập trong bài đánh giá tài liệu của bạn. Trong bài luận của bạn, hãy nhớ nhấn mạnh tầm quan trọng của những bài đọc bạn đã đọc.</p> \
+              <p>Chỉ ra một số thiếu sót hoặc lỗ hổng nào trong kiến thức hiện tại và đưa ra các hướng tiềm năng để nghiên cứu thêm nếu cần.</p> \
+              </div>",
   percentage: "85",
   truePercent: "30",
 };
 
 var articleReviewVi5 = {
   step: "5",
-  heading: "Revising and proofreading",
+  heading: "Đọc và sửa bài",
   todos:
     '<div class="content"> \
-              <p><strong>A. Evaluate your first draft and conduct additional research as needed</strong></p> \
-              <p>Review your first draft and, if necessary, do further additional research.</p> \
-              \
-              <p><strong>B. Revise your draft</strong></p> \
-              <p>Review the organization of your essay to ensure that your thoughts are arranged clearly and coherently. Ensure that each paragraph supports your core argument. Pay attention to grammar, punctuation, and spelling to improve readability overall. Additionally, seek feedback from your peers or instructors and consider appropriate recommendations to improve your work.</p> \
-              \
-              <p><strong>C. Evaluate your second draft and rewrite as needed</strong></p> \
-              <p>Focus on issues within the paragraph level, such as logic, analysis, flow, and transitions.</p> \
-              \
-              <p><strong>D. Proofread and put your paper into its final format</strong></p> \
-              <p>Read attentively to catch all of those little mistakes. Spend time making sure your paper follows the rules outlined in the suitable style guide. Remember the page numbers, titles, margins, reference lists, and citations. For additional help, check out the VinUniversity library website for LibGuides about citation resources.</p> \
-              </div>',
+              <p><strong>A.	Đọc lại lần đầu</strong></p>\
+              <p><a href="https://www.scribbr.com/language-rules/what-is-proofreading/">Đọc lại bài viết</a> và nếu cần thiết, hãy nghiên cứu, tìm thêm tài liệu bổ sung</p>\
+              <p><strong>B.	Đọc và sửa bài</strong></p>\
+              <p>Chú ý đến khung bài luận để chắc chăn rằng các luận điểm của bạn được sắp xếp hợp lí, mạch lạc, các ý phụ củng cố luận điểm chính. Đòng thời chú ý tới chính tả và câu văn toàn bài</p>\
+              <p>Nếu được, hãy tìm một người trợ giúp, nhận xét bài cho bạn để giúp bài bạn tốt hơn. </p>\
+              <p><strong>C.	Viết lại, chỉnh sửa</strong></p>\
+              <p>Chú trọng vào từng đoạn văn nhỏ, chú ý đến logic, phân tích và kết nối giữa các câu, giữa các đoạn. </p>\
+              <p><strong>D.	Đọc lần cuối và chỉnh sửa định dạng </strong></p>\
+              <p>Đọc và tìm những lỗi nhỏ nhặt. Chỉnh sửa bài nghiên cứu của bạn đúng với định dạng tiêu chuẩn hoặc định dạng theo yêu cầu. Đừng quên đánh số trang, thêm tiêu đề, chỉnh lề, danh sách tài liệu tham khảo. Tham khảo thêm tại: <a href="https://libguides.usc.edu/writingguide/proofreading">Chiến thuật đọc soát văn bản</a></p>\
+              <p>Truy cập website Thư viện của VinUni để tham khảo cách trích dẫn nguồn, danh sách tham khảo <a href="https://vinuni.libguides.com/citation">LibGuides about citation resources.</a></p>\
+</div>',
   percentage: "100",
   truePercent: "15",
 };
