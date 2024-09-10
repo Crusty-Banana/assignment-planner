@@ -1077,16 +1077,15 @@ var podcastVi5 = {
 
 var businessCaseStudyVi1 = {
   step: "1",
-  heading: "Get started",
+  heading: "Bắt đầu",
   todos:
     '<div class="content"> \
-              <p><strong>A. Understanding your assignment</strong></p>\
-              <p>Typically, university assignments require you to showcase your grasp of specific topics within the scope of your course. Case study assignments tend to be complicated, requiring careful attention to the given instructions. Failure to adhere to the task requirements may result in a lower grade, irrespective of the quality of your writing. \
-              If you must select from various questions, topics, or cases, conducting preliminary reading (e.g., from your textbook) can assist you in making informed decisions at this stage. Access the “Understanding the Assignment” for further clarification. </p> \
-              <p><strong>B. Get to know components of a business case study report</strong></p>\
-              <p>Understanding which parts are included in a business case study report would help you to have a great big picture of what exactly you need to work on. Have a look at this Case Study Structure Sample and Case Study Report Sample.</p> \
-              <p><strong>C. Group Work (if this is a group assignment)</strong></p>\
-              <p>For group work, you should also arrange tasks and plan the timeline for the whole project at this time. </p>\
+              <p><strong>A. Hiểu bài tập của bạn</strong></p>\
+              <p>Thông thường, bài tập ở trường đại học yêu cầu bạn thể hiện sự hiểu biết của mình về các chủ đề cụ thể trong phạm vi khóa học. Bài tập nghiên cứu tình huống có xu hướng phức tạp, đòi hỏi phải chú ý cẩn thận đến các hướng dẫn đã cho. Không tuân thủ các yêu cầu của bài tập có thể dẫn đến kết quả thấp hơn mong đợi, bất kể chất lượng bài viết của bạn như thế nào. Nếu bạn phải lựa chọn giữa nhiều câu hỏi, chủ đề hoặc trường hợp khác nhau, việc đọc sơ bộ (ví dụ: từ sách giáo khoa của bạn) có thể giúp bạn đưa ra quyết định. (Tìm hiểu thêm tại: “<a href="https://writeonline.ca/casestudy.php?content=section2">Understanding the Assignment</a>”)</p> \
+              <p><strong>B. Tìm hiểu các thành phần của báo cáo phân tích tình huống kinh doanh </strong></p>\
+              <p>Hiểu được những phần nào được đưa vào báo cáo nghiên cứu tình huống kinh doanh sẽ giúp bạn có được bức tranh toàn cảnh về chính xác những gì bạn cần thực hiện: <a href="https://westernsydney.edu.au/__data/assets/pdf_file/0008/1082474/Case_Study_Structure.pdf">Cấu trúc Phân tích tình huống kinh doanh</a> and <a href="https://writeonline.ca/media/documents/CaseStudy-Sample.pdf">Các ví dụ, mẫu Báo cáo Phân tích tình huống</a></p> \
+              <p><strong>C. Làm việc nhóm (nếu đây là yêu cầu của bài tập) </strong></p>\
+              <p>Với bài tập nhóm, bạn nên sắp xếp nhiệm vụ, lên kế hoạch và thời gian biểu chi tiết cho cả quá trình làm bài.</p>\
               </div>',
   percentage: "5",
   truePercent: "5",
@@ -1094,12 +1093,11 @@ var businessCaseStudyVi1 = {
 
 var businessCaseStudyVi2 = {
   step: "2",
-  heading: "Brainstorming ideas and starting to examine the case",
+  heading: "Đưa ra ý tưởng và bắt đầu xem xét tình huống ",
   todos:
     '<div class="content"> \
-              <p>Thoroughly review the case, preferably more than once, and take note of any queries or information gaps. If specific questions are provided for your response, create initial notes for each question based on the case details.</p>\
-              <p>Construct a visual representation, such as a mind map, encompassing your knowledge about the subject and the focal points relevant to your case. Online tools like MindMup or Bubbl.us (compatible with Chrome, Firefox, or Safari) can assist in this process.\
-              Explore connections between the case and pertinent concepts or theories covered in your coursework. Give special consideration to any concepts or theories highlighted in your assignment instructions. Additionally, consider the alignment between the case and readings from your course materials. </p>\
+              <p>Xem xét, Phân tích kỹ lưỡng tình huống, tốt nhất là đọc nhiều lần và ghi chú bất kỳ thắc mắc hoặc thiếu sót thông tin nào. Nếu có câu hỏi cụ thể, hãy tạo ghi chú ban đầu cho từng câu hỏi dựa trên chi tiết tình huống.</p>\
+              <p>Trình bày bằng một bài thuyết trình trực quan ví dụ như <a href="https://www.monash.edu/student-academic-success/enhance-your-thinking/brainstorm-and-mind-map">Sơ đồ tư duy</a>, bao gồm kiến thức của bạn về chủ đề này và các điểm trọng tâm liên quan đến tình huống. Các công cụ trực tuyên như <a href="https://www.mindmup.com/">MindMup</a> hay <a href="https://bubbl.us/>Bubbl.us</a> có thể hỗ trợ bạn qua trình này. Tìm ra mối liên hệ giữa tình huống và các khái niệm hoặc lý thuyết có liên quan được đề cập trong bài tập của bạn. Ngoài ra, hãy xem xét sự liên kết giữa tình huống và bài đọc từ tài liệu khóa học của bạn. Xem lại sơ đồ tư duy của bạn để xác định bất kỳ vấn đề, chi tiết đáng chú ý nào trong các lĩnh vực chính. Cách tiếp cận chiến lược này sẽ giúp ích cho giai đoạn nghiên cứu tiếp theo của bạn, đảm bảo rằng bạn hướng nỗ lực của mình vào thông tin có liên quan và tránh lãng phí thời gian vào các chi tiết khác.</p>\
               <p>Review your mind map to identify any notable gaps in key areas. This strategic approach will guide your subsequent research phase, ensuring that you direct your efforts toward relevant information and avoid wasting time on irrelevant aspects.</p>\
               </div>',
   percentage: "15",
@@ -1108,33 +1106,31 @@ var businessCaseStudyVi2 = {
 
 var businessCaseStudyVi3 = {
   step: "3",
-  heading: "Researching on the subject/topic of the case study",
+  heading: "Nghiên cứu",
   todos:
-    "<div class=\"content\"> \
-              <p>Should the case study pertain to an actual company, collecting data from the company's websites, financial records, and an extensive online search can offer deeper insights into the company's historical and current status, the industry it operates in, its primary competitors, and other pertinent details.</p>\
-              <p>Utilizing information from course textbooks, academic journals, and books aids in gaining a more profound understanding of the issue at hand, facilitating a thorough analysis and the formulation of well-founded recommendations.\
-              While research may be time-consuming, incorporating reliable references enhances the report's credibility, underscoring the diligence and thoroughness of your investigation. </p>\
-              <p>The followings are types of sources that you can concentrate on: </p>\
+    '<div class="content"> \
+              <p>Nếu nghiên cứu tình huống liên quan đến một công ty thực tế, việc thu thập dữ liệu từ các trang web của công ty, hồ sơ tài chính và tìm kiếm trực tuyến mở rộng có thể cung cấp thông tin chi tiết sâu hơn về tình trạng lịch sử và hiện tại của công ty, ngành mà công ty đang hoạt động, các đối thủ cạnh tranh chính và các chi tiết liên quan khác. </p>\
+              <p>Việc sử dụng thông tin từ sách giáo khoa, tạp chí học thuật và sách giúp hiểu sâu hơn về vấn đề đang được đề cập, tạo điều kiện cho việc phân tích kỹ lưỡng và xây dựng các khuyến nghị có cơ sở. Mặc dù nghiên cứu có thể tốn thời gian, nhưng việc kết hợp các tài liệu tham khảo đáng tin cậy sẽ nâng cao độ tin cậy của báo cáo, nhấn mạnh tính kỹ lưỡng của bạn. </p>\
+              <p>Sau đây là các loại nguồn mà bạn có thể tập trung vào: </p>\
               <ul>\
-              <li>Company website</li>\
-              <li>Company financial documents</li>\
-              <li>Broader web search (e.g., industry, competitors)</li>\
-              <li>Course textbooks</li>\
-              <li>Academic journals and books</li>\
+              <li>Trang web của công ty </li>\
+              <li>Tài liệu tài chính của công ty </li>\
+              <li>Tìm kiếm trên web rộng hơn (ví dụ: ngành, đối thủ cạnh tranh) </li>\
+              <li>Sách giáo khoa của khóa học</li>\
+              <li>Tạp chí và sách học thuật</li>\
               </ul>\
-              </div>",
+              </div>',
   percentage: "25",
   truePercent: "10",
 };
 
 var businessCaseStudyVi4 = {
   step: "4",
-  heading: "Develop your case study structure - Organize your sources",
+  heading: "Lập dàn ý",
   todos:
     '<div class="content"> \
-              <p>Refer to your assignment requirements to determine whether a specific format is mandated for your assignment. For instance, you may have been instructed to employ specific headings for organizing your response. \
-              Strategize the content for each section by outlining your main points, considering supporting evidence, deciding on the order of presentation, and formulating topic sentences to begin the drafting of your paragraphs.</p>\
-              <p>Organize all the sources you have researched so far and decide which sources will be cited in which parts of your case study report. </p>\
+              <p>Tham khảo các yêu cầu bài tập của bạn để xác định xem bài tập của bạn có yêu cầu định dạng cụ thể hay không. Ví dụ, bạn có thể được hướng dẫn sử dụng các tiêu đề cụ thể để sắp xếp kêt quả của mình. Lên chiến lược cho nội dung của từng phần bằng cách phác thảo các điểm chính, bổ sung dẫn chứng hỗ trợ, quyết định thứ tự trình bày và xây dựng câu chủ đề để bắt đầu soạn thảo các đoạn văn của bạn.</p>\
+              <p>Sắp xếp tất cả các nguồn bạn đã nghiên cứu cho đến nay và quyết định nguồn nào sẽ được trích dẫn trong các phần nào của báo cáo nghiên cứu tình huống của bạn.</p>\
               </div>',
   percentage: "35",
   truePercent: "10",
@@ -1142,14 +1138,11 @@ var businessCaseStudyVi4 = {
 
 var businessCaseStudyVi5 = {
   step: "5",
-  heading: "Writing your first draft",
+  heading: "Viết",
   todos:
     '<div class="content"> \
-              <p>Draft a paragraph for each main idea, providing an explanation and supporting evidence for each point. It may be necessary to extend beyond a single paragraph for each section of the case study but remember to maintain a singular main idea in each paragraph. Subsequently, craft an introduction and a concluding section, potentially including recommendations based on the guidelines in your assignment instructions. \
-              Make sure that ideas drawn from your sources are all cited, and their citations are included in your reference list (if a specific referencing style is required in your assignment, make sure you apply it to all the sources). Further guidance for citations is available on VinUni Library\'s LibGuides.</p>\
-              <p>In the context of group work, when collaboratively producing content, you should offer constructive feedback to one another. Strive to provide encouragement while also suggesting areas for improvement. \
-              Foster a collaborative and supportive environment within the group to enhance the overall quality of the work.</p>\
-              <p>Here is a detail instruction on how to write each section of a business case study report.</p>\
+              <p>Soạn thảo một đoạn văn cho mỗi ý chính, cung cấp lời giải thích và dẫn chứng hỗ trợ cho từng điểm. Duy trì một ý chính duy nhất trong mỗi đoạn văn. Sau đó, soạn thảo phần giới thiệu và phần kết luận. Đảm bảo rằng tất cả các ý tưởng lấy từ các nguồn của bạn đều được trích dẫn và các trích dẫn của chúng được đưa vào danh sách tham khảo của bạn (nếu bài tập của bạn yêu cầu một phong cách tham khảo cụ thể, hãy đảm bảo bạn áp dụng nó cho tất cả các nguồn). Truy cập website Thư viện của VinUni để tham khảo cách trích dẫn nguồn, danh sách tham khảo <a href="https://vinuni.libguides.com/citation">LibGuides about citation resources.</a></p>\
+              <p>Nếu làm việc nhóm, khi cùng nhau viết nội dung, bạn nên đưa ra phản hồi mang tính xây dựng cho nhau. Cố gắng động viên đồng thời đề xuất các lĩnh vực cần cải thiện. Duy trì môi trường hợp tác và hỗ trợ trong nhóm để nâng cao chất lượng chung của công việc. Tham khảo thêm hướng dẫn cách viết từng phần cho bài phân tích tình huống tại: <a href="https://writeonline.ca/casestudy.php?content=section3">how to write each section of a business case study report</a></p>\
               </div>',
   percentage: "70",
   truePercent: "35",
@@ -1157,14 +1150,13 @@ var businessCaseStudyVi5 = {
 
 var businessCaseStudyVi6 = {
   step: "6",
-  heading: "Reviewing and revising",
+  heading: "Chỉnh sửa",
   todos:
     '<div class="content"> \
-              <p><strong>A. Self-evaluating and proofreading</strong></p>\
-              <p>Review your case study report and revise the content as needed. Assess the coherence of your argument—ensure clarity and logical flow in your explanations. Self-evaluate your work and reflect your work with the rubrics/marking criteria (if available) to see whether it fulfill all the requirements and expectations.\
-              You might want to refer to a checklist for your content and a checklist for overall formatting of your case study report. Once prepared, submit your draft to Turnitin, if permitted by your institution (refer to your instructors for confirmation). </p> \
-              <p><strong>B. Peer review & Advisor feedback</strong></p>\
-              <p>Seeking feedback and suggestions from your advisors, instructors, and colleagues can be highly beneficial. Engaging with diverse perspectives not only enriches your understanding but also enhances the objectivity of your report. Their insights can offer valuable perspectives that might have been overlooked, contributing to a more comprehensive and well-rounded analysis. </p> \
+              <p><strong>A. Tự đánh giá và chỉnh sửa</strong></p>\
+              <p>Xem lại báo cáo phân tích tình huống của bạn và sửa đổi nội dung cần thiết. Chú ý sự mạch lạc của các lập luận và giải thích. Tự đánh giá báo cáo với các tiêu chí chấm điểm/đánh giá (nếu có) để xem liệu nó có đáp ứng tất cả các yêu cầu và kỳ vọng hay không. (tham khảo thêm các tài liệu: <a href="https://writeonline.ca/casestudy.php?content=section5">checklist kiểm tra nội dung</a> and a checklist for <a href="https://writeonline.ca/media/documents/CaseStudy-Checklist.pdf">Trình bày báo cáo phân tích huống.</a> </p> \
+              <p><strong>B. Đánh giá & Nhận xét của người khác</strong></p>\
+              <p>Việc hỏi nhận xét và gợi ý từ cố vấn, giảng viên và đồng nghiệp của bạn có thể rất có lợi. Nhiều quan điểm khác nhau không chỉ làm phong phú thêm sự hiểu biết của bạn mà còn nâng cao tính khách quan của báo cáo. Những hiểu biết sâu sắc của họ có thể cung cấp những quan điểm có giá trị mà có thể đã bị bỏ qua, góp phần tạo nên một phân tích toàn diện và toàn diện hơn</p> \
               </div>',
   percentage: "90",
   truePercent: "20",
@@ -1172,10 +1164,10 @@ var businessCaseStudyVi6 = {
 
 var businessCaseStudyVi7 = {
   step: "7",
-  heading: "Finalizing your business case study",
+  heading: "Hoàn thiện",
   todos:
     '<div class="content"> \
-              <p>Upon receiving feedback, be selective in choosing recommendations that align with the goals of your report. Focus on rewriting specific sections that require adjustments, ensuring clarity and coherence. Additionally, address any identified grammatical, spelling, or punctuation errors to enhance the overall quality of your report. The aim is to refine and improve the content based on constructive feedback, prioritizing changes that contribute to the report\'s effectiveness. </p>\
+              <p>Khi nhận được phản hồi nhận xét, hãy chọn lọc các khuyến nghị phù hợp với mục tiêu của báo cáo. Tập trung vào việc viết lại các phần cụ thể cần điều chỉnh, đảm bảo tính rõ ràng và mạch lạc. Ngoài ra, hãy giải quyết các lỗi ngữ pháp, chính tả hoặc dấu câu. </p>\
               </div>',
   percentage: "95",
   truePercent: "5",
@@ -1183,14 +1175,13 @@ var businessCaseStudyVi7 = {
 
 var businessCaseStudyVi8 = {
   step: "8",
-  heading: "Submitting your work",
+  heading: "Nộp bài",
   todos:
     '<div class="content"> \
-              <p>Ensure that your final version is saved properly and ready to submit. Submitting your work a few hours before the deadline is advisable, as you will have additional time to address any potential technical issues that may suddenly arise. </p>\
-              <p>For group submissions, make sure you understand the submission process for your group assignment. Determine whether the entire group submits it collectively or if only one person is designated to submit. Clearly establish and communicate the responsibility for submission within your group.</p>\
-              <p>After submitting your business case study, take a moment to celebrate and reward yourself (or with your group) for completing the task! </p>\
+              <p>Đảm bảo rằng phiên bản cuối cùng của bạn được lưu và sẵn sàng để nộp. Nên nộp bài trước thời hạn vài giờ vì bạn sẽ có thêm thời gian để giải quyết mọi vấn đề kỹ thuật có thể phát sinh đột ngột.</p>\
+              <p>Đối với bài nộp theo nhóm, hãy hiểu rõ quy trình nộp bài cho bài tập nhóm của mình. Xác định xem toàn bộ nhóm nộp bài tập chung hay chỉ có một người được chỉ định nộp. </p>\
               </div>',
-  percentage: "95",
+  percentage: "100",
   truePercent: "5",
 };
 
@@ -2340,7 +2331,7 @@ var businessCaseStudy8 = {
     <p>For group submissions, make sure you understand the submission process for your group assignment. Determine whether the entire group submits it collectively or if only one person is designated to submit. Clearly establish and communicate the responsibility for submission within your group.</p>\
     <p>After submitting your business case study, take a moment to celebrate and reward yourself (or with your group) for completing the task! </p>\
     </div>',
-  percentage: "95",
+  percentage: "100",
   truePercent: "5",
 };
 
