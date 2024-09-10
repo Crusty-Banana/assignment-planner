@@ -869,15 +869,14 @@ var policyBriefVi5 = {
 
 var infographicVi1 = {
   step: "1",
-  heading: "Getting Started",
+  heading: "Bắt đầu",
   todos:
     '<div class="content"> \
-              <p><strong>A. Understand the assignment</strong></p>\
-              <p>Take your time reading the instruction carefully and make sure you understand all the requirements, including the topic, design, length, and deadline, etc. Never hesitate to ask your instructor for clarification if something is unclear.\
-              To efficiently organize your time, break the assignment down into smaller activities and make a detailed timeline. For more information, please visit Understand Your Assignment.</p>\
-              <p><strong>B. Consider your audience</strong></p>\
-              <p>Be succinct if your audience comprises industry professionals. You are able to immediately get into the in-depth details of your research when presenting in your field because you will not have to define all technical terms or go over the basics. </p>\
-              <p>If your target audience is non-specialists, more background information is needed. Describe any technical terminology then emphasize the significance of your research.</p>\
+              <p><strong>A. Đọc hiểu yêu cầu đề bài, chủ đề.</strong></p>\
+              <p>Hãy dành thời gian đọc hướng dẫn cẩn thận và đảm bảo bạn hiểu tất cả các yêu cầu, bao gồm chủ đề, định dạng, cấu trúc độ dài và thời hạn, v.v. Đừng bao giờ ngần ngại hỏi người hướng dẫn của bạn để làm rõ nếu có điều gì không rõ ràng. Để sắp xếp thời gian một cách hiệu quả, hãy chia nhiệm vụ thành các hoạt động nhỏ hơn và lập lịch trình chi tiết. Để biết thêm thông tin, truy cập: <a href="https://uwaterloo.ca/writing-and-communication-centre/resources-understand-your-assignment">Các bước để phân tích đề bài, chủ đề, yêu cầu</a></p>\
+              <p><strong>B. Phân tích khán giả </strong></p>\
+              <p>Tuỳ thuộc vào từng đối tượng người xem, chủ đề và các cách tiếp cận lại trở nên khác nhau, hãy cân nhắc thật kĩ.</p>\
+              <p>Với người xem là những người có chuyên môn, hãy ngắn gọn, tập trung đi sâu vào vấn đề. Nếu đối tượng là những người không có kiến thức chuyên môn về chủ đề bạn thuyết trình, hay nói ngắn gọn về những thông tin, thuật ngữ cần thiết và nhấn mạnh tầm quan trọng, ảnh hưởng của bài bạn.</p>\
               </div>',
   percentage: "10",
   truePercent: "10",
@@ -885,24 +884,23 @@ var infographicVi1 = {
 
 var infographicVi2 = {
   step: "2",
-  heading: "Gathering Data",
+  heading: "Nghiên cứu",
   todos:
     "<div class=\"content\"> \
-              <p><strong>A. Conduct research:</strong></p>\
-              <p>Choose a research subject or topic that interests you and meets the requirement of the assignment. Do preliminary research to compile background data and evaluate whether reliable sources are accessible. Narrow down your topics (here are some Strategies for Narrowing the Research Topic) and start gathering data by using reliable search tools, academic databases, and libraries to find sources that are applicable to your subject of study.</p>\
-              <p>Consider the author's credentials, the source's reputation, and the source's publication date when evaluating sources. Books from credible publishers, government publications, and peer-reviewed journals are frequently reliable sources.\
-              Assess the source's approach and supporting data carefully as well to judge its quality and applicability to your research. You can create a well-supported and well-rounded research essay by cross-referencing data with several sources and being critical of biases or conflicts of interest.</p>\
-              <p>RADAR test can be used to evaluate sources.</p>\
-              <p><strong>B. Organize information:</strong></p>\
-              <p>Information graphics can be demonstrated and presented in a variety of different formats, including websites, videos, PowerPoint presentations, posters, ... However, an infographic usually include of the following parts:</p>\
+              <p><strong>A.	Tiến hành nghiên cứu:</strong></p>\
+              <p>Chọn một chủ đề hoặc đề tài nghiên cứu mà bạn quan tâm và đáp ứng các yêu cầu của bài tập. Thực hiện nghiên cứu sơ bộ để biên soạn dữ liệu cơ bản và đánh giá xem có thể truy cập được các nguồn đáng tin cậy hay không. Thu hẹp chủ đề của bạn (tìm hiểu thêm tại: <a href='https://libguides.usc.edu/writingguide/narrowtopic'>Strategies for Narrowing the Research Topic.</a> ) và sau đó bắt đầu thu thập dữ liệu bằng cách sử dụng các công cụ tìm kiếm đáng tin cậy, cơ sở dữ liệu học thuật và <a href='https://vinuni.libguides.com/c.php?g=934922&p=6759514'>thư viện</a> để tìm các nguồn có thể áp dụng cho chủ đề nghiên cứu của bạn.</p>\
+              <p>Hãy cân nhắc đến thông tin xác thực của tác giả, uy tín của nguồn và ngày xuất bản của nguồn khi đánh giá các nguồn (tham khảo thêm: <a href='https://guides.library.pdx.edu/evaluate'>evaluating sources.</a>) Sách từ các nhà xuất bản uy tín, ấn phẩm của chính phủ và các tạp chí được bình duyệt thường là các nguồn đáng tin cậy. Đánh giá cách tiếp cận của nguồn và dữ liệu hỗ trợ để đánh giá chất lượng và khả năng áp dụng đối với nghiên cứu của bạn. Bạn có thể tạo một bài luận nghiên cứu được hỗ trợ tốt và toàn diện bằng cách tham chiếu chéo dữ liệu với một số nguồn.</p>\
+              <p>Có thể sử dụng bài kiểm tra RADAR (<a href='https://www.youtube.com/watch?v=CLSLFssRQ_E'>RADAR test</a> ) để đánh giá các nguồn.</p>\
+              <p><strong>B. Tổ chức thông tin:</strong></p>\
+              <p>Đồ họa thông tin có thể được trình bày và minh họa ở nhiều định dạng khác nhau, bao gồm trang web, video, bản trình bày PowerPoint, áp phích, ... Tuy nhiên, một đồ họa thông tin thường bao gồm các phần sau:</p>\
               <ul> \
-              <li> Title: Conveys the main message or topic of the infographic.</li>\
-              <li> Introduction: Provides context and sets the tone for the infographic. </li>\
-              <li> Main Ideas </li>\
-              <li> Key Takeaways/Conclusion: Summarize main points by recaping the most important information. </li>\
-              <li> References </li>\
+              <li> Tiêu đề: Truyền tải thông điệp chính hoặc chủ đề của đồ họa thông tin.</li>\
+              <li> Giới thiệu: Cung cấp bối cảnh và thiết lập tông điệu cho đồ họa thông tin. </li>\
+              <li> Ý chính </li>\
+              <li> Những nội dung chính/Kết luận: Tóm tắt các điểm chính bằng cách tóm tắt lại thông tin quan trọng nhất.</li>\
+              <li> Tài liệu tham khảo </li>\
               </ul> \
-              <p>Remember to be concise since the poster has limited space </p> \
+              <p>Nhớ phải ngắn gọn vì áp phích có hạn chế về không gian  </p> \
               </div>",
   percentage: "45",
   truePercent: "35",
@@ -910,23 +908,22 @@ var infographicVi2 = {
 
 var infographicVi3 = {
   step: "3",
-  heading: "Design",
+  heading: "Thiết kế",
   todos:
     '<div class="content"> \
-              <p><strong>A. Make a layout</strong></p>\
-              <p>Consider factors that can affect your choice of size and design, such as the timing, target audience, and venue of the presentation. \
-              Pick a design platform that works for you and the other team members (Canva, Adobe Illustrators, Power point, etc)</p>\
-              <p>Make a layout plan for your poster. Remember that the mix of text and graphics is visually appealing. Organize the material in a logical flow. \
-              Include illustrations to support your main ideas, such as charts, diagrams, and pictures. Use a consistent font style and size and leave some white space for a tidy, uncomplicated appearance.</p> \
-              <p><strong>B. Create the poster</strong></p>\
-              <p>Tips on visual design</p>\
+              <p><strong>A. Tạo khung, sườn bài</strong></p>\
+              <p>Cân nhắc các điều kiện, đối tượng, thời gian trước khi thiết kế, chọn một công cụ thiết kế mà bạn hay cả nhóm đều có thể tham gia (<a href="https://www.youtube.com/watch?v=YiO4QPCk7SE">Canva</a>, <a href="https://www.youtube.com/watch?v=797-M5De_lA">Adobe Illustrators</a>, <a href="https://www.youtube.com/watch?v=_WnhoIbfcoM">Power point</a>,..)</p>\
+              <p>Tạo dàn ý, Sắp xếp các phần theo trình tự hợp lí, thường là từ phải qua trái, từ trên xuống dưới. Để dễ đọc hơn, hay dùng các đề mục, gạch đầu dòng. Sử dụng các hình ảnh minh hoạ như tranh ảnh, biểu đồ, hình vẽ để củng cố cho các chi tiết cần thiết. Sử dụng font chữ một cách thống nhất và hay để lại những khoảng trống cần thiết để tấm áp phích trở nên gọn gàng, dễ nhìn hơn.</p> \
+              <p><strong>B. Tạo Đồ hoạ </strong></p>\
+              <p>Một số lời khuyên về thiết kế:</p>\
               <ul> \
-              <li> Use a clear, dark, legible font on a light background to make text easier to read. </li>\
-              <li> Use two to three complementing colors to increase visual impact.</li>\
-              <li> Keep the space on your infographic clear.</li>\
-              <li> Consider eliminating a component if it does not enhance the clarity of your research.</li>\
-              <li> Data visualizations such as tables, charts and other images are a common way to turn complex data sets into clear and accessible information.</li>\
-              <li> Copyright restrictions may apply if you use any text, image, or table that you did not make yourself. </li>\
+              <li> Sử dụng font chữ gọn gàng, tương phản tốt với nền để khiến chữ rõ ràng, dễ đọc hơn </li>\
+              <li> Nên sử dụng 2 – 3 màu để có nhiều màu sắc hơn</li>\
+              <li> Giữ khoảng trống cần để bài gọn gàng</li>\
+              <li> Cân nhắc loại bỏ các yếu tố không cần thiết </li>\
+              <li> Minh hoạ các số liệu bằng bảng, biểu đồ, hình ảnh sẽ khiến số liệu dễ tiếp cận hơn</li>\
+              <li> Ưu tiên các câu cú, ý chính ngắn gọn, trọng tâm </li>\
+              <li> Có thể in đậm để nhấn mạnh một vài chi tiết nhưng đừng sử dụng quá nhiều.</li>\
               </ul> \
               <p> Tips for text </p> \
               <ul> \
@@ -940,12 +937,14 @@ var infographicVi3 = {
 
 var infographicVi4 = {
   step: "4",
-  heading: "Revising and proofreading",
+  heading: "Xem và chỉnh sửa",
   todos:
     '<div class="content"> \
-              <p>Review your presentation design, seek feedback from your peers or instructors and consider appropriate recommendations to improve your work.</p> \
-              <p>Read attentively to catch all of those little mistakes. There are some strategies for proofreading you should check </p> \
-              <p>For additional help, check out the VinUniversity library website for LibGuides about citation resources. </p> \
+              <p><strong>A.	Xem lại lần đầu</strong></p> \
+              <p><a href="https://www.scribbr.com/language-rules/what-is-proofreading/">Xem lại</a> và nếu cần thiết, hãy nghiên cứu, tìm thêm tài liệu bổ sung</p> \
+              <p><strong>B.	Xem lần cuối và chỉnh sửa định dạng </strong></p> \
+              <p>Tìm những lỗi nhỏ nhặt. Chỉnh sửa bài nghiên cứu của bạn đúng với định dạng tiêu chuẩn hoặc định dạng theo yêu cầu. Đừng quên thêm tiêu đề, chỉnh lề, danh sách tài liệu tham khảo. Tham khảo thêm tại: <a href="https://libguides.usc.edu/writingguide/proofreading">Chiến thuật đọc soát văn bản </a></p> \
+              <p>Truy cập website Thư viện của VinUni để tham khảo cách trích dẫn nguồn, danh sách tham khảo <a href="https://vinuni.libguides.com/citation">LibGuides about citation resources.</a></p> \
               </div>',
   percentage: "90",
   truePercent: "10",
@@ -953,19 +952,16 @@ var infographicVi4 = {
 
 var infographicVi5 = {
   step: "5",
-  heading: "Presentation",
+  heading: "Thuyết trình",
   todos:
     '<div class="content"> \
-              <p>Prepare a speech for your poster.</p>\
+              <p>Chuẩn bị một bài thuyết trình cho bài áp phích nghiên cứu. </p>\
               <ul> \
-              <li> Speak clearly. </li>\
-              <li> Project your voice. </li>\
-              <li> Make eye contact and interact with your audience. </li>\
-              <li> Gesture to appropriate visuals. </li>\
-              <li> Eliminate filler words such as "um", "like" and "you know".</li>\
+              <li> Thuyết trình to, rõ ràng  </li>\
+              <li> Giao tiếp ánh mắt, sử dụng ngôn ngữ hình thể  </li>\
+              <li> Tránh ngắc ngứ, vấp khi nói </li>\
               </ul> \
-              <p>During your presentation, interacting with people is important</p> \
-              <p>For more practical presentation skills, checkout These presentation techniques. \
+              <p>Tìm hiểu thêm: <a href="https://youtube.com/playlist?list=PL-iPJqUs0UouaCEXjLvZi8TKe_y6Y42eR&si=euOWhhWRRQWTTkwx">Kĩ năng thuyết trình </a></p> \
               </div>',
   percentage: "100",
   truePercent: "10",
