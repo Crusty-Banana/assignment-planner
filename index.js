@@ -969,15 +969,14 @@ var infographicVi5 = {
 
 var podcastVi1 = {
   step: "1",
-  heading: "Getting started",
+  heading: "Bắt đầu",
   todos:
     '<div class="content"> \
-              <p><strong>A. Understand the assignment</strong></p>\
-              <p>Take your time reading the instructions carefully and make sure you understand all the requirements, including the topic, design, length, and deadline, etc. Never hesitate to ask your instructor for clarification if something is unclear. \
-              To efficiently organize your time, break the assignment down into smaller activities and make a detailed timeline. For more information, please visit Understand Your Assignment. </p> \
-              <p><strong>B. Consider your audience</strong></p>\
-              <p>Be succinct if your audience comprises industry professionals. You are able to immediately get into the in-depth details of your research when presenting in your field because you will not have to define all technical terms or go over the basics. </p> \
-              <p>If your target audience is non-specialists, more background information is needed. Describe any technical terminology then emphasize the significance of your research. </p> \
+              <p><strong>A. Đọc hiểu yêu cầu đề bài, chủ đề.</strong></p>\
+              <p>Hãy dành thời gian đọc hướng dẫn cẩn thận và đảm bảo bạn hiểu tất cả các yêu cầu, bao gồm chủ đề, định dạng, cấu trúc độ dài và thời hạn, v.v. Đừng bao giờ ngần ngại hỏi người hướng dẫn của bạn để làm rõ nếu có điều gì không rõ ràng. Để sắp xếp thời gian một cách hiệu quả, hãy chia nhiệm vụ thành các hoạt động nhỏ hơn và lập lịch trình chi tiết. Để biết thêm thông tin, truy cập: <a href="https://uwaterloo.ca/writing-and-communication-centre/resources-understand-your-assignment">Các bước để phân tích đề bài, chủ đề, yêu cầu</a></p> \
+              <p><strong>B. Phân tích khán giả </strong></p>\
+              <p>Tuỳ thuộc vào từng đối tượng người xem, chủ đề và các cách tiếp cận lại trở nên khác nhau, hãy cân nhắc thật kĩ. </p> \
+              <p>Với người xem là những người có chuyên môn, hãy ngắn gọn, tập trung đi sâu vào vấn đề. Nếu đối tượng là những người không có kiến thức chuyên môn về chủ đề bạn thuyết trình, hay nói ngắn gọn về những thông tin, thuật ngữ cần thiết và nhấn mạnh tầm quan trọng, ảnh hưởng của bài bạn.</p> \
               </div>',
   percentage: "10",
   truePercent: "10",
@@ -985,18 +984,16 @@ var podcastVi1 = {
 
 var podcastVi2 = {
   step: "2",
-  heading: "Research and Prepare",
+  heading: "Nghiên cứu",
   todos:
     "<div class=\"content\"> \
-              <p><strong>A. Conduct research</strong></p>\
-              <p>Choose a research subject or topic that interests you and meets the requirements of the assignment.  Do preliminary research to compile background data and evaluate whether reliable sources are accessible.\
-              Narrow down your topics (here are some Strategies for Narrowing the Research Topic. ) and then start gathering data by using reliable search tools, academic databases, and libraries to find sources that are applicable to your subject of study. \
-              <p>Consider the author's credentials, the source's reputation, and the source's publication date when evaluating sources. Books from credible publishers, government publications, and peer-reviewed journals are frequently reliable resources. \
-              Assess the source's approach and supporting data carefully as well to judge its quality and applicability to your research. You can create a well-supported and well-rounded research essay by cross-referencing data with several sources and being critical of biases or conflicts of interest. </p>\
-              <p>RADAR test can be used to evaluate the sources.\
-              <p><strong>B Choosing a format</strong></p>\
-              <p>Podcasts can be demonstrated and presented in mostly audio files. However, podcasts can develop in many formats including monologue, interview, conversation, non-narrated, ... For further information about this, visit this website and this short video. </p>\
-              <p>Based on the topic you want to cover, choose the most suitable format to convey content effectively. </p>\
+              <p><strong>A. Tiến hành nghiên cứu:</strong></p>\
+              <p>Chọn một chủ đề hoặc đề tài nghiên cứu mà bạn quan tâm và đáp ứng các yêu cầu của bài tập. Thực hiện nghiên cứu sơ bộ để biên soạn dữ liệu cơ bản và đánh giá xem có thể truy cập được các nguồn đáng tin cậy hay không. Thu hẹp chủ đề của bạn (tìm hiểu thêm tại: <a href='https://libguides.usc.edu/writingguide/narrowtopic'>Strategies for Narrowing the Research Topic.</a> ) và sau đó bắt đầu thu thập dữ liệu bằng cách sử dụng các công cụ tìm kiếm đáng tin cậy, cơ sở dữ liệu học thuật và <a href='https://vinuni.libguides.com/c.php?g=934922&p=6759514'>thư viện</a> để tìm các nguồn có thể áp dụng cho chủ đề nghiên cứu của bạn.</p>\
+              <p>Hãy cân nhắc đến thông tin xác thực của tác giả, uy tín của nguồn và ngày xuất bản của nguồn khi đánh giá các nguồn (tham khảo thêm: <a href='https://guides.library.pdx.edu/evaluate'>evaluating sources.</a>) Sách từ các nhà xuất bản uy tín, ấn phẩm của chính phủ và các tạp chí được bình duyệt thường là các nguồn đáng tin cậy. Đánh giá cách tiếp cận của nguồn và dữ liệu hỗ trợ để đánh giá chất lượng và khả năng áp dụng đối với nghiên cứu của bạn. Bạn có thể tạo một bài luận nghiên cứu được hỗ trợ tốt và toàn diện bằng cách tham chiếu chéo dữ liệu với một số nguồn.</p>\
+              <p>Có thể sử dụng bài kiểm tra RADAR (<a href='https://www.youtube.com/watch?v=CLSLFssRQ_E'>RADAR test</a> ) để đánh giá các nguồn.</p>\
+              <p><strong>B.	Chọn định dạng trình bày </strong></p>\
+              <p>Podcasts thường được trình bày theo dạng file âm thanh. Ngày nay, Podcasts còn có thể được thể hiện theo rất nhiều khác như độc thoại, phỏng vấn, trò chuyện,... (tham khảo thêm <a href='https://convertkit.com/resources/blog/podcast-formats'>website</a> và <a href='https://youtu.be/ebMxjL7oCuk?si=vbzdd2RgPxW2DtvF'>short video</a>)</p>\
+              <p>Dựa vào chủ đề, chọn cách thức tổ chức, trình bày phù hợp</p>\
               </div>",
   percentage: "45",
   truePercent: "35",
@@ -1004,33 +1001,33 @@ var podcastVi2 = {
 
 var podcastVi3 = {
   step: "3",
-  heading: "Write a script",
+  heading: "Viết kịch bản",
   todos:
     '<div class="content"> \
-              <p><strong>A. Preparing</strong></p>\
-              <p>Podcasts generally fall into two categories: storytelling and interviewing. Even in the same topic, each category will have slightly different ways of developing content and writing scripts. Below are some suggestions for both types. </p>\
-              <p>For a storytelling podcast: </p>\
+              <p><strong>A. Chuẩn bị</strong></p>\
+              <p>Podcast thường được chia thành hai loại: kể chuyện và phỏng vấn. Ngay cả trong cùng một chủ đề, mỗi loại sẽ có cách phát triển nội dung và viết kịch bản hơi khác nhau. Dưới đây là một số gợi ý cho cả hai loại.</p>\
+              <p>Đối với podcast kể chuyện:</p>\
               <ul> \
-              <li> Find any flow problems in your script by reading it aloud. Use this as an opportunity to see if your script fits within your time constraints.</li>\
-              <li> Have another person edit the script or consult your mentor. Seeking an outside view can assist in identifying story holes or other problems you might not have anticipated.</li>\
+              <li> Khiến kịch bản mạch lạc hơn bằng cách đọc to. Hãy coi đây là cơ hội để xem kịch bản của bạn có phù hợp với thời gian cho phép không.</li>\
+              <li> Nhờ người khác chỉnh sửa kịch bản hoặc tham khảo ý kiến của người cố vấn. Việc tìm kiếm góc nhìn từ bên ngoài có thể giúp xác định các vấn đề trong câu chuyện hoặc các vấn đề khác mà bạn có thể không lường trước được.</li>\
               </ul> \
-              <p>For an interview podcast, consider creating an outline or set of questions in advance: </p> \
+              <p>Đối với podcast phỏng vấn, hãy cân nhắc tạo dàn ý hoặc bộ câu hỏi trước: </p> \
               <ul> \
-              <li> Are you going to host one guest one or more? </li>\
-              <li> Will this interview be conducted remotely, or are your guests present in the same room as you? </li>\
-              <li> Before the interview, will you email the questions to your guests? Be aware that if you give your visitors the exact questions in advance, their responses may sound prepared, and the atmosphere may become less natural. </li>\
-              <li> Consider providing a general outline of the interview for the guest. </li>\
-              <li> Make sure your guests are aware that the recording will be edited. It can be polite to inform them if you have to eliminate any parts of the interview so that nobody is misrepresented or misunderstood. </li>\
+              <li> Bạn sẽ tiếp đón một hoặc nhiều khách mời? </li>\
+              <li> Cuộc phỏng vấn này sẽ được tiến hành từ xa hay khách mời của bạn có mặt trong cùng một phòng với bạn?</li>\
+              <li> Trước cuộc phỏng vấn, bạn sẽ gửi câu hỏi qua email cho khách mời chứ? Hãy lưu ý rằng nếu bạn cung cấp cho khách mời những câu hỏi chính xác trước, câu trả lời của họ có thể nghe có vẻ đã được chuẩn bị và bầu không khí có thể trở nên kém tự nhiên hơn. </li>\
+              <li> Cân nhắc cung cấp dàn ý chung về cuộc phỏng vấn cho khách mời.</li>\
+              <li> Đảm bảo khách của bạn biết rằng bản ghi âm sẽ được chỉnh sửa. Bạn có thể lịch sự thông báo cho họ nếu bạn phải loại bỏ bất kỳ phần nào của cuộc phỏng vấn để không ai bị hiểu sai hoặc hiểu lầm. </li>\
               </ul> \
-              <p><strong>B. Pen to paper</strong></p>\
-              <p>Writing a script can be a lot like writing an essay. If you know strategies that work for you, try approaching this in a similar way. Components of a typical podcast structure: </p>\
+              <p><strong>B. Viết trên giấy</strong></p>\
+              <p>Viết kịch bản có thể giống như viết một bài luận. Nếu bạn biết các chiến lược hiệu quả với mình, hãy thử tiếp cận theo cách tương tự. Các thành phần của cấu trúc podcast thông thường: </p>\
               <ul> \
-              <li> Teaser: Give a brief overview of the episode\'s topic to pique interest. </li>\
-              <li> Intro: The opening theme tune that opens the episode </li>\
-              <li> Main contents </li>\
-              <li> Midroll: At times, it can be beneficial to pause a longer podcast. </li>\
-              <li> Main contents </li>\
-              <li> Outro: Wrap up the podcast session and using theme tune to end the podcast. </li>\
+              <li> Teaser: Cung cấp tổng quan ngắn gọn về chủ đề của tập để khơi gợi sự quan tâm. </li>\
+              <li> Intro: Nhạc chủ đề mở đầu mở đầu tập </li>\
+              <li> Nội dung chính </li>\
+              <li> Midroll: Đôi khi, tạm dừng nghỉ một podcast dài hơn có thể hợp lí hơn.</li>\
+              <li> Nội dung chính</li>\
+              <li> Outro: Kết thúc phiên podcast và Sử dụng nhạc chủ đề để kết thúc pocast.</li>\
               </ul> \
               </div>',
   percentage: "65",
@@ -1039,27 +1036,27 @@ var podcastVi3 = {
 
 var podcastVi4 = {
   step: "4",
-  heading: "Recording and editing",
+  heading: "Ghi hình, ghi âm và chỉnh sửa",
   todos:
     '<div class="content"> \
-              <p>Be ready to record your podcast </p>\
-              <p>Here are some software or application that may be useful for the whole process of recording and editing the podcast:</p>\
+              <p>Sẵn sàng và ghi hình podcast của bạn</p>\
+              <p>Dưới đây là một số phần mềm, công cụ chỉnh sửa có thể trợ giúp:</p>\
               <ul> \
-              <li> GarageBand\
-              <li> Audacity\
-              <li> Adobe Audition\
+              <li> <a href="https://youtu.be/CFlcLTqzIR8?si=seHJ9QdMAXMHIN4E">GarageBand</a>\
+              <li> <a href="https://youtu.be/yzJ2VyYkmaA?si=bnUV02yoeFK6hBMq">Audacity</a>\
+              <li> <a href="https://youtu.be/sFLe87ix2_s?si=AWW24ciO6Z7KFg2z">Adobe Audition</a>\
               <li> Zoom (for recording remote interviews)\
               </ul> \
-              <p>While recording, here are some tips or notes to make your podcast better: </p> \
+              <p>Trong khi ghi âm, đây là một số mẹo hoặc lưu ý để giúp podcast của bạn hay hơn: </p> \
               <ul> \
-              <li> Find a smaller space than a larger one. Smaller spaces are less likely to have background noise or echoes. </li>\
-              <li> Seek out a room with non-reflective materials and stay away from loud areas. </li>\
-              <li> Do sound testing to make sure the equipment is operating properly and set up the qualified sound before you start recording. </li>\
-              <li> Your mouth should be roughly 8 inches away from the microphone for optimal sound quality. Make sure you maintain the same distance during the entire recording. </li>\
-              <li> Make a backup copy of your recording. </li>\
-              <li> Prepare a drink to clear your voice if needed </li>\
+              <li> Tìm một không gian nhỏ hơn thay không gian lớn hơn. Không gian nhỏ hơn ít có khả năng có tiếng ồn nền hoặc tiếng vọng.</li>\
+              <li> Tìm một căn phòng có vật liệu cách âm và tránh xa những khu vực ồn ào.</li>\
+              <li> Kiểm tra âm thanh để đảm bảo thiết bị hoạt động bình thường và thiết lập âm thanh đủ tiêu chuẩn trước khi bạn bắt đầu ghi âm.</li>\
+              <li> Miệng của bạn nên cách micrô khoảng 8 inch để có chất lượng âm thanh tối ưu. Đảm bảo bạn duy trì khoảng cách như vậy trong suốt quá trình ghi âm. </li>\
+              <li> Tạo một bản sao lưu bản ghi âm của bạn. </li>\
+              <li> Chuẩn bị đồ uống để làm sạch giọng nói của bạn nếu cần </li>\
               </ul> \
-              <p>Utilizing Campus Spaces. The library has some suitable places for your podcast. Please check the library to make a room booking in advance.</p>\
+              <p>Hãy tận dụng các không gian đa được chuẩn bị trong trường. Thư viện VinUni có một số không gian dành cho ghi hình chuyên nghiệp, liên hệ tại <a href="https://library.vinuni.edu.vn/room-booking/">room booking.</a></p>\
               </div>',
   percentage: "85",
   truePercent: "20",
@@ -1067,12 +1064,12 @@ var podcastVi4 = {
 
 var podcastVi5 = {
   step: "5",
-  heading: "Reviewing and Finalizing",
+  heading: "Chỉnh sửa",
   todos:
     '<div class="content"> \
-              <p>Review your podcast, seek feedback from your peers or instructors and consider appropriate recommendations to improve your work.</p>\
-              <p>Watch attentively to catch all of those little mistakes. There are some strategies for proofreading you should check.</p>\
-              <p>For additional help, check out the VinUniversity library website for LibGuides about citation resources.</p>\
+              <p>Xem lại, tự chỉnh sửa và có thể xin nhận xét, tham khảo ý kiến của người hướng dẫn</p>\
+              <p>(một số kĩ thuật kiểm tra bạn nên tham khảo <a href="https://libguides.usc.edu/writingguide/proofreading">strategies for proofreading</a>)</p>\
+              <p>Truy cập website Thư viện của VinUni để tham khảo cách trích dẫn nguồn, danh sách tham khảo <a href="https://vinuni.libguides.com/citation">LibGuides about citation resources.</a></p>\
               </div>',
   percentage: "100",
   truePercent: "15",
